@@ -170,7 +170,9 @@ def test_vendors_and_purchase_orders(client):
     assert client.get("/vendors/all").json() == [{"value": 3, "label": "Demo Supplier"}]
     pos = client.get("/purchaseorders/by_vendor_id/3").json()
     assert [p["name"] for p in pos] == ["P00021", "P00020"]
-    line = client.get("/purchaseorders/by_id/20").json()["order_line"][0]
+    po = client.get("/purchaseorders/by_id/20").json()
+    assert po["expected_arrival"] == "2025-10-10 14:00:00" and po["arrival_confirmed"] is False
+    line = po["order_line"][0]
     assert line["product_uom_qty"] == 10.0 and line["product_name"] == "Steel"
     assert client.get("/purchaseorders/by_id/999").status_code == 404
 
@@ -198,7 +200,7 @@ def test_openapi_lists_clean_paths_only(client):
     paths = client.get("/openapi.json").json()["paths"]
     assert "/saleorders/delivery_date/query/{order_name}" in paths
     assert "/saleorders/delivery_date/querry/{order_name}" not in paths
-    assert len(paths) == 25
+    assert len(paths) == 28
 
 
 # ---------------------------------------------------------------- quotation lines (customer portal)
@@ -231,3 +233,25 @@ def test_delete_line(client, fake):
     assert 104 not in fake.data["sale.order.line"]
     r = client.delete("/saleorders/S00010/lines/101")  # last product line
     assert r.status_code == 409 and "cancel" in r.json()["detail"]
+
+
+# ---------------------------------------------------------------- order to cash (back office)
+def test_deliver_invoice_and_pay(client, fake):
+    order = client.get("/saleorders/by_orderid/12").json()
+    assert order["delivery_state"] == "to deliver" and order["deliveries"][0]["name"] == "WH/OUT/00001"
+    assert client.post("/saleorders/delivery/validate/S00010").status_code == 409  # quotation
+    r = client.post("/saleorders/delivery/validate/S00012")
+    assert r.status_code == 200, r.text
+    assert fake.data["stock.move"][400]["quantity"] == 3.0 and fake.data["stock.picking"][300]["state"] == "done"
+    assert client.get("/saleorders/by_orderid/12").json()["delivery_state"] == "delivered"
+    assert client.post("/saleorders/delivery/validate/S00012").status_code == 409  # nothing left
+
+    invoice_id = client.post("/saleorders/invoice/create/S00012").json()["invoice"]["id"]
+    assert client.post(f"/accounting/invoice/{invoice_id}/pay").status_code == 409  # still a draft
+    r = client.post(f"/accounting/invoice/{invoice_id}/confirm")
+    assert r.status_code == 200 and r.json()["invoice"]["state"] == "posted"
+    assert client.post(f"/accounting/invoice/{invoice_id}/confirm").status_code == 409
+    r = client.post(f"/accounting/invoice/{invoice_id}/pay")
+    assert r.status_code == 200 and r.json()["invoice"]["payment_state"] == "paid"
+    assert client.post(f"/accounting/invoice/{invoice_id}/pay").status_code == 409
+    assert client.post("/accounting/invoice/999/confirm").status_code == 404

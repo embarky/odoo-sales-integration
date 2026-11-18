@@ -27,9 +27,10 @@ This project opens the sales process to external applications in three steps.
    endpoints for customers, sales orders, invoices, deliveries and purchase orders.
 3. **Extend**: a Node-RED customer portal on top of the API (review and edit quotations,
    accept or decline them, follow orders through invoicing and payment, download documents,
-   request a new delivery date, report a problem, talk to the service team), a service desk
-   where employees answer and approve these requests, and KPI dashboards that measure how
-   the portal is used.
+   request a new delivery date, report a problem, talk to the service team), an employee
+   back office that runs the whole order-to-cash process (confirm, deliver, invoice, register
+   payment) and the purchasing steps, a service desk where employees answer and approve
+   customer requests, and KPI dashboards that measure how the portal is used.
 
 ## Architecture
 
@@ -81,11 +82,13 @@ Built with FastAPI. Interactive documentation is served at `/docs` (Swagger UI).
 | | `PUT` / `DELETE` | `/saleorders/{order}/lines/{line_id}` (quotations only) | `sale.order.line` `write` / `unlink` |
 | | `PUT` | `/saleorders/quotations/confirm/{order}` | `action_confirm` |
 | | `PUT` | `/saleorders/quotations/cancel/{order}` | `action_cancel` |
+| | `POST` | `/saleorders/delivery/validate/{order}` | `stock.picking.button_validate` |
 | | `POST` | `/saleorders/invoice/create/{order}` | wizard `sale.advance.payment.inv` |
 | | `GET` | `/saleorders/delivery_date/query/{order}` | `commitment_date` / `expected_date` |
 | | `PUT` | `/saleorders/delivery_date/confirm/{order}/accept` · `…/reject/{new_date}` | `write` + `message_post` |
 | | `GET` | `/saleorders/get/pdf/{id}` | report `sale.report_saleorder` |
 | Accounting | `GET` | `/accounting/invoice/by_saleorder/{order}` | `account.move.read` |
+| | `POST` | `/accounting/invoice/{invoice_id}/confirm` · `…/pay` | `action_post` · wizard `account.payment.register` |
 | | `GET` | `/accounting/invoice/get/pdf/{invoice_id}` | report `account.report_invoice_with_payments` |
 | Vendors | `GET` | `/vendors/all` | `res.partner.search_read` |
 | Purchase orders | `GET` | `/purchaseorders/by_vendor_id/{id}` · `/purchaseorders/by_id/{id}` | `purchase.order` + lines |
@@ -128,7 +131,7 @@ odoo-sales-integration/
 │   ├── tests/                 # pytest suite with a fake Odoo XML-RPC server
 │   ├── Dockerfile
 │   └── requirements*.txt
-├── node-red/                  # Node-RED flows (portal, KPIs, employee dashboard) and image
+├── node-red/                  # Node-RED flows (portal, back office, service desk, KPIs) and image
 ├── docs/
 │   └── models/                # BPMN process model (source and image)
 ├── database/                  # MySQL schema and demo data for the portal and KPIs
@@ -159,7 +162,7 @@ process (quotation, sent, confirmed, invoiced, paid).
 | Customer portal | <http://localhost:1880/dashboard/portal> |
 | Service desk and message KPIs (employees) | <http://localhost:1880/dashboard/service-desk> |
 | Portal KPIs | <http://localhost:1880/dashboard/page1> |
-| Employee dashboard (sales and purchase) | <http://localhost:1880/ui> |
+| Back office: sales and purchasing (employees) | <http://localhost:1880/dashboard/back-office> |
 | API documentation (Swagger UI) | <http://localhost:8000/docs> |
 | Odoo (login `admin` / `admin`) | <http://localhost:8069> |
 | Node-RED editor | <http://localhost:1880> |

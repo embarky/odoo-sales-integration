@@ -1,125 +1,5 @@
 [
     {
-        "id": "f6f2187d.f17ca8",
-        "type": "tab",
-        "label": "sales",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "54fc18ea533226e9",
-        "type": "tab",
-        "label": "purchase",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "1c2bbd12911ac830",
-        "type": "ui_tab",
-        "name": "Odoo-API-NodeRed-Saturne-sales",
-        "icon": "dashboard-sales",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "0c6d593420f1b7aa",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "1821bfc72f1b2c08",
         "type": "ui-theme",
         "name": "Default Theme",
@@ -137,119 +17,6 @@
             "groupBorderRadius": "4px",
             "widgetGap": "12px"
         }
-    },
-    {
-        "id": "f20fd5aa39f9f670",
-        "type": "ui_group",
-        "name": "Customers",
-        "tab": "1c2bbd12911ac830",
-        "order": 1,
-        "disp": true,
-        "width": "7",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4e2d9d73c8d0cf89",
-        "type": "ui_spacer",
-        "z": "f6f2187d.f17ca8",
-        "name": "spacer",
-        "group": "f20fd5aa39f9f670",
-        "order": 5,
-        "width": 15,
-        "height": 1
-    },
-    {
-        "id": "b526edcacb29519b",
-        "type": "ui_spacer",
-        "z": "f6f2187d.f17ca8",
-        "name": "spacer",
-        "group": "f20fd5aa39f9f670",
-        "order": 6,
-        "width": 15,
-        "height": 1
-    },
-    {
-        "id": "1c73ec87bd969a77",
-        "type": "ui_spacer",
-        "z": "f6f2187d.f17ca8",
-        "name": "spacer",
-        "group": "f20fd5aa39f9f670",
-        "order": 7,
-        "width": 23,
-        "height": 1
-    },
-    {
-        "id": "471aed3a57dc9318",
-        "type": "ui_spacer",
-        "z": "f6f2187d.f17ca8",
-        "name": "spacer",
-        "group": "f20fd5aa39f9f670",
-        "order": 8,
-        "width": 23,
-        "height": 1
-    },
-    {
-        "id": "117d821a82b99754",
-        "type": "ui_spacer",
-        "z": "f6f2187d.f17ca8",
-        "name": "spacer",
-        "group": "f20fd5aa39f9f670",
-        "order": 9,
-        "width": 23,
-        "height": 1
-    },
-    {
-        "id": "fe64d88aac61e3db",
-        "type": "ui_group",
-        "name": "SaleOrders",
-        "tab": "1c2bbd12911ac830",
-        "order": 2,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "491cb1f2cdf4d485",
-        "type": "ui_group",
-        "name": "SaleOrdersOperation",
-        "tab": "1c2bbd12911ac830",
-        "order": 3,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "da01af37b6df1fa3",
-        "type": "ui_tab",
-        "name": "Odoo-API-NodeRed-Saturne-purchase",
-        "icon": "dashboard-purchase",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ebc2771a7848bb93",
-        "type": "ui_group",
-        "name": "purchase",
-        "tab": "da01af37b6df1fa3",
-        "order": 1,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9ef5408d1c420db5",
-        "type": "ui_group",
-        "name": "Purchase Order Operation",
-        "tab": "da01af37b6df1fa3",
-        "order": 2,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "d3b098e8d3850623",
@@ -271,1414 +38,19 @@
         }
     },
     {
-        "id": "3c3614407320d752",
-        "type": "inject",
-        "z": "f6f2187d.f17ca8",
-        "name": "Start",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 3,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 160,
-        "wires": [
-            [
-                "f6ddf04b5756c3f4"
-            ]
-        ]
-    },
-    {
-        "id": "f6ddf04b5756c3f4",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "customers/all",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://api:8000/customers/all",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 380,
-        "y": 160,
-        "wires": [
-            [
-                "8c7ef79a94d4f93e"
-            ]
-        ]
-    },
-    {
-        "id": "0f9fdc36eb2c6270",
-        "type": "ui_list",
-        "z": "f6f2187d.f17ca8",
-        "group": "f20fd5aa39f9f670",
-        "name": "Display customers list",
-        "order": 1,
-        "width": 5,
-        "height": "9",
-        "lineType": "two",
-        "actionType": "click",
-        "allowHTML": true,
-        "outputs": 1,
-        "topic": "",
-        "x": 840,
-        "y": 160,
-        "wires": [
-            [
-                "01c565a46bd5965b",
-                "596bc9a937cb5bb0"
-            ]
-        ]
-    },
-    {
-        "id": "8c7ef79a94d4f93e",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct customers list",
-        "func": "let data = msg.payload;\n\n\nif (typeof data === \"string\") {\n    data = JSON.parse(data);\n}\n\nmsg.payload = data.map(item => ({\n    title: item.label,    \n    value: item.value     \n}));\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 160,
-        "wires": [
-            [
-                "0f9fdc36eb2c6270"
-            ]
-        ]
-    },
-    {
-        "id": "01c565a46bd5965b",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url customer",
-        "func": "const customerId = msg.payload.value;\n\nmsg.url = `${env.get('API_URL') || 'http://api:8000'}/customers/${customerId}`;\n\nmsg.method = \"GET\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 320,
-        "wires": [
-            [
-                "bc5886af2bd053fc"
-            ]
-        ]
-    },
-    {
-        "id": "bc5886af2bd053fc",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "customers/{customerId}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 670,
-        "y": 320,
-        "wires": [
-            [
-                "984b4b820ea9ba70"
-            ]
-        ]
-    },
-    {
-        "id": "984b4b820ea9ba70",
-        "type": "ui_template",
-        "z": "f6f2187d.f17ca8",
-        "group": "f20fd5aa39f9f670",
-        "name": "Display customer",
-        "order": 2,
-        "width": "7",
-        "height": 4,
-        "format": "<div style=\"border:1px solid #ccc; padding:10px; border-radius:5px; width:300px;\">\n    <h3>{{msg.payload[0].name}}</h3>\n    <p><b>Email:</b> {{msg.payload[0].email}}</p>\n    <p><b>City:</b> {{msg.payload[0].city}}</p>\n    <p><b>Country:</b> {{msg.payload[0].country_id[1]}}</p>\n    <p><b>Comment:</b> {{msg.payload[0].comment}}</p>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 890,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "596bc9a937cb5bb0",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url orders",
-        "func": "// Extract customerId\nconst customerId = msg.payload.value;\n\n// Build query API URL or request body\nmsg.url = `${env.get('API_URL') || 'http://api:8000'}/saleorders/by_id/${customerId}`;\n\n// If using HTTP Request GET request\nmsg.method = \"GET\";\nflow.set('selected_customer', msg.payload.value);\nflow.set('selected_sale_order', undefined);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 200,
-        "y": 380,
-        "wires": [
-            [
-                "7917073ada12bbfc"
-            ]
-        ]
-    },
-    {
-        "id": "7917073ada12bbfc",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/by_id/{customerId}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 450,
-        "y": 380,
-        "wires": [
-            [
-                "fccd34fbc36014e2"
-            ]
-        ]
-    },
-    {
-        "id": "fccd34fbc36014e2",
-        "type": "ui_template",
-        "z": "f6f2187d.f17ca8",
-        "group": "fe64d88aac61e3db",
-        "name": "Display orders",
-        "order": 10,
-        "width": "20",
-        "height": "18",
-        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n        cursor: pointer;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload || !msg.payload.length\">\n\n</div>\n\n<!-- Order List -->\n<div ng-if=\"msg.payload && msg.payload.length\" ng-repeat=\"order in msg.payload\" class=\"order-card\"\n    ng-click=\"$parent.send({payload:{id: order.id, state: order.state, name: order.name}})\">\n    <b>Order:</b> {{order.name}} <br>\n    <b>Status:</b> {{order.state}} <br>\n    <b>Created:</b> {{order.create_date}} <br>\n    <b>Total:</b> {{order.amount_total}} € <br>\n\n    <div ng-repeat=\"item in order.order_line\" class=\"order-line\">\n        <b>Product:</b> {{item.name}} <br>\n        <b>Qty:</b> {{item.product_uom_qty}} <br>\n        <b>Unit Price:</b> {{item.price_unit}} € <br>\n        <b>Total:</b> {{item.price_total}} €\n    </div>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 680,
-        "y": 380,
-        "wires": [
-            [
-                "72755f5290a74424",
-                "f6f2fixremember0001"
-            ]
-        ]
-    },
-    {
-        "id": "ce4c68900b3c7cc6",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/by_orderid/{orderId}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1130,
-        "y": 380,
-        "wires": [
-            [
-                "3d1a162a3f50e160",
-                "f6f2fixremember0001"
-            ]
-        ]
-    },
-    {
-        "id": "72755f5290a74424",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url order",
-        "func": "let orderId = msg.payload.id;\n\nmsg.url = `${env.get('API_URL') || 'http://api:8000'}/saleorders/by_orderid/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 380,
-        "wires": [
-            [
-                "ce4c68900b3c7cc6"
-            ]
-        ]
-    },
-    {
-        "id": "3d1a162a3f50e160",
-        "type": "ui_template",
-        "z": "f6f2187d.f17ca8",
-        "group": "491cb1f2cdf4d485",
-        "name": "Display order",
-        "order": 1,
-        "width": "28",
-        "height": "4",
-        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload\">\n    <i>No order selected.</i>\n</div>\n\n<!-- Order Information -->\n<div ng-if=\"msg.payload\" class=\"order-card\">\n    <b>Order:</b> {{msg.payload.name}} <br>\n    <b>Status:</b> {{msg.payload.state}} <br>\n    <b>Created:</b> {{msg.payload.create_date}} <br>\n    <b>Total:</b> {{msg.payload.amount_total}} € <br>\n\n    <!-- Order Details -->\n    <div ng-if=\"msg.payload.order_line.length\">\n        <div ng-repeat=\"item in msg.payload.order_line\" class=\"order-line\">\n            <b>Product:</b> {{item.product_name}} <br>\n            <b>Description:</b> {{item.description}} <br>\n            <b>Quantity:</b> {{item.quantity}} <br>\n            <b>Unit Price:</b> {{item.unit_price}} € <br>\n            <b>Total:</b> {{item.total}} €\n        </div>\n    </div>\n\n    <div ng-if=\"!msg.payload.order_line.length\">\n        <i>No items in this order.</i>\n    </div>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1350,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cd090e0bfaa50f56",
-        "type": "ui_button",
-        "z": "f6f2187d.f17ca8",
-        "name": "Confirm quotation",
-        "group": "491cb1f2cdf4d485",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Confirm quotation",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "confirm",
-        "payloadType": "str",
-        "topic": "button",
-        "topicType": "msg",
-        "x": 650,
-        "y": 460,
-        "wires": [
-            [
-                "bc4cafb32aa2b6d1"
-            ]
-        ]
-    },
-    {
-        "id": "bc4cafb32aa2b6d1",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url confirm quotation",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_sale_order');\nif (!order) return [null, { topic: 'Confirm quotation', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['draft','sent'] && !['draft','sent'].includes(order.state)) {\n    return [null, { topic: 'Confirm quotation', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Confirm quotation', method: 'PUT', url: API + '/saleorders/quotations/confirm/' + encodeURIComponent(order.name), payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 500,
-        "wires": [
-            [
-                "abdc4ecaf3369f6e"
-            ],
-            [
-                "f6f2fixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "13c06f1c8bd7cff8",
-        "type": "ui_button",
-        "z": "f6f2187d.f17ca8",
-        "name": "Cancel quotation",
-        "group": "491cb1f2cdf4d485",
-        "order": 3,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Cancel order",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "cancel",
-        "payloadType": "str",
-        "topic": "button",
-        "topicType": "msg",
-        "x": 650,
-        "y": 540,
-        "wires": [
-            [
-                "3376353c54393347"
-            ]
-        ]
-    },
-    {
-        "id": "3376353c54393347",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url cancel quotation",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_sale_order');\nif (!order) return [null, { topic: 'Cancel order', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['draft','sent','sale'] && !['draft','sent','sale'].includes(order.state)) {\n    return [null, { topic: 'Cancel order', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Cancel order', method: 'PUT', url: API + '/saleorders/quotations/cancel/' + encodeURIComponent(order.name), payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 580,
-        "wires": [
-            [
-                "3c0c49ce3acea410"
-            ],
-            [
-                "f6f2fixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "abdc4ecaf3369f6e",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/quotations/confirm/{orderName}",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1230,
-        "y": 500,
-        "wires": [
-            [
-                "f6f2fixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "3c0c49ce3acea410",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/quotations/cancel/{orderName}",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1230,
-        "y": 580,
-        "wires": [
-            [
-                "f6f2fixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "6a7b6df1314b4345",
-        "type": "ui_button",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "group": "491cb1f2cdf4d485",
-        "order": 5,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Create invoice",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "createinvoice",
-        "payloadType": "str",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 640,
-        "y": 820,
-        "wires": [
-            [
-                "16330eda444eca6f"
-            ]
-        ]
-    },
-    {
-        "id": "16330eda444eca6f",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url createinvoice",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_sale_order');\nif (!order) return [null, { topic: 'Create invoice', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['sale'] && !['sale'].includes(order.state)) {\n    return [null, { topic: 'Create invoice', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Create invoice', method: 'POST', url: API + '/saleorders/invoice/create/' + encodeURIComponent(order.name), payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 860,
-        "wires": [
-            [
-                "ae6173d7f01105ac"
-            ],
-            [
-                "f6f2fixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "ae6173d7f01105ac",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/invoice/create/{orderName}",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1190,
-        "y": 860,
-        "wires": [
-            [
-                "f6f2fixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "e1bdb12230c94740",
-        "type": "ui_button",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "group": "491cb1f2cdf4d485",
-        "order": 6,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Invoice PDF",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "invoicepdf",
-        "payloadType": "str",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 630,
-        "y": 900,
-        "wires": [
-            [
-                "d3b4f756afdfbd3a"
-            ]
-        ]
-    },
-    {
-        "id": "d3b4f756afdfbd3a",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "construct url invoiceid",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_sale_order');\nif (!order) return [null, { topic: 'Invoice PDF', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['sale'] && !['sale'].includes(order.state)) {\n    return [null, { topic: 'Invoice PDF', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Invoice PDF', method: 'GET', url: API + '/accounting/invoice/by_saleorder/' + encodeURIComponent(order.name), payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 940,
-        "wires": [
-            [
-                "8041bf3da5e396f8"
-            ],
-            [
-                "f6f2fixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "8041bf3da5e396f8",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "accounting/invoice/by_saleorder/{orderName}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1180,
-        "y": 940,
-        "wires": [
-            [
-                "e4aa49478d88c920"
-            ]
-        ]
-    },
-    {
-        "id": "e4aa49478d88c920",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "construct url invoicepdf",
-        "func": "const invoices = (msg.payload && msg.payload.invoice) || [];\nif (!invoices.length) return [null, { topic: 'Invoice PDF', payload: `${msg.order.name} has no invoice yet.`, highlight: 'red' }];\nreturn [{ url: `/pdf/invoice/${invoices[0].id}`, payload: {} }, null];",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 870,
-        "y": 1000,
-        "wires": [
-            [
-                "36545f803b406034"
-            ],
-            [
-                "f6f2fixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "36545f803b406034",
-        "type": "ui_template",
-        "z": "f6f2187d.f17ca8",
-        "group": "491cb1f2cdf4d485",
-        "name": "download pdf",
-        "order": 7,
-        "width": "12",
-        "height": "5",
-        "format": "<div style=\"text-align:center; margin:10px 0;\">\n    <a ng-href=\"{{msg.url}}\" target=\"_blank\" style=\"display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; \n            text-decoration:none; border-radius:5px; font-weight:bold; font-family:Arial, sans-serif;\">\n        Download PDF\n    </a>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1100,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3e400faf7b383c2",
-        "type": "ui_button",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "group": "491cb1f2cdf4d485",
-        "order": 4,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Delivery date",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "querrydelivery",
-        "payloadType": "str",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 640,
-        "y": 640,
-        "wires": [
-            [
-                "6f89c5a42c2e41df"
-            ]
-        ]
-    },
-    {
-        "id": "6f89c5a42c2e41df",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url querrydelivery",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_sale_order');\nif (!order) return [null, { topic: 'Delivery date', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['sale'] && !['sale'].includes(order.state)) {\n    return [null, { topic: 'Delivery date', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Delivery date', method: 'GET', url: API + '/saleorders/delivery_date/query/' + encodeURIComponent(order.name), payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 680,
-        "wires": [
-            [
-                "13610d9c093cdb80"
-            ],
-            [
-                "f6f2fixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "13610d9c093cdb80",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/delivery_date/querry/{orderName}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1210,
-        "y": 680,
-        "wires": [
-            [
-                "a10ad5945283dec2"
-            ]
-        ]
-    },
-    {
-        "id": "a10ad5945283dec2",
-        "type": "ui_template",
-        "z": "f6f2187d.f17ca8",
-        "group": "491cb1f2cdf4d485",
-        "name": "Display deliverydate and choose",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "format": "<div style=\"text-align:center; font-family: Arial, sans-serif; margin: 20px;\">\n  <!-- Title -->\n  <h3 style=\"color:#333;\">Order Information</h3>\n\n  <!-- Order Information -->\n  <p><strong>Order Name:</strong> {{msg.payload.order_name}}</p>\n  <p><strong>Scheduled Delivery:</strong> {{msg.payload.scheduled_delivery_date}}</p>\n\n  <!-- New Date Selection -->\n  <div style=\"margin:15px 0;\">\n    <label for=\"newDate\">Select New Date (if rejecting):</label><br>\n    <input type=\"datetime-local\" id=\"newDate\" ng-model=\"newDate\" style=\"margin:8px; padding:6px; border-radius:4px; border:1px solid #ccc;\">\n  </div>\n\n  <!-- Operation Button -->\n  <div style=\"margin-top:15px;\">\n    <!-- Accept Button -->\n    <button\n      style=\"background-color:#28a745; color:white; border:none; border-radius:5px; padding:8px 16px; margin-right:10px; cursor:pointer;\"\n      ng-click=\"send({action:'accept', order_name:msg.payload.order_name})\">\n      ✅ Accept\n    </button>\n\n    <!-- Reject and submit new date button -->\n    <button\n      style=\"background-color:#dc3545; color:white; border:none; border-radius:5px; padding:8px 16px; cursor:pointer;\"\n      ng-click=\"send({action:'reject', new_date:newDate, order_name:msg.payload.order_name})\">\n      ❌ Reject & Submit\n    </button>\n  </div>\n</div>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 690,
-        "y": 740,
-        "wires": [
-            [
-                "6afbd88bd9b9ad33"
-            ]
-        ]
-    },
-    {
-        "id": "6afbd88bd9b9ad33",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Construct url confirm deliverydate",
-        "func": "var orderName = msg.order_name;\nvar decision = msg.action;\nvar newDate = msg.new_date;\n\nvar encodedDate = encodeURIComponent(newDate);\n\nmsg = {\n    payload: {},\n    url : `${env.get('API_URL') || 'http://api:8000'}/saleorders/delivery_date/confirm/${orderName}/${decision}/${encodedDate}`,\n    method : \"PUT\",\n    action: 'Delivery date ' + decision,\n    order: flow.get('selected_sale_order')\n};\n\n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 980,
-        "y": 740,
-        "wires": [
-            [
-                "23e176651a47784b"
-            ]
-        ]
-    },
-    {
-        "id": "23e176651a47784b",
-        "type": "http request",
-        "z": "f6f2187d.f17ca8",
-        "name": "saleorders/delivery_date/confirm/{orderName}/{decision}/{encodedDate}",
-        "method": "PUT",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1400,
-        "y": 740,
-        "wires": [
-            [
-                "f6f2fixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "85d517b099aea54f",
-        "type": "inject",
-        "z": "54fc18ea533226e9",
-        "name": "Start",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 3,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 140,
-        "wires": [
-            [
-                "3e39d35ba356d083"
-            ]
-        ]
-    },
-    {
-        "id": "3e39d35ba356d083",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "vendors/all",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://api:8000/vendors/all",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 370,
-        "y": 140,
-        "wires": [
-            [
-                "aa841f142c683399"
-            ]
-        ]
-    },
-    {
-        "id": "aa841f142c683399",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct venders list",
-        "func": "let data = msg.payload;\n\n\nif (typeof data === \"string\") {\n    data = JSON.parse(data);\n}\n\n\nmsg.payload = data.map(item => ({\n    title: item.label,    \n    value: item.value     \n}));\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 140,
-        "wires": [
-            [
-                "a50beea64fd7d2fe"
-            ]
-        ]
-    },
-    {
-        "id": "a50beea64fd7d2fe",
-        "type": "ui_list",
-        "z": "54fc18ea533226e9",
-        "group": "ebc2771a7848bb93",
-        "name": "vendors list",
-        "order": 1,
-        "width": 5,
-        "height": "9",
-        "lineType": "two",
-        "actionType": "click",
-        "allowHTML": true,
-        "outputs": 1,
-        "topic": "",
-        "x": 770,
-        "y": 140,
-        "wires": [
-            [
-                "5d9eb44f815af04e"
-            ]
-        ]
-    },
-    {
-        "id": "625eacc22a3a17c7",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "purchaseorders/by_vendor_id/{vendorId}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 660,
-        "y": 220,
-        "wires": [
-            [
-                "bd8f2d1ae6cbbd5e"
-            ]
-        ]
-    },
-    {
-        "id": "bd8f2d1ae6cbbd5e",
-        "type": "ui_template",
-        "z": "54fc18ea533226e9",
-        "group": "ebc2771a7848bb93",
-        "name": "Display all purchaseorders",
-        "order": 10,
-        "width": "20",
-        "height": "8",
-        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n        cursor: pointer;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload || !msg.payload.length\">\n    No orders found.\n</div>\n\n<!-- Order List -->\n<div ng-if=\"msg.payload && msg.payload.length\" ng-repeat=\"order in msg.payload\" class=\"order-card\"\n    ng-click=\"$parent.send({payload:{id: order.id, state: order.state, name: order.name}})\">\n    <b>Order:</b> {{order.name}} <br>\n    <b>Status:</b> {{order.state}} <br>\n    <b>Created:</b> {{order.date_order}} <br>\n    <b>Total:</b> {{order.amount_total}} € <br>\n\n    <div ng-repeat=\"item in order.order_line\" class=\"order-line\">\n        <b>Product:</b> {{item.name}} <br>\n        <b>Qty:</b> {{item.product_uom_qty || 'N/A'}} <br>\n        <b>Unit Price:</b> {{item.price_unit || 'N/A'}} € <br>\n        <b>Total:</b> {{item.price_total || 'N/A'}} €\n    </div>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 960,
-        "y": 220,
-        "wires": [
-            [
-                "aa793d12441c00db",
-                "54fcfixremember0001"
-            ]
-        ]
-    },
-    {
-        "id": "989003148113494f",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "purchaseorders/by_id/{orderId}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1170,
-        "y": 300,
-        "wires": [
-            [
-                "a00a7f77e63a6c79",
-                "54fcfixremember0001"
-            ]
-        ]
-    },
-    {
-        "id": "aa793d12441c00db",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct url purchaseorder",
-        "func": "let orderId = msg.payload.id;\n\nmsg.url = `${env.get('API_URL') || 'http://api:8000'}/purchaseorders/by_id/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 300,
-        "wires": [
-            [
-                "989003148113494f"
-            ]
-        ]
-    },
-    {
-        "id": "5d9eb44f815af04e",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct url purchaseorders by venderid",
-        "func": "const vendorId = msg.payload.value;\n\n// Set the request URL and method\nmsg.url = `${env.get('API_URL') || 'http://api:8000'}/purchaseorders/by_vendor_id/${vendorId}`;\nmsg.method = \"GET\";\nflow.set('selected_vendor', msg.payload.value);\nflow.set('selected_purchase_order', undefined);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 220,
-        "wires": [
-            [
-                "625eacc22a3a17c7"
-            ]
-        ]
-    },
-    {
-        "id": "a00a7f77e63a6c79",
-        "type": "ui_template",
-        "z": "54fc18ea533226e9",
-        "group": "9ef5408d1c420db5",
-        "name": "Display purchaseorder",
-        "order": 1,
-        "width": "28",
-        "height": "4",
-        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload\">\n    <i>No order selected.</i>\n</div>\n\n<!-- Order Information -->\n<div ng-if=\"msg.payload\" class=\"order-card\">\n    <b>Order:</b> {{msg.payload.name}} <br>\n    <b>Status:</b> {{msg.payload.state}} <br>\n    <b>Created:</b> {{msg.payload.date_order}} <br>\n    <b>Total:</b> {{msg.payload.amount_total}} € <br>\n\n    <!-- Order Details -->\n    <div ng-if=\"msg.payload.order_line && msg.payload.order_line.length\">\n        <div ng-repeat=\"item in msg.payload.order_line\" class=\"order-line\">\n            <b>Product:</b> {{item.name || 'N/A'}} <br>\n            <b>Description:</b> {{item.description || 'N/A'}} <br>\n            <b>Quantity:</b> {{item.product_uom_qty || 'N/A'}} <br>\n            <b>Unit Price:</b> {{item.price_unit || 'N/A'}} € <br>\n            <b>Total:</b> {{item.price_total || 'N/A'}} €\n        </div>\n    </div>\n\n    <div ng-if=\"!msg.payload.order_line || !msg.payload.order_line.length\">\n        <i>No items in this order.</i>\n    </div>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1420,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5e93806208d85105",
-        "type": "ui_button",
-        "z": "54fc18ea533226e9",
-        "name": "",
-        "group": "9ef5408d1c420db5",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Confirm order",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "confirm",
-        "payloadType": "str",
-        "topic": "button",
-        "topicType": "msg",
-        "x": 560,
-        "y": 320,
-        "wires": [
-            [
-                "d7183545afbece8f"
-            ]
-        ]
-    },
-    {
-        "id": "d7183545afbece8f",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct url confirm",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_purchase_order');\nif (!order) return [null, { topic: 'Confirm order', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['draft','sent','to approve'] && !['draft','sent','to approve'].includes(order.state)) {\n    return [null, { topic: 'Confirm order', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Confirm order', method: 'PUT', url: API + '/purchaseorders/confirm/' + order.id, payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 840,
-        "y": 360,
-        "wires": [
-            [
-                "0ab721b36b99e3d5"
-            ],
-            [
-                "54fcfixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "7712880cc239fb4d",
-        "type": "ui_button",
-        "z": "54fc18ea533226e9",
-        "name": "",
-        "group": "9ef5408d1c420db5",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Cancel order",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "cancel",
-        "payloadType": "str",
-        "topic": "button",
-        "topicType": "msg",
-        "x": 550,
-        "y": 400,
-        "wires": [
-            [
-                "9de40f68cea6e796"
-            ]
-        ]
-    },
-    {
-        "id": "9de40f68cea6e796",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct url cancel",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_purchase_order');\nif (!order) return [null, { topic: 'Cancel order', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['draft','sent','to approve','purchase'] && !['draft','sent','to approve','purchase'].includes(order.state)) {\n    return [null, { topic: 'Cancel order', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Cancel order', method: 'PUT', url: API + '/purchaseorders/cancel/' + order.id, payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 840,
-        "y": 440,
-        "wires": [
-            [
-                "bdc05cbab731f8d7"
-            ],
-            [
-                "54fcfixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "0ab721b36b99e3d5",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "purchaseorders/confirm/{orderId}",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1100,
-        "y": 360,
-        "wires": [
-            [
-                "54fcfixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "bdc05cbab731f8d7",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "purchaseorders/cancel/{orderId}",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1090,
-        "y": 440,
-        "wires": [
-            [
-                "54fcfixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "7940c90e148a5c24",
-        "type": "ui_button",
-        "z": "54fc18ea533226e9",
-        "name": "",
-        "group": "9ef5408d1c420db5",
-        "order": 4,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "label": "Expected arrival",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "querrydelivery",
-        "payloadType": "str",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 590,
-        "y": 480,
-        "wires": [
-            [
-                "4aa370f9d2e0cf46"
-            ]
-        ]
-    },
-    {
-        "id": "4aa370f9d2e0cf46",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct url querrydeliverdate",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_purchase_order');\nif (!order) return [null, { topic: 'Expected arrival', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['purchase','done'] && !['purchase','done'].includes(order.state)) {\n    return [null, { topic: 'Expected arrival', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Expected arrival', method: 'GET', url: API + '/purchaseorders/deliverdate/query/' + order.id, payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 860,
-        "y": 520,
-        "wires": [
-            [
-                "5665165cde2e27f2"
-            ],
-            [
-                "54fcfixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "5665165cde2e27f2",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "purchaseorders/deliverdate/querry/{orderId}",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1190,
-        "y": 520,
-        "wires": [
-            [
-                "dfe27557e16a218b"
-            ]
-        ]
-    },
-    {
-        "id": "4b14dac8cafc47f4",
-        "type": "http request",
-        "z": "54fc18ea533226e9",
-        "name": "purchaseorders/deliverdate/confirm/{orderId}",
-        "method": "use",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1130,
-        "y": 600,
-        "wires": [
-            [
-                "54fcfixresult000001"
-            ]
-        ]
-    },
-    {
-        "id": "69eebf49fb45ee58",
-        "type": "ui_button",
-        "z": "54fc18ea533226e9",
-        "name": "",
-        "group": "9ef5408d1c420db5",
-        "order": 4,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "label": "Confirm arrival date",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "confirmdeliverydate",
-        "payloadType": "str",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 600,
-        "y": 560,
-        "wires": [
-            [
-                "5046eac092053677"
-            ]
-        ]
-    },
-    {
-        "id": "5046eac092053677",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Construct request",
-        "func": "// The order last clicked in the list is kept in the flow context (\"Remember selected order\").\nconst order = flow.get('selected_purchase_order');\nif (!order) return [null, { topic: 'Confirm arrival date', payload: 'Select an order in the list first.', highlight: 'red' }];\nif (['purchase'] && !['purchase'].includes(order.state)) {\n    return [null, { topic: 'Confirm arrival date', payload: `${order.name} cannot be used for this action (state: ${order.state}).`, highlight: 'red' }];\n}\nconst API = env.get('API_URL') || 'http://api:8000';\nreturn [{ order, action: 'Confirm arrival date', method: 'PUT', url: API + '/purchaseorders/deliverdate/confirm/' + order.id, payload: '', headers: {} }, null];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 830,
-        "y": 600,
-        "wires": [
-            [
-                "4b14dac8cafc47f4"
-            ],
-            [
-                "54fcfixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "08753ccd255b8ece",
-        "type": "ui_button",
-        "z": "54fc18ea533226e9",
-        "name": "OrderPDF",
-        "group": "9ef5408d1c420db5",
-        "order": 6,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Order PDF",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "orderpdf",
-        "payloadType": "str",
-        "topic": "payload",
-        "topicType": "msg",
-        "x": 560,
-        "y": 640,
-        "wires": [
-            [
-                "6c45e88033a2a0c0"
-            ]
-        ]
-    },
-    {
-        "id": "6c45e88033a2a0c0",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "construct url purchaseorder PDF",
-        "func": "const order = flow.get('selected_purchase_order');\nif (!order) return [null, { topic: 'Order PDF', payload: 'Select an order in the list first.', highlight: 'red' }];\nreturn [{ url: `/pdf/purchase/${order.id}`, payload: {} }, null];",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 680,
-        "wires": [
-            [
-                "a195a05cd036e9f8"
-            ],
-            [
-                "54fcfixtoast0000001"
-            ]
-        ]
-    },
-    {
-        "id": "a195a05cd036e9f8",
-        "type": "ui_template",
-        "z": "54fc18ea533226e9",
-        "group": "9ef5408d1c420db5",
-        "name": "Download pdf",
-        "order": 7,
-        "width": "12",
-        "height": "5",
-        "format": "<div style=\"text-align:center; margin:10px 0;\">\n    <a ng-href=\"{{msg.url}}\" target=\"_blank\" style=\"display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; \n            text-decoration:none; border-radius:5px; font-weight:bold; font-family:Arial, sans-serif;\">\n        Download PDF\n    </a>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1120,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dfe27557e16a218b",
-        "type": "ui_template",
-        "z": "54fc18ea533226e9",
-        "group": "9ef5408d1c420db5",
-        "name": "Expected Arrival",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "format": "<div style=\"text-align:center; font-family: Arial, sans-serif; margin: 20px;\">\n    <h3 style=\"color:#333;\">Expected Arrival</h3>\n\n    <!-- Order Information -->\n    <p><strong>Order Name:</strong> {{msg.payload.order_name}}</p>\n    <p><strong>Scheduled Delivery:</strong> {{msg.payload.scheduled_delivery_date}}</p>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1460,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6a3cdb4dcb12f723",
         "type": "tab",
         "label": "Customer Portal",
         "disabled": false,
         "info": "Customer self-service portal (Dashboard 2.0, /dashboard/portal).\n\nThe page is one Vue template. Each click sends `{topic: action, payload}`; **Portal actions** turns it into a call to the integration API or a MySQL query, and the answer is routed back to the same browser session (`msg._client`). Changes are followed by a refresh of the order and the order list.",
+        "env": []
+    },
+    {
+        "id": "c3e000000000000a",
+        "type": "tab",
+        "label": "Back Office",
+        "disabled": false,
+        "info": "Employee back office (/dashboard/back-office), the Dashboard 2.0 successor of the TG1 /ui dashboard.\n\nSales: confirm, deliver, invoice, confirm the invoice and register the payment, i.e. the whole order-to-cash process of the BPMN model. Purchasing: confirm or cancel purchase orders and record the vendor's arrival date.\n\nEvery action is one call to the integration API; the answer is shown on the page and the order is reloaded.",
         "env": []
     },
     {
@@ -1767,136 +139,6 @@
         "charset": "UTF8"
     },
     {
-        "id": "ad8bd8277cf20068",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "29c1303e8ca1e852",
-        "type": "ui_group",
-        "name": "purchase",
-        "tab": "da01af37b6df1fa3",
-        "order": 1,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c7dfc1972dc30c9c",
-        "type": "ui_group",
-        "name": "Purchase Order Operation",
-        "tab": "da01af37b6df1fa3",
-        "order": 2,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "91b669ecdb534ef1",
-        "type": "ui_group",
-        "name": "Sales",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "2bc85ab1754f87d3",
         "type": "ui-page",
         "name": "Service Desk",
@@ -1927,7 +169,7 @@
                 "cols": "12"
             }
         ],
-        "order": 2,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1963,21 +205,10 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
-    },
-    {
-        "id": "52f1cf16427fed48",
-        "type": "ui_group",
-        "name": "Message ",
-        "tab": "1c2bbd12911ac830",
-        "order": 4,
-        "disp": true,
-        "width": "11",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "d68276270f259ac2",
@@ -4473,132 +2704,8 @@
         "env": [],
         "modules": {
             "@flowfuse/node-red-dashboard": "1.29.0",
-            "node-red-dashboard": "3.6.6",
-            "node-red-node-ui-list": "0.3.6",
             "node-red-node-mysql": "2.0.0"
         }
-    },
-    {
-        "id": "f6f2fixremember0001",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Remember selected order",
-        "outputs": 0,
-        "func": "if (msg.payload && msg.payload.id) flow.set('selected_sale_order', msg.payload);\nreturn null;",
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "f6f2fixtoast0000001",
-        "type": "ui_toast",
-        "z": "f6f2187d.f17ca8",
-        "position": "top right",
-        "displayTime": "4",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Notification",
-        "x": 1450,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "f6f2fixresult000001",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "Show result and reload",
-        "outputs": 3,
-        "func": "// Answer of the API: show it as a notification, then reload the order list and the order.\nconst code = Number(msg.statusCode), d = msg.payload, order = msg.order || {};\nconst ok = code >= 200 && code < 300;\nlet text;\nif (!code) text = 'The integration API cannot be reached.';\nelse if (!ok) text = d && d.detail ? (typeof d.detail === 'string' ? d.detail : d.detail.map(e => e.msg).join('; ')) : `HTTP ${code}`;\nelse text = (d && (d.message || d.status)) || 'Done';\nconst toast = { topic: `${msg.action} · ${order.name || ''}`, payload: text, highlight: ok ? '' : 'red' };\nconst partner = flow.get('selected_customer');\nreturn [toast, partner ? { payload: { value: partner } } : null, order.id ? { payload: { id: order.id } } : null];\n",
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 1060,
-        "wires": [
-            [
-                "f6f2fixtoast0000001"
-            ],
-            [
-                "596bc9a937cb5bb0"
-            ],
-            [
-                "72755f5290a74424"
-            ]
-        ]
-    },
-    {
-        "id": "54fcfixremember0001",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Remember selected order",
-        "outputs": 0,
-        "func": "if (msg.payload && msg.payload.id) flow.set('selected_purchase_order', msg.payload);\nreturn null;",
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "54fcfixtoast0000001",
-        "type": "ui_toast",
-        "z": "54fc18ea533226e9",
-        "position": "top right",
-        "displayTime": "4",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Notification",
-        "x": 1450,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "54fcfixresult000001",
-        "type": "function",
-        "z": "54fc18ea533226e9",
-        "name": "Show result and reload",
-        "outputs": 3,
-        "func": "// Answer of the API: show it as a notification, then reload the order list and the order.\nconst code = Number(msg.statusCode), d = msg.payload, order = msg.order || {};\nconst ok = code >= 200 && code < 300;\nlet text;\nif (!code) text = 'The integration API cannot be reached.';\nelse if (!ok) text = d && d.detail ? (typeof d.detail === 'string' ? d.detail : d.detail.map(e => e.msg).join('; ')) : `HTTP ${code}`;\nelse text = (d && (d.message || d.status)) || 'Done';\nconst toast = { topic: `${msg.action} · ${order.name || ''}`, payload: text, highlight: ok ? '' : 'red' };\nconst partner = flow.get('selected_vendor');\nreturn [toast, partner ? { payload: { value: partner } } : null, order.id ? { payload: { id: order.id } } : null];\n",
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 760,
-        "wires": [
-            [
-                "54fcfixtoast0000001"
-            ],
-            [
-                "5d9eb44f815af04e"
-            ],
-            [
-                "aa793d12441c00db"
-            ]
-        ]
     },
     {
         "id": "a1c0000000000001",
@@ -5088,6 +3195,189 @@
         "wires": [
             [
                 "b2d0000000000010"
+            ]
+        ]
+    },
+    {
+        "id": "c3e0000000000002",
+        "type": "ui-page",
+        "name": "Back Office",
+        "ui": "62d6e656995736f5",
+        "path": "/back-office",
+        "icon": "mdi-briefcase-outline",
+        "layout": "grid",
+        "theme": "1821bfc72f1b2c08",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c3e0000000000001",
+        "type": "ui-group",
+        "name": "Back office",
+        "page": "c3e0000000000002",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c3e0000000000010",
+        "type": "ui-template",
+        "z": "c3e000000000000a",
+        "group": "c3e0000000000001",
+        "page": "",
+        "ui": "",
+        "name": "Back office page",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "head": "",
+        "format": "<template>\n<div class=\"bo\">\n  <header class=\"bo-top\">\n    <div class=\"bo-brand\"><span class=\"bo-logo\">S</span>Back office</div>\n    <nav class=\"bo-tabs\">\n      <button :class=\"{ on: area === 'sales' }\" @click=\"area = 'sales'\">Sales</button>\n      <button :class=\"{ on: area === 'purchase' }\" @click=\"area = 'purchase'\">Purchasing</button>\n    </nav>\n    <span class=\"bo-muted bo-small bo-right\">All actions are carried out in Odoo through the integration API.</span>\n  </header>\n\n  <!-- ============================================================ sales -->\n  <section v-show=\"area === 'sales'\" class=\"bo-grid\">\n    <div class=\"bo-panel\">\n      <v-autocomplete v-model=\"customerId\" :items=\"customers\" item-title=\"label\" item-value=\"value\" label=\"Customer\"\n        variant=\"outlined\" density=\"comfortable\" hide-details @update:model-value=\"loadOrders\"></v-autocomplete>\n      <div class=\"bo-list\">\n        <div v-if=\"!customerId\" class=\"bo-empty\">Choose a customer.</div>\n        <div v-else-if=\"!orders.length\" class=\"bo-empty\">{{ loadingList ? 'Loading…' : 'No orders.' }}</div>\n        <button v-for=\"o in orders\" :key=\"o.id\" class=\"bo-row\" :class=\"{ sel: order && order.id === o.id }\" @click=\"openOrder(o.id)\">\n          <div><b>{{ o.name }}</b><div class=\"bo-muted bo-small\">{{ day(o.date_order) }}</div></div>\n          <div class=\"bo-row-right\">\n            <span class=\"bo-chip\" :class=\"'st-' + o.state\">{{ saleState(o.state) }}</span>\n            <span v-if=\"o.state === 'sale'\" class=\"bo-chip\" :class=\"slug('inv-', o.invoice_status)\">{{ invoiceStatus(o.invoice_status) }}</span>\n            <div class=\"bo-amount\">{{ money(o.amount_total) }}</div>\n          </div>\n        </button>\n      </div>\n    </div>\n\n    <div class=\"bo-panel\">\n      <div v-if=\"!order\" class=\"bo-empty bo-big\">Select an order.</div>\n      <template v-else>\n        <div class=\"bo-head\">\n          <div><div class=\"bo-muted bo-small\">{{ order.partner_id && order.partner_id[1] }}</div><h2>{{ order.name }}</h2></div>\n          <div class=\"bo-chips\">\n            <span class=\"bo-chip big\" :class=\"'st-' + order.state\">{{ saleState(order.state) }}</span>\n            <span v-if=\"order.state === 'sale'\" class=\"bo-chip big\" :class=\"slug('dl-', order.delivery_state)\">{{ deliveryLabel(order.delivery_state) }}</span>\n            <span v-if=\"order.state === 'sale'\" class=\"bo-chip big\" :class=\"slug('inv-', order.invoice_status)\">{{ invoiceStatus(order.invoice_status) }}</span>\n          </div>\n        </div>\n\n        <div class=\"bo-flow\">\n          <div v-for=\"(s, i) in flow\" :key=\"s.label\" class=\"bo-step\" :class=\"s.status\">\n            <span class=\"bo-dot\">{{ s.status === 'done' ? '✓' : i + 1 }}</span>\n            <div><b>{{ s.label }}</b><div class=\"bo-small bo-muted\">{{ s.note }}</div></div>\n            <v-btn v-if=\"s.action\" size=\"small\" color=\"#1f4e5f\" class=\"text-white bo-step-btn\" :loading=\"busy === s.action\" :disabled=\"!!busy\" @click=\"act(s.action)\">{{ s.button }}</v-btn>\n          </div>\n        </div>\n\n        <div class=\"bo-facts\">\n          <div><span>Order date</span><b>{{ day(order.date_order) }}</b></div>\n          <div><span>Delivery date</span><b>{{ dateTime(order.scheduled_delivery_date) }}</b></div>\n          <div><span>Customer reference</span><b>{{ order.client_order_ref || '—' }}</b></div>\n          <div><span>Total</span><b>{{ money(order.amount_total) }}</b></div>\n        </div>\n\n        <table class=\"bo-table\">\n          <thead><tr><th>Product</th><th class=\"r\">Qty</th><th class=\"r\">Unit price</th><th class=\"r\">Total</th></tr></thead>\n          <tbody><tr v-for=\"l in order.order_line\" :key=\"l.line_id\">\n            <td>{{ l.product_name || l.description }}</td><td class=\"r\">{{ l.quantity }}</td>\n            <td class=\"r\">{{ money(l.unit_price) }}</td><td class=\"r\">{{ money(l.total) }}</td></tr></tbody>\n        </table>\n\n        <h3>Deliveries</h3>\n        <div v-if=\"!order.deliveries.length\" class=\"bo-muted bo-small\">None — created when the order is confirmed.</div>\n        <table v-else class=\"bo-table\">\n          <tbody><tr v-for=\"d in order.deliveries\" :key=\"d.id\">\n            <td>{{ d.name }}</td><td><span class=\"bo-chip\" :class=\"'pk-' + d.state\">{{ pickingState(d.state) }}</span></td>\n            <td class=\"r bo-muted\">{{ d.date_done ? 'done ' + dateTime(d.date_done) : 'planned ' + dateTime(d.scheduled_date) }}</td></tr></tbody>\n        </table>\n\n        <h3>Invoices</h3>\n        <div v-if=\"!invoices.length\" class=\"bo-muted bo-small\">No invoice yet.</div>\n        <table v-else class=\"bo-table\">\n          <tbody><tr v-for=\"inv in invoices\" :key=\"inv.id\">\n            <td>{{ inv.name || 'Draft invoice' }}</td><td class=\"r\">{{ money(inv.amount_total) }}</td>\n            <td><span class=\"bo-chip\" :class=\"inv.state === 'draft' ? 'st-draft' : 'pay-' + inv.payment_state\">{{ inv.state === 'draft' ? 'Draft' : paymentLabel(inv.payment_state) }}</span></td>\n            <td class=\"r bo-inv-actions\">\n              <v-btn v-if=\"inv.state === 'draft'\" size=\"small\" variant=\"tonal\" :loading=\"busy === 'invoice_confirm' + inv.id\" :disabled=\"!!busy\" @click=\"act('invoice_confirm', inv)\">Confirm</v-btn>\n              <v-btn v-if=\"inv.state === 'posted' && !['paid', 'in_payment', 'reversed'].includes(inv.payment_state)\" size=\"small\" variant=\"tonal\" color=\"#1e6b45\" :loading=\"busy === 'invoice_pay' + inv.id\" :disabled=\"!!busy\" @click=\"act('invoice_pay', inv)\">Register payment</v-btn>\n              <a class=\"bo-doc\" :href=\"pdf('invoice', inv.id)\" target=\"_blank\">PDF</a>\n            </td></tr></tbody>\n        </table>\n\n        <div class=\"bo-actions\">\n          <v-btn v-if=\"order.state !== 'cancel'\" variant=\"outlined\" color=\"#b3261e\" :disabled=\"!!busy\" :loading=\"busy === 'cancel'\"\n            @click=\"ask(`Cancel ${order.name}?`, () => act('cancel'))\">Cancel order</v-btn>\n          <span class=\"bo-spacer\"></span>\n          <a class=\"bo-doc\" :href=\"pdf('order', order.id)\" target=\"_blank\">⬇ {{ ['draft', 'sent'].includes(order.state) ? 'Quotation' : 'Order' }} PDF</a>\n        </div>\n      </template>\n    </div>\n  </section>\n\n  <!-- ============================================================ purchasing -->\n  <section v-show=\"area === 'purchase'\" class=\"bo-grid\">\n    <div class=\"bo-panel\">\n      <v-autocomplete v-model=\"vendorId\" :items=\"vendors\" item-title=\"label\" item-value=\"value\" label=\"Vendor\"\n        variant=\"outlined\" density=\"comfortable\" hide-details @update:model-value=\"loadPurchases\"></v-autocomplete>\n      <div class=\"bo-list\">\n        <div v-if=\"!vendorId\" class=\"bo-empty\">Choose a vendor.</div>\n        <div v-else-if=\"!purchases.length\" class=\"bo-empty\">{{ loadingList ? 'Loading…' : 'No purchase orders.' }}</div>\n        <button v-for=\"o in purchases\" :key=\"o.id\" class=\"bo-row\" :class=\"{ sel: po && po.id === o.id }\" @click=\"openPurchase(o.id)\">\n          <div><b>{{ o.name }}</b><div class=\"bo-muted bo-small\">{{ day(o.date_order) }}</div></div>\n          <div class=\"bo-row-right\"><span class=\"bo-chip\" :class=\"slug('po-', o.state)\">{{ poState(o.state) }}</span>\n            <div class=\"bo-amount\">{{ money(o.amount_total) }}</div></div>\n        </button>\n      </div>\n    </div>\n\n    <div class=\"bo-panel\">\n      <div v-if=\"!po\" class=\"bo-empty bo-big\">Select a purchase order.</div>\n      <template v-else>\n        <div class=\"bo-head\">\n          <div><div class=\"bo-muted bo-small\">{{ po.partner_id && po.partner_id[1] }}</div><h2>{{ po.name }}</h2></div>\n          <span class=\"bo-chip big\" :class=\"slug('po-', po.state)\">{{ poState(po.state) }}</span>\n        </div>\n        <div class=\"bo-facts\">\n          <div><span>Order date</span><b>{{ day(po.date_order) }}</b></div>\n          <div><span>Expected arrival</span><b>{{ dateTime(po.expected_arrival) }}</b></div>\n          <div><span>Arrival date confirmed by vendor</span><b>{{ po.arrival_confirmed ? 'yes' : 'no' }}</b></div>\n          <div><span>Total</span><b>{{ money(po.amount_total) }}</b></div>\n        </div>\n        <table class=\"bo-table\">\n          <thead><tr><th>Product</th><th class=\"r\">Qty</th><th class=\"r\">Unit price</th><th class=\"r\">Total</th></tr></thead>\n          <tbody><tr v-for=\"l in po.order_line\" :key=\"l.id\">\n            <td>{{ l.product_name || l.name }}</td><td class=\"r\">{{ l.product_qty }}</td>\n            <td class=\"r\">{{ money(l.price_unit) }}</td><td class=\"r\">{{ money(l.price_total) }}</td></tr></tbody>\n        </table>\n        <div class=\"bo-actions\">\n          <v-btn v-if=\"['draft', 'sent', 'to approve'].includes(po.state)\" color=\"#1f4e5f\" class=\"text-white\" :loading=\"busy === 'po_confirm'\" :disabled=\"!!busy\" @click=\"act('po_confirm')\">Confirm order</v-btn>\n          <v-btn v-if=\"po.state === 'purchase' && !po.arrival_confirmed && !po.received_on\" variant=\"outlined\" :loading=\"busy === 'po_arrival'\" :disabled=\"!!busy\" @click=\"act('po_arrival')\">Vendor confirmed the arrival date</v-btn>\n          <v-btn v-if=\"po.state !== 'cancel'\" variant=\"outlined\" color=\"#b3261e\" :loading=\"busy === 'po_cancel'\" :disabled=\"!!busy\"\n            @click=\"ask(`Cancel ${po.name}?`, () => act('po_cancel'))\">Cancel</v-btn>\n          <span class=\"bo-spacer\"></span>\n          <a class=\"bo-doc\" :href=\"pdf('purchase', po.id)\" target=\"_blank\">⬇ Purchase order PDF</a>\n        </div>\n      </template>\n    </div>\n  </section>\n\n  <v-dialog v-model=\"confirmBox.show\" max-width=\"400\">\n    <v-card class=\"pa-2\"><v-card-text>{{ confirmBox.text }}</v-card-text>\n      <v-card-actions><v-spacer></v-spacer><v-btn @click=\"confirmBox.show = false\">Back</v-btn>\n        <v-btn color=\"#b3261e\" @click=\"confirmBox.show = false; confirmBox.fn()\">Yes, cancel it</v-btn></v-card-actions></v-card>\n  </v-dialog>\n  <v-snackbar v-model=\"toast.show\" :color=\"toast.ok ? '#1e6b45' : '#b3261e'\" location=\"top right\" :timeout=\"toast.ok ? 3500 : 8000\">{{ toast.text }}</v-snackbar>\n</div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      area: 'sales', customers: [], vendors: [], customerId: null, vendorId: null,\n      orders: [], order: null, invoices: [], purchases: [], po: null, loadingList: false, busy: '',\n      toast: { show: false, text: '', ok: true }, confirmBox: { show: false, text: '', fn: () => {} }\n    }\n  },\n  computed: {\n    flow() {  // order-to-cash steps of the selected order, with the action that moves it forward\n      const o = this.order\n      if (!o) return []\n      const confirmed = o.state === 'sale', cancelled = o.state === 'cancel'\n      const delivered = o.delivery_state === 'delivered'\n      const invoiced = this.invoices.some(i => i.state === 'posted')\n      const paid = invoiced && this.invoices.filter(i => i.state === 'posted').every(i => ['paid', 'in_payment'].includes(i.payment_state))\n      const st = (done, ready) => cancelled ? 'off' : done ? 'done' : ready ? 'now' : 'off'\n      return [\n        { label: 'Confirm', note: confirmed ? 'Sales order' : 'Quotation', status: st(confirmed, !cancelled),\n          action: !confirmed && !cancelled ? 'confirm' : null, button: 'Confirm order' },\n        { label: 'Deliver', note: delivered ? 'Shipped' : (confirmed ? 'Waiting in the warehouse' : ''), status: st(delivered, confirmed),\n          action: confirmed && o.delivery_state === 'to deliver' ? 'deliver' : null, button: 'Validate delivery' },\n        { label: 'Invoice', note: invoiced ? this.invoices.filter(i => i.state === 'posted').map(i => i.name).join(', ')\n            : o.invoice_status === 'to invoice' ? 'Ready to invoice'\n            : (delivered && !this.invoices.length ? 'Odoo sees nothing to invoice (check the invoicing policy of the products)' : ''),\n          status: st(invoiced, confirmed && delivered), action: confirmed && o.invoice_status === 'to invoice' ? 'invoice' : null, button: 'Create invoice' },\n        { label: 'Payment', note: paid ? 'Paid' : (invoiced ? 'Waiting for payment' : ''), status: st(paid, invoiced) }\n      ]\n    }\n  },\n  mounted() {\n    this.handler = (msg) => this.receive(msg)\n    this.$socket.on('msg-input:' + this.id, this.handler)\n    this.send({ topic: 'init', payload: {} })\n  },\n  unmounted() { this.$socket.off('msg-input:' + this.id, this.handler) },\n  methods: {\n    req(topic, payload = {}) { this.send({ topic, payload }) },\n    receive(msg) {\n      const p = msg.payload\n      switch (msg.topic) {\n        case 'customers': this.customers = p; break\n        case 'vendors': this.vendors = p; break\n        case 'orders': if (p.customer_id === this.customerId) { this.orders = p.orders; this.loadingList = false } break\n        case 'order': if (!this.order || this.order.id === p.id || this.wanted === p.id) { if (!this.order || this.order.id !== p.id) this.invoices = []; this.order = p } break\n        case 'invoices': if (this.order && this.order.name === p.order_name) this.invoices = p.invoices; break\n        case 'purchases': if (p.vendor_id === this.vendorId) { this.purchases = p.orders; this.loadingList = false } break\n        case 'purchase': if (!this.po || this.po.id === p.id || this.wantedPo === p.id) this.po = p; break\n        case 'toast': case 'error':\n          this.toast.show = false\n          this.$nextTick(() => { this.toast = { show: true, text: p.text, ok: msg.topic === 'toast' } })\n          this.busy = ''\n          break\n      }\n    },\n    loadOrders() { this.order = null; this.orders = []; this.invoices = []; if (this.customerId) { this.loadingList = true; this.req('orders', { customer_id: this.customerId }) } },\n    loadPurchases() { this.po = null; this.purchases = []; if (this.vendorId) { this.loadingList = true; this.req('purchases', { vendor_id: this.vendorId }) } },\n    openOrder(id) { this.wanted = id; if (this.order && this.order.id !== id) { this.order = null; this.invoices = [] } this.req('order', { order_id: id }) },\n    openPurchase(id) { this.wantedPo = id; if (this.po && this.po.id !== id) this.po = null; this.req('purchase', { po_id: id }) },\n    act(action, invoice) {\n      this.busy = action + (invoice ? invoice.id : '')\n      const o = this.order, po = this.po\n      this.req(action, { customer_id: this.customerId, vendor_id: this.vendorId,\n        order_id: o && o.id, order_name: o && o.name, invoice_id: invoice && invoice.id, invoice_name: invoice && invoice.name,\n        po_id: po && po.id, po_name: po && po.name })\n    },\n    slug(prefix, value) { return prefix + String(value).replace(/\\s+/g, '-') },\n    ask(text, fn) { this.confirmBox = { show: true, text, fn } },\n    pdf(kind, id) { return `${window.location.origin}/pdf/${kind}/${id}` },\n    saleState(s) { return { draft: 'Quotation', sent: 'Quotation sent', sale: 'Sales order', cancel: 'Cancelled' }[s] || s },\n    poState(s) { return { draft: 'Request for quotation', sent: 'RFQ sent', 'to approve': 'To approve', purchase: 'Purchase order', done: 'Locked', cancel: 'Cancelled' }[s] || s },\n    invoiceStatus(s) { return { 'to invoice': 'To invoice', invoiced: 'Invoiced', no: 'Nothing to invoice', upselling: 'Upselling' }[s] || s },\n    deliveryLabel(s) { return { 'to deliver': 'To deliver', delivered: 'Delivered', none: 'No delivery' }[s] || s },\n    pickingState(s) { return { draft: 'Draft', waiting: 'Waiting', confirmed: 'Waiting stock', assigned: 'Ready', done: 'Done', cancel: 'Cancelled' }[s] || s },\n    paymentLabel(s) { return { not_paid: 'Not paid', in_payment: 'In payment', paid: 'Paid', partial: 'Partially paid', reversed: 'Reversed' }[s] || s },\n    money(v) { return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(v || 0) },\n    parse(s) { return s ? new Date(String(s).replace(' ', 'T')) : null },\n    day(s) { const d = this.parse(s); return d ? d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '—' },\n    dateTime(s) { const d = this.parse(s); return d ? d.toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '—' }\n  }\n}\n</script>\n\n<style>\n.bo { --ink:#1d2733; --muted:#66727f; --line:#e4e8ec; --bg:#f4f6f8; --accent:#1f4e5f; --soft:#e3eef1;\n  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--ink); background: var(--bg);\n  border-radius: 12px; padding-bottom: 28px; min-height: calc(100vh - 110px); overflow: hidden; }\n.bo .v-btn { text-transform: none; letter-spacing: 0; font-weight: 600; }\n.bo h2 { font-size: 22px; margin: 0; } .bo h3 { font-size: 14px; margin: 18px 0 6px; }\n.bo-muted { color: var(--muted); } .bo-small { font-size: 12.5px; } .bo-spacer { flex: 1; } .bo-right { margin-left: auto; }\n.bo-top { display: flex; align-items: center; gap: 24px; padding: 14px 24px; background: #fff; border-bottom: 1px solid var(--line); flex-wrap: wrap; }\n.bo-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }\n.bo-logo { width: 30px; height: 30px; border-radius: 8px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 800; }\n.bo-tabs { display: flex; gap: 4px; }\n.bo-tabs button { padding: 8px 14px; border-radius: 8px; color: var(--muted); font-weight: 600; }\n.bo-tabs button.on { background: var(--soft); color: var(--accent); }\n.bo-grid { display: grid; grid-template-columns: minmax(300px, 4fr) 8fr; gap: 16px; padding: 20px 24px 0; align-items: start; }\n.bo-panel { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }\n.bo-list { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; max-height: 640px; overflow-y: auto; }\n.bo-row { display: flex; justify-content: space-between; align-items: center; text-align: left; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; }\n.bo-row:hover { background: #fafbfc; border-color: #b9c7cf; } .bo-row.sel { border-color: var(--accent); background: var(--soft); }\n.bo-row-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }\n.bo-amount { font-weight: 600; font-variant-numeric: tabular-nums; }\n.bo-chips { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }\n.bo-chip { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 11.5px; font-weight: 650; background: #eceff2; color: #4a5560; white-space: nowrap; }\n.bo-chip.big { font-size: 12.5px; padding: 4px 11px; }\n.st-draft, .po-draft, .inv-to-invoice, .dl-to-deliver, .pay-not_paid, .pk-assigned, .pk-confirmed { background: #fff3d6; color: #8a5a00; }\n.st-sent, .po-sent, .po-to-approve, .pay-partial, .pay-in_payment { background: #e3ecfb; color: #2a55a0; }\n.st-sale, .po-purchase, .po-done, .inv-invoiced, .dl-delivered, .pay-paid, .pk-done { background: #dcf3e6; color: #1e6b45; }\n.st-cancel, .po-cancel, .pk-cancel { background: #f3e1e1; color: #9b2c2c; }\n.bo-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }\n.bo-head + .bo-facts { margin-top: 16px; }\n.bo-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }\n.bo-step { border: 1px solid var(--line); border-radius: 10px; padding: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }\n.bo-step > div { flex: 1; min-width: 0; }\n.bo-step-btn { width: 100%; }\n.bo-dot { width: 22px; height: 22px; border-radius: 50%; background: #d5dbe0; color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 700; flex: none; }\n.bo-step.done { background: #f1faf5; border-color: #cde9d8; } .bo-step.done .bo-dot { background: #2e8b57; }\n.bo-step.now { border-color: var(--accent); background: var(--soft); } .bo-step.now .bo-dot { background: var(--accent); }\n.bo-step.off { opacity: .55; }\n.bo-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 14px; }\n.bo-facts span { display: block; font-size: 12px; color: var(--muted); } .bo-facts b { font-weight: 600; font-size: 14px; }\n.bo-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }\n.bo-table th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 600; padding: 7px 6px; border-bottom: 1px solid var(--line); }\n.bo-table td { padding: 8px 6px; border-bottom: 1px solid #f0f2f4; font-variant-numeric: tabular-nums; }\n.bo-table .r { text-align: right; }\n.bo-inv-actions { display: flex; gap: 6px; justify-content: flex-end; align-items: center; }\n.bo-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }\n.bo-doc { color: var(--accent); font-weight: 600; font-size: 13px; text-decoration: none; padding: 6px 10px; border-radius: 8px; background: var(--soft); }\n.bo-empty { color: var(--muted); padding: 24px 8px; text-align: center; } .bo-empty.bo-big { padding: 80px 24px; }\n@media (max-width: 960px) {\n  .bo-grid { grid-template-columns: 1fr; padding: 16px 12px 0; }\n  .bo-flow, .bo-facts { grid-template-columns: repeat(2, 1fr); }\n  .bo-top { padding: 12px; }\n}\n</style>\n",
+        "storeOutMessages": false,
+        "passthru": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "c3e0000000000011"
+            ]
+        ]
+    },
+    {
+        "id": "c3e0000000000011",
+        "type": "function",
+        "z": "c3e000000000000a",
+        "name": "Back office actions",
+        "func": "// Back office (employees): every click becomes a call to the integration API.\nconst API = env.get('API_URL') || 'http://api:8000';\nconst p = msg.payload || {};\nconst id = v => { const n = Number(v); return Number.isInteger(n) && n > 0 ? n : null; };\nconst name = typeof p.order_name === 'string' && /^[\\w\\/-]{1,30}$/.test(p.order_name) ? encodeURIComponent(p.order_name) : null;\nconst call = (method, path) => ({ _client: msg._client, action: msg.topic, ctx: p, method, url: API + path, payload: '', headers: {} });\n\nconst routes = {\n    init:            () => [call('GET', '/customers/all'), call('GET', '/vendors/all')],\n    orders:          () => id(p.customer_id) && call('GET', `/saleorders/by_id/${id(p.customer_id)}`),\n    order:           () => id(p.order_id) && call('GET', `/saleorders/by_orderid/${id(p.order_id)}`),\n    invoices:        () => name && call('GET', `/accounting/invoice/by_saleorder/${name}`),\n    confirm:         () => name && call('PUT', `/saleorders/quotations/confirm/${name}`),\n    cancel:          () => name && call('PUT', `/saleorders/quotations/cancel/${name}`),\n    deliver:         () => name && call('POST', `/saleorders/delivery/validate/${name}`),\n    invoice:         () => name && call('POST', `/saleorders/invoice/create/${name}`),\n    invoice_confirm: () => id(p.invoice_id) && call('POST', `/accounting/invoice/${id(p.invoice_id)}/confirm`),\n    invoice_pay:     () => id(p.invoice_id) && call('POST', `/accounting/invoice/${id(p.invoice_id)}/pay`),\n    purchases:       () => id(p.vendor_id) && call('GET', `/purchaseorders/by_vendor_id/${id(p.vendor_id)}`),\n    purchase:        () => id(p.po_id) && call('GET', `/purchaseorders/by_id/${id(p.po_id)}`),\n    po_confirm:      () => id(p.po_id) && call('PUT', `/purchaseorders/confirm/${id(p.po_id)}`),\n    po_cancel:       () => id(p.po_id) && call('PUT', `/purchaseorders/cancel/${id(p.po_id)}`),\n    po_arrival:      () => id(p.po_id) && call('PUT', `/purchaseorders/deliverdate/confirm/${id(p.po_id)}`),\n};\nconst route = routes[msg.topic];\nconst out = route && route();\nif (!out) {\n    return [null, { _client: msg._client, topic: 'error', payload: { text: 'This action needs a selected order.' } }];\n}\nreturn [out, null];\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "c3e0000000000012"
+            ],
+            [
+                "c3e0000000000010"
+            ]
+        ]
+    },
+    {
+        "id": "c3e0000000000012",
+        "type": "http request",
+        "z": "c3e000000000000a",
+        "name": "Integration API",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 120,
+        "wires": [
+            [
+                "c3e0000000000013"
+            ]
+        ]
+    },
+    {
+        "id": "c3e0000000000013",
+        "type": "function",
+        "z": "c3e000000000000a",
+        "name": "API result",
+        "func": "// Answer of the API. Output 1: to the page, output 2: follow-up reads (reload what changed).\nconst a = msg.action, c = msg.ctx || {}, d = msg.payload;\nconst ui = (topic, payload) => ({ _client: msg._client, topic, payload });\nconst next = (topic, payload) => ({ _client: msg._client, topic, payload: { ...c, ...payload } });\nconst code = Number(msg.statusCode);\nif (!code || code >= 400) {\n    let detail = d && typeof d === 'object' ? d.detail : null;\n    if (Array.isArray(detail)) detail = detail.map(e => e.msg).join('; ');\n    return [ui('error', { text: !code ? 'The integration API cannot be reached.' : (detail || `HTTP ${code}`) }), null];\n}\nconst reloadSale = [next('order', {}), next('orders', {})];\nconst reloadPurchase = [next('purchase', {}), next('purchases', {})];\nconst done = text => ui('toast', { text });\n\nswitch (a) {\ncase 'init':\n    return [ui(msg.url.endsWith('/vendors/all') ? 'vendors' : 'customers', d), null];\ncase 'orders':\n    return [ui('orders', { customer_id: c.customer_id, orders: d.map(o => ({ id: o.id, name: o.name, state: o.state,\n        date_order: o.date_order, amount_total: o.amount_total, invoice_status: o.invoice_status })) }), null];\ncase 'order':\n    return [ui('order', d), next('invoices', { order_name: d.name })];\ncase 'invoices':\n    return [ui('invoices', { order_name: c.order_name, invoices: d.invoice }), null];\ncase 'confirm':  return [done(`${c.order_name} confirmed: it is now a sales order and a delivery was created.`), reloadSale];\ncase 'cancel':   return [done(`${c.order_name} cancelled.`), reloadSale];\ncase 'deliver':  return [done(`${c.order_name} delivered.`), reloadSale];\ncase 'invoice':  return [done(`Draft invoice created for ${c.order_name}. Confirm it to send it.`), reloadSale];\ncase 'invoice_confirm': return [done(d.message), reloadSale];\ncase 'invoice_pay':     return [done(d.message), reloadSale];\ncase 'purchases':\n    return [ui('purchases', { vendor_id: c.vendor_id, orders: d.map(o => ({ id: o.id, name: o.name, state: o.state,\n        date_order: o.date_order, amount_total: o.amount_total })) }), null];\ncase 'purchase':\n    return [ui('purchase', d), null];\ncase 'po_confirm': return [done(`${c.po_name} confirmed and sent to the vendor.`), reloadPurchase];\ncase 'po_cancel':  return [done(`${c.po_name} cancelled.`), reloadPurchase];\ncase 'po_arrival': return [done(`Arrival date of ${c.po_name} marked as confirmed by the vendor.`), reloadPurchase];\n}\nreturn null;\n",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 120,
+        "wires": [
+            [
+                "c3e0000000000010"
+            ],
+            [
+                "c3e0000000000011"
+            ]
+        ]
+    },
+    {
+        "id": "c3e0000000000014",
+        "type": "catch",
+        "z": "c3e000000000000a",
+        "name": "API or database error",
+        "scope": [
+            "c3e0000000000012"
+        ],
+        "uncaught": false,
+        "x": 650,
+        "y": 200,
+        "wires": [
+            [
+                "c3e0000000000015"
+            ]
+        ]
+    },
+    {
+        "id": "c3e0000000000015",
+        "type": "function",
+        "z": "c3e000000000000a",
+        "name": "Tell the employee",
+        "func": "// An API call or a query failed before it returned an answer (service down, database not reachable).\nconst text = /database|ER_|ECONN|mysql/i.test(msg.error && msg.error.message || '')\n    ? 'Our database is not reachable at the moment. Please try again later.'\n    : 'Something went wrong: ' + ((msg.error && msg.error.message) || 'unknown error');\nif (!msg._client) return null;\nreturn { _client: msg._client, topic: 'error', payload: { text } };\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "c3e0000000000010"
             ]
         ]
     }

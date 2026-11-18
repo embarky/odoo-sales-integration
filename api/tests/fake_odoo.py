@@ -38,15 +38,15 @@ def initial_data() -> dict:
                 "zip": False, "country_id": False, "comment": False},
         },
         "sale.order": {
-            10: {"id": 10, "name": "S00010", "invoice_status": "no", "amount_untaxed": 100.0, "amount_tax": 0.0, "client_order_ref": False, "state": "draft", "partner_id": [1, "Agrolait"],
+            10: {"id": 10, "name": "S00010", "invoice_status": "no", "amount_untaxed": 100.0, "amount_tax": 0.0, "client_order_ref": False, "picking_ids": [], "state": "draft", "partner_id": [1, "Agrolait"],
                  "create_date": "2025-10-01 08:00:00", "date_order": "2025-10-01 08:00:00", "amount_total": 100.0,
                  "order_line": [100, 101], "invoice_ids": [], "commitment_date": False,
                  "expected_date": "2025-10-31 21:00:00", "locked": False},
-            11: {"id": 11, "name": "S00011", "invoice_status": "no", "amount_untaxed": 50.0, "amount_tax": 0.0, "client_order_ref": False, "state": "sent", "partner_id": [2, "Agrolait, Jane Doe"],
+            11: {"id": 11, "name": "S00011", "invoice_status": "no", "amount_untaxed": 50.0, "amount_tax": 0.0, "client_order_ref": False, "picking_ids": [], "state": "sent", "partner_id": [2, "Agrolait, Jane Doe"],
                  "create_date": "2025-10-02 08:00:00", "date_order": "2025-10-02 08:00:00", "amount_total": 50.0,
                  "order_line": [102], "invoice_ids": [], "commitment_date": False,
                  "expected_date": False, "locked": False},
-            12: {"id": 12, "name": "S00012", "invoice_status": "to invoice", "amount_untaxed": 75.0, "amount_tax": 0.0, "client_order_ref": "PO-7", "state": "sale", "partner_id": [4, "Brandon Freeman"],
+            12: {"id": 12, "name": "S00012", "invoice_status": "to invoice", "amount_untaxed": 75.0, "amount_tax": 0.0, "client_order_ref": "PO-7", "picking_ids": [300], "state": "sale", "partner_id": [4, "Brandon Freeman"],
                  "create_date": "2025-10-03 08:00:00", "date_order": "2025-10-03 08:00:00", "amount_total": 75.0,
                  "order_line": [103], "invoice_ids": [500], "commitment_date": "2025-11-05 09:00:00",
                  "expected_date": "2025-11-04 09:00:00", "locked": False, "to_invoice": True},
@@ -66,6 +66,14 @@ def initial_data() -> dict:
                   "state": "posted", "payment_state": "paid"},
         },
         "sale.advance.payment.inv": {},
+        "stock.picking": {
+            300: {"id": 300, "name": "WH/OUT/00001", "state": "assigned", "scheduled_date": "2025-11-05 09:00:00",
+                  "date_done": False, "move_ids": [400]},
+        },
+        "stock.move": {
+            400: {"id": 400, "product_uom_qty": 3.0, "quantity": 0.0, "picked": False, "state": "assigned"},
+        },
+        "account.payment.register": {},
         "purchase.order": {
             20: {"id": 20, "name": "P00020", "state": "draft", "partner_id": [3, "Demo Supplier"],
                  "date_order": "2025-10-05 08:00:00", "date_planned": "2025-10-10 12:00:00", "amount_total": 300.0,
@@ -166,11 +174,33 @@ class FakeOdoo:
             r.update(vals)
         return True
 
-    def m_create(self, model, vals, **kw):
+    def m_create(self, model, vals, context=None, **kw):
         table = self.data[model]
         new_id = max(table, default=0) + 1
-        table[new_id] = {"id": new_id, **vals}
+        table[new_id] = {"id": new_id, **vals, "_context": context or {}}
         return new_id
+
+    # stock
+    def m_button_validate(self, model, ids, context=None, **kw):
+        for p in self._records(model, ids):
+            moves = self._records("stock.move", p["move_ids"])
+            if not all(m["picked"] for m in moves):
+                return {"type": "ir.actions.act_window", "res_model": "stock.backorder.confirmation"}
+            p["state"], p["date_done"] = "done", "2025-11-05 10:00:00"
+        return True
+
+    # accounting
+    def m_action_post(self, model, ids, **kw):
+        for r in self._records(model, ids):
+            r["state"] = "posted"
+            r["name"] = r["name"] or f"INV/2025/{r['id']:05d}"
+        return False
+
+    def m_action_create_payments(self, model, ids, context=None, **kw):
+        wizard = self._records(model, ids)[0]
+        for inv in self._records("account.move", wizard["_context"]["active_ids"]):
+            inv["payment_state"] = "paid"
+        return True
 
     def m_unlink(self, model, ids, **kw):
         for r in self._records(model, ids):

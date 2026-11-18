@@ -53,8 +53,14 @@ def get_purchase_orders_by_vendor(vendor_id: int, odoo: Odoo):
 
 @router.get("/by_id/{purchase_order_id}")
 def get_purchase_order(purchase_order_id: int, odoo: Odoo):
-    """One purchase order with its lines."""
-    return _with_lines(odoo, [_po(odoo, purchase_order_id, PO_FIELDS)])[0]
+    """One purchase order with its lines, its expected arrival in local time and whether the
+    vendor confirmed that date."""
+    po = _po(odoo, purchase_order_id, PO_FIELDS + ["mail_reminder_confirmed", "effective_date"])
+    tz = odoo.settings.timezone
+    po["expected_arrival"] = odoo_to_local(po["date_planned"], tz)
+    po["received_on"] = odoo_to_local(po.pop("effective_date"), tz)
+    po["arrival_confirmed"] = po.pop("mail_reminder_confirmed")
+    return _with_lines(odoo, [po])[0]
 
 
 @router.put("/confirm/{purchase_orders_id}")

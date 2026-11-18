@@ -8,8 +8,8 @@
 #   Odoo                http://localhost:8069        login admin / admin
 #   API documentation   http://localhost:8000/docs
 #   Customer portal     http://localhost:1880/dashboard/portal
+#   Back office         http://localhost:1880/dashboard/back-office
 #   Service desk + KPIs http://localhost:1880/dashboard/service-desk
-#   Employee dashboard  http://localhost:1880/ui
 #   Node-RED editor     http://localhost:1880
 #
 # To use your own Odoo instead, put ODOO_URL, ODOO_DB, ODOO_USER and ODOO_PASSWORD in a .env file.

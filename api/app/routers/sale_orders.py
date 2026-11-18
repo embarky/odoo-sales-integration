@@ -7,10 +7,11 @@ from ..timeutils import odoo_to_local, parse_user_datetime, to_odoo
 
 router = APIRouter(prefix="/saleorders", tags=["Sale Orders"])
 
-ORDER_FIELDS = ["name", "state", "create_date", "date_order", "amount_total", "partner_id", "order_line"]
+ORDER_FIELDS = ["name", "state", "create_date", "date_order", "amount_total", "partner_id", "order_line",
+                "invoice_status"]
 LINE_FIELDS = ["name", "product_id", "product_uom_qty", "price_unit", "price_total", "display_type"]
 DETAIL_FIELDS = ORDER_FIELDS + ["commitment_date", "expected_date", "invoice_status", "invoice_ids",
-                                "amount_untaxed", "amount_tax", "client_order_ref"]
+                                "amount_untaxed", "amount_tax", "client_order_ref", "picking_ids"]
 EDITABLE_STATES = ("draft", "sent")  # quotations; confirmed orders are changed by the company
 
 
@@ -92,8 +93,22 @@ def _detail(odoo: OdooClient, order: dict) -> dict:
     order["commitment_date"] = odoo_to_local(order["commitment_date"], tz)
     order["expected_date"] = odoo_to_local(order["expected_date"], tz)
     order["invoice_count"] = len(order.pop("invoice_ids"))
+    order["deliveries"] = _deliveries(odoo, order.pop("picking_ids"))
+    pending = [d for d in order["deliveries"] if d["state"] not in ("done", "cancel")]
+    done = [d for d in order["deliveries"] if d["state"] == "done"]
+    order["delivery_state"] = "to deliver" if pending else ("delivered" if done else "none")
     order["editable"] = order["state"] in EDITABLE_STATES
     return order
+
+
+def _deliveries(odoo: OdooClient, picking_ids: list[int]) -> list[dict]:
+    if not picking_ids:
+        return []
+    tz = odoo.settings.timezone
+    pickings = odoo.execute("stock.picking", "read", picking_ids, fields=["name", "state", "scheduled_date", "date_done"])
+    return [{"id": p["id"], "name": p["name"], "state": p["state"],
+             "scheduled_date": odoo_to_local(p["scheduled_date"], tz), "date_done": odoo_to_local(p["date_done"], tz)}
+            for p in pickings]
 
 
 # ---------------------------------------------------------------- quotation lines
@@ -161,6 +176,32 @@ def cancel_quotation(order_name: str, odoo: Odoo):
     if state != "cancel":
         raise HTTPException(409, f"Odoo did not cancel {order_name} (state is still '{state}')")
     return {"message": "Order canceled successfully", "order_name": order_name, "ids": [order["id"]], "state": state}
+
+
+# ---------------------------------------------------------------- delivery
+@router.post("/delivery/validate/{order_name}")
+def validate_delivery(order_name: str, odoo: Odoo):
+    """Ship everything still open on a confirmed order: the ordered quantities are set as done
+    and the delivery orders are validated (stock.picking.button_validate)."""
+    order = _order_by_name(odoo, order_name, ["state", "picking_ids"])
+    if order["state"] != "sale":
+        raise HTTPException(409, f"Order {order_name} must be confirmed before delivery (state '{order['state']}')")
+    pickings = [p for p in _deliveries(odoo, order["picking_ids"]) if p["state"] not in ("done", "cancel")]
+    if not pickings:
+        raise HTTPException(409, f"Nothing left to deliver for {order_name}")
+    for picking in pickings:
+        move_ids = odoo.execute("stock.picking", "read", [picking["id"]], fields=["move_ids"])[0]["move_ids"]
+        for move in odoo.execute("stock.move", "read", move_ids, fields=["product_uom_qty", "state"]):
+            if move["state"] not in ("done", "cancel"):
+                odoo.execute("stock.move", "write", [move["id"]], {"quantity": move["product_uom_qty"], "picked": True})
+        # skip_sms: no "send an SMS to the customer?" wizard (stock_sms)
+        result = odoo.execute("stock.picking", "button_validate", [picking["id"]], context={"skip_sms": True})
+        if isinstance(result, dict) and result.get("res_model"):
+            raise HTTPException(409, f"Odoo asks for a manual step to validate {picking['name']} ({result['res_model']})")
+    after = _deliveries(odoo, order["picking_ids"])
+    if any(p["state"] not in ("done", "cancel") for p in after):
+        raise HTTPException(409, f"Odoo did not complete the delivery of {order_name}")
+    return {"message": f"{order_name} delivered", "order_name": order_name, "deliveries": after}
 
 
 # ---------------------------------------------------------------- invoicing

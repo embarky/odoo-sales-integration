@@ -1,6 +1,7 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 
 from ..dependencies import Odoo, find_one, not_found, pdf_response
+from ..odoo import OdooClient
 
 router = APIRouter(prefix="/accounting", tags=["Accounting"])
 
@@ -25,3 +26,37 @@ def get_invoice_pdf(invoice_id: int, odoo: Odoo):
         raise not_found(f"Invoice {invoice_id}")
     content = odoo.fetch_report_pdf("account.report_invoice_with_payments", invoice_id)
     return pdf_response(content, f"invoice_{invoice_id}.pdf")
+
+
+def _invoice(odoo: OdooClient, invoice_id: int) -> dict:
+    return find_one(odoo, "account.move", [("id", "=", invoice_id)], INVOICE_FIELDS, f"Invoice {invoice_id}")
+
+
+@router.post("/invoice/{invoice_id}/confirm")
+def confirm_invoice(invoice_id: int, odoo: Odoo):
+    """Post a draft invoice (button 'Confirm', account.move.action_post): it gets its number."""
+    invoice = _invoice(odoo, invoice_id)
+    if invoice["state"] != "draft":
+        raise HTTPException(409, f"Invoice {invoice['name'] or invoice_id} is '{invoice['state']}', not a draft")
+    odoo.execute("account.move", "action_post", [invoice_id])
+    invoice = _invoice(odoo, invoice_id)
+    if invoice["state"] != "posted":
+        raise HTTPException(409, f"Odoo did not post invoice {invoice_id}")
+    return {"message": f"Invoice {invoice['name']} confirmed", "invoice": invoice}
+
+
+@router.post("/invoice/{invoice_id}/pay")
+def register_payment(invoice_id: int, odoo: Odoo):
+    """Register the full payment of a posted invoice (button 'Pay', wizard account.payment.register)."""
+    invoice = _invoice(odoo, invoice_id)
+    if invoice["state"] != "posted":
+        raise HTTPException(409, f"Invoice {invoice['name'] or invoice_id} must be confirmed before payment")
+    if invoice["payment_state"] in ("paid", "in_payment", "reversed"):
+        raise HTTPException(409, f"Invoice {invoice['name']} is already paid")
+    context = {"active_model": "account.move", "active_ids": [invoice_id]}
+    wizard = odoo.execute("account.payment.register", "create", {}, context=context)
+    odoo.execute("account.payment.register", "action_create_payments", [wizard], context=context)
+    invoice = _invoice(odoo, invoice_id)
+    if invoice["payment_state"] not in ("paid", "in_payment"):
+        raise HTTPException(409, f"Odoo did not register the payment of {invoice['name']}")
+    return {"message": f"Payment of {invoice['name']} registered", "invoice": invoice}
