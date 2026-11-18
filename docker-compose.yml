@@ -1,20 +1,118 @@
+# Complete demo environment: Odoo + integration API + Node-RED portal + MySQL.
+#
+#   docker compose up -d --build
+#
+# First start: Odoo creates its database and installs Sales, Inventory, Invoicing and
+# Purchase (a few minutes), then the "seed" job adds demo orders and stops.
+#
+#   Odoo                http://localhost:8069        login admin / admin
+#   API documentation   http://localhost:8000/docs
+#   Customer portal     http://localhost:1880/dashboard
+#   Employee dashboard  http://localhost:1880/ui
+#   Node-RED editor     http://localhost:1880
+#
+# To use your own Odoo instead, put ODOO_URL, ODOO_DB, ODOO_USER and ODOO_PASSWORD in a .env file.
+
 services:
+  odoo-db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo"]
+      interval: 5s
+      retries: 20
+    restart: unless-stopped
+
+  odoo:
+    image: odoo:18.0
+    depends_on:
+      odoo-db:
+        condition: service_healthy
+    environment:
+      HOST: odoo-db
+      USER: odoo
+      PASSWORD: odoo
+    # creates the "saturne" database with demo data on first start
+    command: ["odoo", "-d", "saturne", "-i", "sale_management,stock,purchase,account", "--db-filter=^saturne$$"]
+    ports:
+      - "8069:8069"
+    volumes:
+      - odoo-data:/var/lib/odoo
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8069/web/health', timeout=5)"]
+      interval: 10s
+      start_period: 300s
+      retries: 30
+    restart: unless-stopped
+
+  seed:
+    image: python:3.12-slim
+    depends_on:
+      odoo:
+        condition: service_healthy
+    environment:
+      ODOO_URL: http://odoo:8069
+      ODOO_DB: saturne
+      ODOO_USER: admin
+      ODOO_PASSWORD: admin
+    volumes:
+      - ./demo:/demo:ro
+    command: ["python", "/demo/seed_odoo.py"]
+    restart: "no"
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: saturne
+      MYSQL_USER: saturne
+      MYSQL_PASSWORD: saturne
+      MYSQL_ROOT_PASSWORD: root
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:ro   # schema and demo data, loaded on first start
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-usaturne", "-psaturne"]
+      interval: 5s
+      retries: 30
+    restart: unless-stopped
+
   api:
     build: ./api
-    env_file: .env
+    depends_on:
+      odoo:
+        condition: service_healthy
+    environment:
+      ODOO_URL: ${ODOO_URL:-http://odoo:8069}
+      ODOO_DB: ${ODOO_DB:-saturne}
+      ODOO_USER: ${ODOO_USER:-admin}
+      ODOO_PASSWORD: ${ODOO_PASSWORD:-admin}
+      ODOO_VERIFY_SSL: ${ODOO_VERIFY_SSL:-true}
+      APP_TIMEZONE: ${APP_TIMEZONE:-Europe/Zurich}
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
     ports:
-      - "8000:8000"          # Swagger UI: http://localhost:8000/docs
+      - "8000:8000"
     restart: unless-stopped
 
   node-red:
-    image: nodered/node-red:4.0
-    ports:
-      - "1880:1880"          # editor: http://localhost:1880  dashboard: http://localhost:1880/dashboard
-    volumes:
-      - ./node-red:/data     # flows, settings and installed nodes are kept in the repository folder
-    extra_hosts:
-      # the existing flows call http://host.docker.internal:8000 ; this makes that name work on Linux too
-      - "host.docker.internal:host-gateway"
+    build: ./node-red
     depends_on:
-      - api
+      api:
+        condition: service_started
+      mysql:
+        condition: service_healthy
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./node-red:/data       # flows.json, flows_cred.json and settings.js from the repository
     restart: unless-stopped
+
+volumes:
+  odoo-db-data:
+  odoo-data:
+  mysql-data:

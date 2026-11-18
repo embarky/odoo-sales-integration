@@ -1,5 +1,1992 @@
 [
     {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "sales",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "54fc18ea533226e9",
+        "type": "tab",
+        "label": "purchase",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1c2bbd12911ac830",
+        "type": "ui_tab",
+        "name": "Odoo-API-NodeRed-Saturne-sales",
+        "icon": "dashboard-sales",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0c6d593420f1b7aa",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1821bfc72f1b2c08",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "f20fd5aa39f9f670",
+        "type": "ui_group",
+        "name": "Customers",
+        "tab": "1c2bbd12911ac830",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4e2d9d73c8d0cf89",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "f20fd5aa39f9f670",
+        "order": 5,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "b526edcacb29519b",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "f20fd5aa39f9f670",
+        "order": 6,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "1c73ec87bd969a77",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "f20fd5aa39f9f670",
+        "order": 7,
+        "width": 23,
+        "height": 1
+    },
+    {
+        "id": "471aed3a57dc9318",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "f20fd5aa39f9f670",
+        "order": 8,
+        "width": 23,
+        "height": 1
+    },
+    {
+        "id": "117d821a82b99754",
+        "type": "ui_spacer",
+        "z": "f6f2187d.f17ca8",
+        "name": "spacer",
+        "group": "f20fd5aa39f9f670",
+        "order": 9,
+        "width": 23,
+        "height": 1
+    },
+    {
+        "id": "fe64d88aac61e3db",
+        "type": "ui_group",
+        "name": "SaleOrders",
+        "tab": "1c2bbd12911ac830",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "491cb1f2cdf4d485",
+        "type": "ui_group",
+        "name": "SaleOrdersOperation",
+        "tab": "1c2bbd12911ac830",
+        "order": 3,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da01af37b6df1fa3",
+        "type": "ui_tab",
+        "name": "Odoo-API-NodeRed-Saturne-purchase",
+        "icon": "dashboard-purchase",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ebc2771a7848bb93",
+        "type": "ui_group",
+        "name": "purchase",
+        "tab": "da01af37b6df1fa3",
+        "order": 1,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ef5408d1c420db5",
+        "type": "ui_group",
+        "name": "Purchase Order Operation",
+        "tab": "da01af37b6df1fa3",
+        "order": 2,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d3b098e8d3850623",
+        "type": "ui-theme",
+        "name": "Purple Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#7000cc",
+            "bgPage": "#d9bdef",
+            "groupBg": "#ffffff",
+            "groupOutline": "#7000cc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3c3614407320d752",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 3,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "f6ddf04b5756c3f4"
+            ]
+        ]
+    },
+    {
+        "id": "f6ddf04b5756c3f4",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "customers/all",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api:8000/customers/all",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "8c7ef79a94d4f93e"
+            ]
+        ]
+    },
+    {
+        "id": "0f9fdc36eb2c6270",
+        "type": "ui_list",
+        "z": "f6f2187d.f17ca8",
+        "group": "f20fd5aa39f9f670",
+        "name": "Display customers list",
+        "order": 1,
+        "width": 5,
+        "height": "9",
+        "lineType": "two",
+        "actionType": "click",
+        "allowHTML": true,
+        "outputs": 1,
+        "topic": "",
+        "x": 840,
+        "y": 160,
+        "wires": [
+            [
+                "01c565a46bd5965b",
+                "596bc9a937cb5bb0"
+            ]
+        ]
+    },
+    {
+        "id": "8c7ef79a94d4f93e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct customers list",
+        "func": "let data = msg.payload;\n\n\nif (typeof data === \"string\") {\n    data = JSON.parse(data);\n}\n\nmsg.payload = data.map(item => ({\n    title: item.label,    \n    value: item.value     \n}));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "0f9fdc36eb2c6270"
+            ]
+        ]
+    },
+    {
+        "id": "01c565a46bd5965b",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url customer",
+        "func": "const customerId = msg.payload.value;\n\nmsg.url = `http://api:8000/customers/${customerId}`;\n\nmsg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "bc5886af2bd053fc"
+            ]
+        ]
+    },
+    {
+        "id": "bc5886af2bd053fc",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "customers/{customerId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "984b4b820ea9ba70"
+            ]
+        ]
+    },
+    {
+        "id": "984b4b820ea9ba70",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "f20fd5aa39f9f670",
+        "name": "Display customer",
+        "order": 2,
+        "width": "7",
+        "height": 4,
+        "format": "<div style=\"border:1px solid #ccc; padding:10px; border-radius:5px; width:300px;\">\n    <h3>{{msg.payload[0].name}}</h3>\n    <p><b>Email:</b> {{msg.payload[0].email}}</p>\n    <p><b>City:</b> {{msg.payload[0].city}}</p>\n    <p><b>Country:</b> {{msg.payload[0].country_id[1]}}</p>\n    <p><b>Comment:</b> {{msg.payload[0].comment}}</p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 890,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "596bc9a937cb5bb0",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url orders",
+        "func": "// Extract customerId\nconst customerId = msg.payload.value;\n\n// Build query API URL or request body\nmsg.url = `http://api:8000/saleorders/by_id/${customerId}`;\n\n// If using HTTP Request GET request\nmsg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "7917073ada12bbfc"
+            ]
+        ]
+    },
+    {
+        "id": "7917073ada12bbfc",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/by_id/{customerId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "fccd34fbc36014e2"
+            ]
+        ]
+    },
+    {
+        "id": "fccd34fbc36014e2",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "fe64d88aac61e3db",
+        "name": "Display orders",
+        "order": 10,
+        "width": "20",
+        "height": "18",
+        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n        cursor: pointer;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload || !msg.payload.length\">\n\n</div>\n\n<!-- Order List -->\n<div ng-if=\"msg.payload && msg.payload.length\" ng-repeat=\"order in msg.payload\" class=\"order-card\"\n    ng-click=\"$parent.send({payload:{id: order.id, state: order.state, name: order.name}})\">\n    <b>Order:</b> {{order.name}} <br>\n    <b>Status:</b> {{order.state}} <br>\n    <b>Created:</b> {{order.create_date}} <br>\n    <b>Total:</b> {{order.amount_total}} € <br>\n\n    <div ng-repeat=\"item in order.order_line\" class=\"order-line\">\n        <b>Product:</b> {{item.name}} <br>\n        <b>Qty:</b> {{item.product_uom_qty}} <br>\n        <b>Unit Price:</b> {{item.price_unit}} € <br>\n        <b>Total:</b> {{item.price_total}} €\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 380,
+        "wires": [
+            [
+                "6c0584449cd36a84",
+                "72755f5290a74424"
+            ]
+        ]
+    },
+    {
+        "id": "6c0584449cd36a84",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "draft",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "sale",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "45f525cea78bcf59",
+                "6484c0c2075df4de"
+            ],
+            [
+                "a4a762836ef7aab1",
+                "7b45757bc3743d1e",
+                "8d4abc93741bce6e"
+            ]
+        ]
+    },
+    {
+        "id": "ce4c68900b3c7cc6",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/by_orderid/{orderId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 380,
+        "wires": [
+            [
+                "3d1a162a3f50e160"
+            ]
+        ]
+    },
+    {
+        "id": "72755f5290a74424",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url order",
+        "func": "let orderId = msg.payload.id;\n\nmsg.url = `http://api:8000/saleorders/by_orderid/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 380,
+        "wires": [
+            [
+                "ce4c68900b3c7cc6"
+            ]
+        ]
+    },
+    {
+        "id": "3d1a162a3f50e160",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "491cb1f2cdf4d485",
+        "name": "Display order",
+        "order": 1,
+        "width": "28",
+        "height": "4",
+        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload\">\n    <i>No order selected.</i>\n</div>\n\n<!-- Order Information -->\n<div ng-if=\"msg.payload\" class=\"order-card\">\n    <b>Order:</b> {{msg.payload.name}} <br>\n    <b>Status:</b> {{msg.payload.state}} <br>\n    <b>Created:</b> {{msg.payload.create_date}} <br>\n    <b>Total:</b> {{msg.payload.amount_total}} € <br>\n\n    <!-- Order Details -->\n    <div ng-if=\"msg.payload.order_line.length\">\n        <div ng-repeat=\"item in msg.payload.order_line\" class=\"order-line\">\n            <b>Product:</b> {{item.product_name}} <br>\n            <b>Description:</b> {{item.description}} <br>\n            <b>Quantity:</b> {{item.quantity}} <br>\n            <b>Unit Price:</b> {{item.unit_price}} € <br>\n            <b>Total:</b> {{item.total}} €\n        </div>\n    </div>\n\n    <div ng-if=\"!msg.payload.order_line.length\">\n        <i>No items in this order.</i>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1350,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd090e0bfaa50f56",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "Confirm quotation",
+        "group": "491cb1f2cdf4d485",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "confirm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "confirm",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "msg",
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "45f525cea78bcf59"
+            ]
+        ]
+    },
+    {
+        "id": "bc4cafb32aa2b6d1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url confirm quotation",
+        "func": "\nvar keys = Object.keys(msg.payload).filter(k => k !== 'confirm');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar confirm = msg.payload.confirm; \n\nif (confirm === \"confirm\" && order.state === \"draft\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/saleorders/quotations/confirm/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "abdc4ecaf3369f6e"
+            ]
+        ]
+    },
+    {
+        "id": "45f525cea78bcf59",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 660,
+        "y": 500,
+        "wires": [
+            [
+                "bc4cafb32aa2b6d1"
+            ]
+        ]
+    },
+    {
+        "id": "13c06f1c8bd7cff8",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cancel quotation",
+        "group": "491cb1f2cdf4d485",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "cancel",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "cancel",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "msg",
+        "x": 650,
+        "y": 540,
+        "wires": [
+            [
+                "6484c0c2075df4de"
+            ]
+        ]
+    },
+    {
+        "id": "3376353c54393347",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url cancel quotation",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'cancel');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar cancel = msg.payload.cancel;  \n\nif (cancel === \"cancel\" && order.state === \"draft\") {\n    let orderName = order.name; \n\n    msg.url = `http://api:8000/saleorders/quotations/cancel/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 580,
+        "wires": [
+            [
+                "3c0c49ce3acea410"
+            ]
+        ]
+    },
+    {
+        "id": "6484c0c2075df4de",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "3376353c54393347"
+            ]
+        ]
+    },
+    {
+        "id": "abdc4ecaf3369f6e",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/quotations/confirm/{orderName}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1230,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c0c49ce3acea410",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/quotations/cancel/{orderName}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1230,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a7b6df1314b4345",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "491cb1f2cdf4d485",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "CreateInvoice",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "createinvoice",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "a4a762836ef7aab1"
+            ]
+        ]
+    },
+    {
+        "id": "a4a762836ef7aab1",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 660,
+        "y": 860,
+        "wires": [
+            [
+                "16330eda444eca6f"
+            ]
+        ]
+    },
+    {
+        "id": "16330eda444eca6f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url createinvoice",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar createinvoice = msg.payload.createinvoice;   \n\nif (createinvoice === \"createinvoice\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/saleorders/invoice/create/${orderName}`;\n    msg.method = \"POST\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 860,
+        "wires": [
+            [
+                "ae6173d7f01105ac"
+            ]
+        ]
+    },
+    {
+        "id": "ae6173d7f01105ac",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/invoice/create/{orderName}",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1190,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1bdb12230c94740",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "491cb1f2cdf4d485",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "InvoicePDF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "invoicepdf",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 630,
+        "y": 900,
+        "wires": [
+            [
+                "7b45757bc3743d1e"
+            ]
+        ]
+    },
+    {
+        "id": "7b45757bc3743d1e",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 660,
+        "y": 940,
+        "wires": [
+            [
+                "d3b4f756afdfbd3a"
+            ]
+        ]
+    },
+    {
+        "id": "d3b4f756afdfbd3a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "construct url invoiceid",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar invoicepdf = msg.payload.invoicepdf;  \n\nif (invoicepdf === \"invoicepdf\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/accounting/invoice/by_saleorder/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 940,
+        "wires": [
+            [
+                "8041bf3da5e396f8"
+            ]
+        ]
+    },
+    {
+        "id": "8041bf3da5e396f8",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "accounting/invoice/by_saleorder/{orderName}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1180,
+        "y": 940,
+        "wires": [
+            [
+                "e4aa49478d88c920"
+            ]
+        ]
+    },
+    {
+        "id": "e4aa49478d88c920",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "construct url invoicepdf",
+        "func": "if (!msg.payload || !msg.payload.invoice || !msg.payload.invoice.length) {\n    node.warn(\"No invoice data found\");\n    return null;\n}\n\nlet invoiceId = msg.payload.invoice[0].id;\n\nmsg = {\n    payload: {},\n    url: `http://localhost:8000/accounting/invoice/get/pdf/${invoiceId}`,\n    method: \"GET\"\n};\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1000,
+        "wires": [
+            [
+                "36545f803b406034"
+            ]
+        ]
+    },
+    {
+        "id": "36545f803b406034",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "491cb1f2cdf4d485",
+        "name": "download pdf",
+        "order": 7,
+        "width": "12",
+        "height": "5",
+        "format": "<div style=\"text-align:center; margin:10px 0;\">\n    <a ng-href=\"{{msg.url}}\" target=\"_blank\" style=\"display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; \n            text-decoration:none; border-radius:5px; font-weight:bold; font-family:Arial, sans-serif;\">\n        Download PDF\n    </a>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1100,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3e400faf7b383c2",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "491cb1f2cdf4d485",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "QuerryDelivery",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "querrydelivery",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "8d4abc93741bce6e"
+            ]
+        ]
+    },
+    {
+        "id": "8d4abc93741bce6e",
+        "type": "join",
+        "z": "f6f2187d.f17ca8",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 660,
+        "y": 680,
+        "wires": [
+            [
+                "6f89c5a42c2e41df"
+            ]
+        ]
+    },
+    {
+        "id": "6f89c5a42c2e41df",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url querrydelivery",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar querrydelivery = msg.payload.querrydelivery;  \n\nif (querrydelivery === \"querrydelivery\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/saleorders/delivery_date/querry/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 680,
+        "wires": [
+            [
+                "13610d9c093cdb80"
+            ]
+        ]
+    },
+    {
+        "id": "13610d9c093cdb80",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/delivery_date/querry/{orderName}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1210,
+        "y": 680,
+        "wires": [
+            [
+                "a10ad5945283dec2"
+            ]
+        ]
+    },
+    {
+        "id": "a10ad5945283dec2",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "491cb1f2cdf4d485",
+        "name": "Display deliverydate and choose",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center; font-family: Arial, sans-serif; margin: 20px;\">\n  <!-- Title -->\n  <h3 style=\"color:#333;\">Order Information</h3>\n\n  <!-- Order Information -->\n  <p><strong>Order Name:</strong> {{msg.payload.order_name}}</p>\n  <p><strong>Scheduled Delivery:</strong> {{msg.payload.scheduled_delivery_date}}</p>\n\n  <!-- New Date Selection -->\n  <div style=\"margin:15px 0;\">\n    <label for=\"newDate\">Select New Date (if rejecting):</label><br>\n    <input type=\"datetime-local\" id=\"newDate\" ng-model=\"newDate\" style=\"margin:8px; padding:6px; border-radius:4px; border:1px solid #ccc;\">\n  </div>\n\n  <!-- Operation Button -->\n  <div style=\"margin-top:15px;\">\n    <!-- Accept Button -->\n    <button\n      style=\"background-color:#28a745; color:white; border:none; border-radius:5px; padding:8px 16px; margin-right:10px; cursor:pointer;\"\n      ng-click=\"send({action:'accept', order_name:msg.payload.order_name})\">\n      ✅ Accept\n    </button>\n\n    <!-- Reject and submit new date button -->\n    <button\n      style=\"background-color:#dc3545; color:white; border:none; border-radius:5px; padding:8px 16px; cursor:pointer;\"\n      ng-click=\"send({action:'reject', new_date:newDate, order_name:msg.payload.order_name})\">\n      ❌ Reject & Submit\n    </button>\n  </div>\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "6afbd88bd9b9ad33"
+            ]
+        ]
+    },
+    {
+        "id": "6afbd88bd9b9ad33",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Construct url confirm deliverydate",
+        "func": "var orderName = msg.order_name;\nvar decision = msg.action;\nvar newDate = msg.new_date;\n\nvar encodedDate = encodeURIComponent(newDate);\n\nmsg = {\n    payload: {},\n    url : `http://api:8000/saleorders/delivery_date/confirm/${orderName}/${decision}/${encodedDate}`,\n    method : \"PUT\"\n};\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 740,
+        "wires": [
+            [
+                "23e176651a47784b"
+            ]
+        ]
+    },
+    {
+        "id": "23e176651a47784b",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "saleorders/delivery_date/confirm/{orderName}/{decision}/{encodedDate}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1400,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85d517b099aea54f",
+        "type": "inject",
+        "z": "54fc18ea533226e9",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 3,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "3e39d35ba356d083"
+            ]
+        ]
+    },
+    {
+        "id": "3e39d35ba356d083",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "vendors/all",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api:8000/vendors/all",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "aa841f142c683399"
+            ]
+        ]
+    },
+    {
+        "id": "aa841f142c683399",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct venders list",
+        "func": "let data = msg.payload;\n\n\nif (typeof data === \"string\") {\n    data = JSON.parse(data);\n}\n\n\nmsg.payload = data.map(item => ({\n    title: item.label,    \n    value: item.value     \n}));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "a50beea64fd7d2fe"
+            ]
+        ]
+    },
+    {
+        "id": "a50beea64fd7d2fe",
+        "type": "ui_list",
+        "z": "54fc18ea533226e9",
+        "group": "ebc2771a7848bb93",
+        "name": "vendors list",
+        "order": 1,
+        "width": 5,
+        "height": "9",
+        "lineType": "two",
+        "actionType": "click",
+        "allowHTML": true,
+        "outputs": 1,
+        "topic": "",
+        "x": 770,
+        "y": 140,
+        "wires": [
+            [
+                "5d9eb44f815af04e"
+            ]
+        ]
+    },
+    {
+        "id": "625eacc22a3a17c7",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "purchaseorders/by_vendor_id/{vendorId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "bd8f2d1ae6cbbd5e"
+            ]
+        ]
+    },
+    {
+        "id": "bd8f2d1ae6cbbd5e",
+        "type": "ui_template",
+        "z": "54fc18ea533226e9",
+        "group": "ebc2771a7848bb93",
+        "name": "Display all purchaseorders",
+        "order": 10,
+        "width": "20",
+        "height": "8",
+        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n        cursor: pointer;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload || !msg.payload.length\">\n    No orders found.\n</div>\n\n<!-- Order List -->\n<div ng-if=\"msg.payload && msg.payload.length\" ng-repeat=\"order in msg.payload\" class=\"order-card\"\n    ng-click=\"$parent.send({payload:{id: order.id, state: order.state, name: order.name}})\">\n    <b>Order:</b> {{order.name}} <br>\n    <b>Status:</b> {{order.state}} <br>\n    <b>Created:</b> {{order.date_order}} <br>\n    <b>Total:</b> {{order.amount_total}} € <br>\n\n    <div ng-repeat=\"item in order.order_line\" class=\"order-line\">\n        <b>Product:</b> {{item.name}} <br>\n        <b>Qty:</b> {{item.product_uom_qty || 'N/A'}} <br>\n        <b>Unit Price:</b> {{item.price_unit || 'N/A'}} € <br>\n        <b>Total:</b> {{item.price_total || 'N/A'}} €\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 220,
+        "wires": [
+            [
+                "aa793d12441c00db",
+                "2234eb2229447b13"
+            ]
+        ]
+    },
+    {
+        "id": "989003148113494f",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "purchaseorders/by_id/{orderId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1170,
+        "y": 300,
+        "wires": [
+            [
+                "a00a7f77e63a6c79"
+            ]
+        ]
+    },
+    {
+        "id": "aa793d12441c00db",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct url purchaseorder",
+        "func": "let orderId = msg.payload.id;\n\nmsg.url = `http://api:8000/purchaseorders/by_id/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 300,
+        "wires": [
+            [
+                "989003148113494f"
+            ]
+        ]
+    },
+    {
+        "id": "5d9eb44f815af04e",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct url purchaseorders by venderid",
+        "func": "const vendorId = msg.payload.value;\n\n// Set the request URL and method\nmsg.url = `http://api:8000/purchaseorders/by_vendor_id/${vendorId}`;\nmsg.method = \"GET\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "625eacc22a3a17c7"
+            ]
+        ]
+    },
+    {
+        "id": "a00a7f77e63a6c79",
+        "type": "ui_template",
+        "z": "54fc18ea533226e9",
+        "group": "9ef5408d1c420db5",
+        "name": "Display purchaseorder",
+        "order": 1,
+        "width": "28",
+        "height": "4",
+        "format": "<style>\n    .order-card {\n        border: 1px solid #ccc;\n        border-radius: 8px;\n        margin: 8px 0;\n        padding: 8px;\n        background: #f9f9f9;\n    }\n\n    .order-card:hover {\n        background: #eef;\n    }\n\n    .order-line {\n        margin-left: 16px;\n        padding: 4px 0;\n        border-top: 1px dashed #ccc;\n    }\n</style>\n\n<!-- Empty order reminder -->\n<div ng-if=\"!msg.payload\">\n    <i>No order selected.</i>\n</div>\n\n<!-- Order Information -->\n<div ng-if=\"msg.payload\" class=\"order-card\">\n    <b>Order:</b> {{msg.payload.name}} <br>\n    <b>Status:</b> {{msg.payload.state}} <br>\n    <b>Created:</b> {{msg.payload.date_order}} <br>\n    <b>Total:</b> {{msg.payload.amount_total}} € <br>\n\n    <!-- Order Details -->\n    <div ng-if=\"msg.payload.order_line && msg.payload.order_line.length\">\n        <div ng-repeat=\"item in msg.payload.order_line\" class=\"order-line\">\n            <b>Product:</b> {{item.name || 'N/A'}} <br>\n            <b>Description:</b> {{item.description || 'N/A'}} <br>\n            <b>Quantity:</b> {{item.product_uom_qty || 'N/A'}} <br>\n            <b>Unit Price:</b> {{item.price_unit || 'N/A'}} € <br>\n            <b>Total:</b> {{item.price_total || 'N/A'}} €\n        </div>\n    </div>\n\n    <div ng-if=\"!msg.payload.order_line || !msg.payload.order_line.length\">\n        <i>No items in this order.</i>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1420,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2234eb2229447b13",
+        "type": "switch",
+        "z": "54fc18ea533226e9",
+        "name": "",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "draft",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "purchase",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "f376f56872f75136",
+                "019181f6a1baff3b"
+            ],
+            [
+                "1ebec3c767f22225",
+                "65737e361daaf0ce",
+                "bdcfbc4cd2c4c795"
+            ]
+        ]
+    },
+    {
+        "id": "5e93806208d85105",
+        "type": "ui_button",
+        "z": "54fc18ea533226e9",
+        "name": "",
+        "group": "9ef5408d1c420db5",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "confirm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "confirm",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "msg",
+        "x": 560,
+        "y": 320,
+        "wires": [
+            [
+                "f376f56872f75136"
+            ]
+        ]
+    },
+    {
+        "id": "d7183545afbece8f",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct url confirm",
+        "func": "\nvar keys = Object.keys(msg.payload).filter(k => k !== 'confirm');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar confirm = msg.payload.confirm; \n\nif (confirm === \"confirm\" && order.state === \"draft\") {\n    let orderId = order.id;  \n\n    msg.url = `http://api:8000/purchaseorders/confirm/${orderId}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 360,
+        "wires": [
+            [
+                "0ab721b36b99e3d5"
+            ]
+        ]
+    },
+    {
+        "id": "f376f56872f75136",
+        "type": "join",
+        "z": "54fc18ea533226e9",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 600,
+        "y": 360,
+        "wires": [
+            [
+                "d7183545afbece8f"
+            ]
+        ]
+    },
+    {
+        "id": "7712880cc239fb4d",
+        "type": "ui_button",
+        "z": "54fc18ea533226e9",
+        "name": "",
+        "group": "9ef5408d1c420db5",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "cancel",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "cancel",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "msg",
+        "x": 550,
+        "y": 400,
+        "wires": [
+            [
+                "019181f6a1baff3b"
+            ]
+        ]
+    },
+    {
+        "id": "9de40f68cea6e796",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct url cancel",
+        "func": "\nvar keys = Object.keys(msg.payload).filter(k => k !== 'cancel');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar cancel = msg.payload.cancel;  \n\nif (cancel === \"cancel\" && order.state === \"draft\") {\n    let orderId = order.id; \n\n    msg.url = `http://api:8000/purchaseorders/cancel/${orderId}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 440,
+        "wires": [
+            [
+                "bdc05cbab731f8d7"
+            ]
+        ]
+    },
+    {
+        "id": "019181f6a1baff3b",
+        "type": "join",
+        "z": "54fc18ea533226e9",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "9de40f68cea6e796"
+            ]
+        ]
+    },
+    {
+        "id": "0ab721b36b99e3d5",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "purchaseorders/confirm/{orderId}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1100,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdc05cbab731f8d7",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "purchaseorders/cancel/{orderId}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1090,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7940c90e148a5c24",
+        "type": "ui_button",
+        "z": "54fc18ea533226e9",
+        "name": "",
+        "group": "9ef5408d1c420db5",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "QuerryDeliveryDate",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "querrydelivery",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 590,
+        "y": 480,
+        "wires": [
+            [
+                "1ebec3c767f22225"
+            ]
+        ]
+    },
+    {
+        "id": "1ebec3c767f22225",
+        "type": "join",
+        "z": "54fc18ea533226e9",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [
+                "4aa370f9d2e0cf46"
+            ]
+        ]
+    },
+    {
+        "id": "4aa370f9d2e0cf46",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct url querrydeliverdate",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'purchase');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar querrydelivery = msg.payload.querrydelivery;  \n\nif (querrydelivery === \"querrydelivery\" && order.state === \"purchase\") {\n    let orderId = order.id;  \n\n    msg.url = `http://api:8000/purchaseorders/deliverdate/querry/${orderId}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 520,
+        "wires": [
+            [
+                "5665165cde2e27f2"
+            ]
+        ]
+    },
+    {
+        "id": "5665165cde2e27f2",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "purchaseorders/deliverdate/querry/{orderId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1190,
+        "y": 520,
+        "wires": [
+            [
+                "dfe27557e16a218b"
+            ]
+        ]
+    },
+    {
+        "id": "4b14dac8cafc47f4",
+        "type": "http request",
+        "z": "54fc18ea533226e9",
+        "name": "purchaseorders/deliverdate/confirm/{orderId}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69eebf49fb45ee58",
+        "type": "ui_button",
+        "z": "54fc18ea533226e9",
+        "name": "",
+        "group": "9ef5408d1c420db5",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "ConfirmDeliveryDate",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "confirmdeliverydate",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 600,
+        "y": 560,
+        "wires": [
+            [
+                "bdcfbc4cd2c4c795"
+            ]
+        ]
+    },
+    {
+        "id": "bdcfbc4cd2c4c795",
+        "type": "join",
+        "z": "54fc18ea533226e9",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 600,
+        "y": 600,
+        "wires": [
+            [
+                "5046eac092053677"
+            ]
+        ]
+    },
+    {
+        "id": "5046eac092053677",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "Construct request",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'purchase');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar confirmdeliverydate = msg.payload.confirmdeliverydate;  \n\nif (confirmdeliverydate === \"confirmdeliverydate\" && order.state === \"purchase\") {\n    let orderId = order.id;  \n\n    msg.url = `http://api:8000/purchaseorders/deliverdate/confirm/${orderId}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 600,
+        "wires": [
+            [
+                "4b14dac8cafc47f4"
+            ]
+        ]
+    },
+    {
+        "id": "08753ccd255b8ece",
+        "type": "ui_button",
+        "z": "54fc18ea533226e9",
+        "name": "OrderPDF",
+        "group": "9ef5408d1c420db5",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "orderPDF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "orderpdf",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 560,
+        "y": 640,
+        "wires": [
+            [
+                "65737e361daaf0ce"
+            ]
+        ]
+    },
+    {
+        "id": "65737e361daaf0ce",
+        "type": "join",
+        "z": "54fc18ea533226e9",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 600,
+        "y": 680,
+        "wires": [
+            [
+                "6c45e88033a2a0c0"
+            ]
+        ]
+    },
+    {
+        "id": "6c45e88033a2a0c0",
+        "type": "function",
+        "z": "54fc18ea533226e9",
+        "name": "construct url purchaseorder PDF",
+        "func": "// Get the order object in the payload\nvar order = msg.payload[Object.keys(msg.payload)[0]];\n\n// Judge state is \"purchase\" and orderpdf is \"orderpdf\"\nif (order && order.state === \"purchase\" && msg.payload.orderpdf === \"orderpdf\") {\n    let orderId = order.id;\n\n    // Construct a URL pointing to the interface for obtaining PDFs\n    msg.url = `http://localhost:8000/purchaseorders/get/pdf/${orderId}`;\n    msg.method = \"GET\";\n    msg.payload = {}; // Keep payload empty objects\n    return msg;\n}\n\n// If conditions are not met, return null\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 680,
+        "wires": [
+            [
+                "a195a05cd036e9f8"
+            ]
+        ]
+    },
+    {
+        "id": "a195a05cd036e9f8",
+        "type": "ui_template",
+        "z": "54fc18ea533226e9",
+        "group": "9ef5408d1c420db5",
+        "name": "Download pdf",
+        "order": 7,
+        "width": "12",
+        "height": "5",
+        "format": "<div style=\"text-align:center; margin:10px 0;\">\n    <a ng-href=\"{{msg.url}}\" target=\"_blank\" style=\"display:inline-block; padding:10px 20px; background-color:#4CAF50; color:white; \n            text-decoration:none; border-radius:5px; font-weight:bold; font-family:Arial, sans-serif;\">\n        Download PDF\n    </a>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1120,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dfe27557e16a218b",
+        "type": "ui_template",
+        "z": "54fc18ea533226e9",
+        "group": "9ef5408d1c420db5",
+        "name": "Expected Arrival",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center; font-family: Arial, sans-serif; margin: 20px;\">\n    <h3 style=\"color:#333;\">Expected Arrival</h3>\n\n    <!-- Order Information -->\n    <p><strong>Order Name:</strong> {{msg.payload.order_name}}</p>\n    <p><strong>Scheduled Delivery:</strong> {{msg.payload.scheduled_delivery_date}}</p>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1460,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "6a3cdb4dcb12f723",
         "type": "tab",
         "label": "Customer - Interface",
@@ -43,20 +2030,6 @@
         }
     },
     {
-        "id": "09eaa569865a9606",
-        "type": "ui-group",
-        "name": "sales",
-        "page": "",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "fc27825cd30b9132",
         "type": "ui-theme",
         "name": "Purple Theme",
@@ -74,20 +2047,6 @@
             "groupBorderRadius": "4px",
             "widgetGap": "12px"
         }
-    },
-    {
-        "id": "3b27354ee6f33928",
-        "type": "ui-group",
-        "name": "group-1",
-        "page": "",
-        "width": "6",
-        "height": "1",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
     },
     {
         "id": "62d6e656995736f5",
@@ -112,23 +2071,12 @@
     {
         "id": "6e7b1c36e446e574",
         "type": "MySQLdatabase",
-        "name": "SATURNE@edi.unil.ch",
-        "host": "edi.unil.ch",
+        "name": "saturne@mysql",
+        "host": "mysql",
         "port": "3306",
-        "db": "SATURNE",
+        "db": "saturne",
         "tz": "",
         "charset": "UTF8"
-    },
-    {
-        "id": "648d5b2b862a3283",
-        "type": "MySQL-Server-Connector",
-        "name": "SATURNE",
-        "host": "edi.unil.ch",
-        "port": "3306",
-        "user": "",
-        "password": "",
-        "tls": false,
-        "database": "SATURNE"
     },
     {
         "id": "ad8bd8277cf20068",
@@ -261,53 +2209,6 @@
         "className": ""
     },
     {
-        "id": "18b6bc10eba5c917",
-        "type": "ui-group",
-        "name": "DB Access demo",
-        "page": "",
-        "width": "10",
-        "height": "2",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "f308ddc1219941c6",
-        "type": "ui-group",
-        "name": "Customer  Login",
-        "page": "",
-        "width": "15",
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "1821bfc72f1b2c08",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
         "id": "2bc85ab1754f87d3",
         "type": "ui-page",
         "name": "KPI - Customer Messages",
@@ -344,48 +2245,6 @@
         "disabled": "false"
     },
     {
-        "id": "6dc24099975c2cf3",
-        "type": "ui-group",
-        "name": "Message",
-        "page": "",
-        "width": 6,
-        "height": 1,
-        "order": 4,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "b165d622c426bfb2",
-        "type": "ui-group",
-        "name": "Customer Order",
-        "page": "",
-        "width": 6,
-        "height": 1,
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "e3e870bbdd387d45",
-        "type": "ui-group",
-        "name": "Order Operation",
-        "page": "",
-        "width": 6,
-        "height": 1,
-        "order": 3,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "aba435c6e2da3094",
         "type": "ui-page",
         "name": "KPI",
@@ -420,61 +2279,6 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
-    },
-    {
-        "id": "1c2bbd12911ac830",
-        "type": "ui_tab",
-        "name": "Odoo-NodeRed-Saturne",
-        "icon": "dashboard-sales",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "f20fd5aa39f9f670",
-        "type": "ui_group",
-        "name": "Customers",
-        "tab": "1c2bbd12911ac830",
-        "order": 1,
-        "disp": true,
-        "width": "7",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "fe64d88aac61e3db",
-        "type": "ui_group",
-        "name": "SaleOrders",
-        "tab": "1c2bbd12911ac830",
-        "order": 2,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "491cb1f2cdf4d485",
-        "type": "ui_group",
-        "name": "SaleOrdersOperation",
-        "tab": "1c2bbd12911ac830",
-        "order": 3,
-        "disp": true,
-        "width": "28",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "741a58029aa32415",
-        "type": "ui-group",
-        "name": "Customer Interface",
-        "page": "",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
     },
     {
         "id": "52f1cf16427fed48",
@@ -679,8 +2483,8 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": 3,
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -700,7 +2504,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://host.docker.internal:8000/customers/all",
+        "url": "http://api:8000/customers/all",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -772,7 +2576,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url customer",
-        "func": "const customerId = msg.payload.value;\n\nmsg.url = `http://host.docker.internal:8000/customers/${customerId}`;\n\nmsg.method = \"GET\";\nreturn msg;",
+        "func": "const customerId = msg.payload.value;\n\nmsg.url = `http://api:8000/customers/${customerId}`;\n\nmsg.method = \"GET\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -843,7 +2647,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url orders",
-        "func": "// Extract customerId\nconst customerId = msg.payload.value;\n\n// Build query API URL or request body\nmsg.url = `http://host.docker.internal:8000/saleorders/by_id/${customerId}`;\n\n// If using HTTP Request GET request\nmsg.method = \"GET\";\nreturn msg;",
+        "func": "// Extract customerId\nconst customerId = msg.payload.value;\n\n// Build query API URL or request body\nmsg.url = `http://api:8000/saleorders/by_id/${customerId}`;\n\n// If using HTTP Request GET request\nmsg.method = \"GET\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -943,7 +2747,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url order",
-        "func": "let orderId = msg.payload.id;\n\nmsg.url = `http://host.docker.internal:8000/saleorders/by_orderid/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
+        "func": "let orderId = msg.payload.id;\n\nmsg.url = `http://api:8000/saleorders/by_orderid/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1318,7 +3122,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url confirm quotation",
-        "func": "\nvar keys = Object.keys(msg.payload).filter(k => k !== 'confirm');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar confirm = msg.payload.confirm; \n\nif (confirm === \"confirm\" && order.state === \"draft\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/saleorders/quotations/confirm/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "func": "\nvar keys = Object.keys(msg.payload).filter(k => k !== 'confirm');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar confirm = msg.payload.confirm; \n\nif (confirm === \"confirm\" && order.state === \"draft\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/saleorders/quotations/confirm/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1358,8 +3162,7 @@
         "y": 580,
         "wires": [
             [
-                "70bba868fcf5303f",
-                "90b2480f2fcec75f"
+                "70bba868fcf5303f"
             ]
         ]
     },
@@ -1368,7 +3171,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url cancel quotation",
-        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'cancel');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar cancel = msg.payload.cancel;  \n\nif (cancel === \"cancel\" && order.state === \"draft\") {\n    let orderName = order.name; \n\n    msg.url = `http://host.docker.internal:8000/saleorders/quotations/cancel/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'cancel');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar cancel = msg.payload.cancel;  \n\nif (cancel === \"cancel\" && order.state === \"draft\") {\n    let orderName = order.name; \n\n    msg.url = `http://api:8000/saleorders/quotations/cancel/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1408,8 +3211,7 @@
         "y": 660,
         "wires": [
             [
-                "8b288fe0c07841e3",
-                "e5cedf3ea7f23a25"
+                "8b288fe0c07841e3"
             ]
         ]
     },
@@ -1491,7 +3293,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url createinvoice",
-        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar createinvoice = msg.payload.createinvoice;   \n\nif (createinvoice === \"createinvoice\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/saleorders/invoice/create/${orderName}`;\n    msg.method = \"POST\";\n\n    return msg;\n}\n\nreturn null;",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar createinvoice = msg.payload.createinvoice;   \n\nif (createinvoice === \"createinvoice\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/saleorders/invoice/create/${orderName}`;\n    msg.method = \"POST\";\n\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1562,7 +3364,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "construct url invoiceid",
-        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar invoicepdf = msg.payload.invoicepdf;  \n\nif (invoicepdf === \"invoicepdf\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/accounting/invoice/by_saleorder/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar invoicepdf = msg.payload.invoicepdf;  \n\nif (invoicepdf === \"invoicepdf\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/accounting/invoice/by_saleorder/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1606,7 +3408,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "construct url invoicepdf",
-        "func": "if (!msg.payload || !msg.payload.invoice || !msg.payload.invoice.length) {\n    node.warn(\"No invoice data found\");\n    return null;\n}\n\nlet invoiceId = msg.payload.invoice[0].id;\n\nmsg.url = `http://127.0.0.1:8000/accounting/invoice/get/pdf/${invoiceId}`;\n\nreturn msg;",
+        "func": "if (!msg.payload || !msg.payload.invoice || !msg.payload.invoice.length) {\n    node.warn(\"No invoice data found\");\n    return null;\n}\n\nlet invoiceId = msg.payload.invoice[0].id;\n\nmsg.url = `http://localhost:8000/accounting/invoice/get/pdf/${invoiceId}`;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1655,7 +3457,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url querrydelivery",
-        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar querrydelivery = msg.payload.querrydelivery;  \n\nif (querrydelivery === \"querrydelivery\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/saleorders/delivery_date/querry/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar querrydelivery = msg.payload.querrydelivery;  \n\nif (querrydelivery === \"querrydelivery\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://api:8000/saleorders/delivery_date/querry/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1700,7 +3502,7 @@
         "type": "function",
         "z": "6a3cdb4dcb12f723",
         "name": "Construct url confirm deliverydate",
-        "func": "var orderName = flow.get(\"order_name\");\nvar decision = \"reject\";\nvar newDate = flow.get(\"new_date\");\n\nvar encodedDate = encodeURIComponent(newDate);\n\nmsg = {\n    payload: {},\n    url : `http://host.docker.internal:8000/saleorders/delivery_date/confirm/${orderName}/${decision}/${encodedDate}`,\n    method : \"PUT\"\n};\n\n\n\nreturn msg;",
+        "func": "var orderName = flow.get(\"order_name\");\nvar decision = \"reject\";\nvar newDate = flow.get(\"new_date\");\n\nvar encodedDate = encodeURIComponent(newDate);\n\nmsg = {\n    payload: {},\n    url : `http://api:8000/saleorders/delivery_date/confirm/${orderName}/${decision}/${encodedDate}`,\n    method : \"PUT\"\n};\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2019,8 +3821,7 @@
         "y": 860,
         "wires": [
             [
-                "36e7f514f8b77b80",
-                "7a4b97ca4bbd3488"
+                "36e7f514f8b77b80"
             ]
         ]
     },
@@ -2121,40 +3922,8 @@
         "y": 380,
         "wires": [
             [
-                "b0eabe0762b58efc"
+                "c1ea2a0000000001"
             ]
-        ]
-    },
-    {
-        "id": "b0eabe0762b58efc",
-        "type": "function",
-        "z": "6a3cdb4dcb12f723",
-        "name": "function 16",
-        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1130,
-        "y": 380,
-        "wires": [
-            [
-                "a5918c5e3c4c5cbf"
-            ]
-        ]
-    },
-    {
-        "id": "a5918c5e3c4c5cbf",
-        "type": "mysql",
-        "z": "6a3cdb4dcb12f723",
-        "mydb": "6e7b1c36e446e574",
-        "name": "",
-        "x": 1340,
-        "y": 380,
-        "wires": [
-            []
         ]
     },
     {
@@ -2178,106 +3947,10 @@
         ]
     },
     {
-        "id": "90b2480f2fcec75f",
-        "type": "function",
-        "z": "6a3cdb4dcb12f723",
-        "name": "function 36",
-        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 540,
-        "wires": [
-            [
-                "ce0e1f02800880a2"
-            ]
-        ]
-    },
-    {
-        "id": "ce0e1f02800880a2",
-        "type": "mysql",
-        "z": "6a3cdb4dcb12f723",
-        "mydb": "6e7b1c36e446e574",
-        "name": "",
-        "x": 1120,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5cedf3ea7f23a25",
-        "type": "function",
-        "z": "6a3cdb4dcb12f723",
-        "name": "function 37",
-        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 620,
-        "wires": [
-            [
-                "66227f5689998779"
-            ]
-        ]
-    },
-    {
-        "id": "66227f5689998779",
-        "type": "mysql",
-        "z": "6a3cdb4dcb12f723",
-        "mydb": "6e7b1c36e446e574",
-        "name": "",
-        "x": 1120,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7a4b97ca4bbd3488",
-        "type": "function",
-        "z": "6a3cdb4dcb12f723",
-        "name": "function 53",
-        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 820,
-        "wires": [
-            [
-                "2d1623adb0912da5"
-            ]
-        ]
-    },
-    {
-        "id": "2d1623adb0912da5",
-        "type": "mysql",
-        "z": "6a3cdb4dcb12f723",
-        "mydb": "6e7b1c36e446e574",
-        "name": "",
-        "x": 1220,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "7acb1fe8cb0fbd44",
         "type": "inject",
         "z": "60255b57bde27492",
-        "name": "",
+        "name": "Load messages",
         "props": [
             {
                 "p": "payload"
@@ -2287,10 +3960,10 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "30",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": 3,
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -2551,7 +4224,7 @@
         "id": "e730b0fa0b267866",
         "type": "inject",
         "z": "70b614b1a465535c",
-        "name": "",
+        "name": "Load KPIs",
         "props": [
             {
                 "p": "payload"
@@ -2561,10 +4234,10 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "60",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": 3,
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -4930,14 +6603,30 @@
         ]
     },
     {
-        "id": "9d11c2d4e081acfe",
+        "id": "c1ea2a0000000001",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Clear session",
+        "func": "['user_id', 'message_type', 'message_content', 'order_name', 'new_date']\n    .forEach(k => flow.set(k, undefined));\nnode.status({ text: 'logged out' });\nreturn null;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b0498283bd7dd820",
         "type": "global-config",
         "env": [],
         "modules": {
             "@flowfuse/node-red-dashboard": "1.29.0",
-            "node-red-node-mysql": "2.0.0",
-            "node-red-contrib-mysql-config": "1.0.4",
-            "node-red-dashboard": "3.6.6"
+            "node-red-dashboard": "3.6.6",
+            "node-red-node-ui-list": "0.3.6",
+            "node-red-node-mysql": "2.0.0"
         }
     }
 ]

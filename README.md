@@ -125,26 +125,42 @@ odoo-sales-integration/
 │   ├── tests/                 # pytest suite with a fake Odoo XML-RPC server
 │   ├── Dockerfile
 │   └── requirements*.txt
-├── node-red/                  # Node-RED data folder (portal and KPI flows)
+├── node-red/                  # Node-RED flows (portal, KPIs, employee dashboard) and image
 ├── docs/
 │   └── models/                # BPMN process model (source and image)
-├── docker-compose.yml
+├── database/                  # MySQL schema and demo data for the portal and KPIs
+├── demo/                      # script that prepares the Odoo demo database
+├── docker-compose.yml         # complete demo environment
 └── .env.example
 ```
 
 ## Getting started
 
-### With Docker
+### Demo environment (Docker)
+
+One command starts the whole system with demo data: Odoo 18 Community, the API, the
+Node-RED portal and dashboards, and the MySQL database.
 
 ```bash
 git clone https://github.com/embarky/odoo-sales-integration.git
 cd odoo-sales-integration
-cp .env.example .env          # fill in your Odoo URL, database, login and password
 docker compose up -d --build
 ```
 
-- API documentation: <http://localhost:8000/docs>
-- Node-RED editor: <http://localhost:1880>
+The first start takes a few minutes: Odoo creates its database and installs Sales,
+Inventory, Invoicing and Purchase, then a one-off job adds demo orders in every stage of the
+process (quotation, sent, confirmed, invoiced, paid).
+
+| Service | URL |
+|---|---|
+| Customer portal and KPI dashboards | <http://localhost:1880/dashboard> |
+| Employee dashboard (sales and purchase) | <http://localhost:1880/ui> |
+| API documentation (Swagger UI) | <http://localhost:8000/docs> |
+| Odoo (login `admin` / `admin`) | <http://localhost:8069> |
+| Node-RED editor | <http://localhost:1880> |
+
+All passwords in the demo environment are local defaults. To connect the API to another
+Odoo instance, copy `.env.example` to `.env` and fill in its URL, database and login.
 
 ### Without Docker
 

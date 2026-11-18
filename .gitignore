@@ -15,7 +15,6 @@ venv/
 node-red/node_modules/
 node-red/.config.*.json
 node-red/.flows*.json.backup
-node-red/flows_cred.json
 node-red/lib/
 node-red/context/
 

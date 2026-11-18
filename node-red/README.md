@@ -1,21 +1,20 @@
 # Node-RED flows
 
-This folder is mounted as `/data` in the Node-RED container (see `docker-compose.yml`).
+`flows.json` contains five tabs:
 
-| File | Content |
-|---|---|
-| `flows/sales-purchase-dashboard.json` | Employee dashboard: customers, sales orders (confirm, cancel, invoice, PDF, delivery date) and purchase orders |
-| `flows/customer-portal-kpi.json` | Customer portal (my orders, quotation actions, delivery date, invoice PDF, messages) and KPI dashboards |
+| Tab | Dashboard | Content |
+|---|---|---|
+| sales | `/ui` | Employee dashboard: customers, sales orders, confirm / cancel, invoice, PDF, delivery date |
+| purchase | `/ui` | Employee dashboard: vendors and purchase orders |
+| Customer - Interface | `/dashboard` | Customer portal: my orders, order details, quotation actions, delivery date, invoice PDF, messages |
+| Customers Messages | `/dashboard` | Sales manager view of customer messages, with replies |
+| KPI | `/dashboard` | KPI dashboards: traffic, quotations, deliveries, messages |
 
-## Getting started
+The `Dockerfile` builds Node-RED with the nodes the flows need. With `docker compose up`,
+this folder is mounted as `/data`, so changes deployed from the editor are saved in
+`flows.json` here.
 
-1. `docker compose up -d`, then open http://localhost:1880.
-2. Menu → *Manage palette* → install the nodes used by the flows:
-   `@flowfuse/node-red-dashboard`, `node-red-dashboard`, `node-red-node-ui-list`,
-   `node-red-node-mysql`, `node-red-contrib-mysql-config`.
-3. Menu → *Import* → select one of the files in `flows/`, then *Deploy*.
-4. The flows call the API at `http://host.docker.internal:8000`, which works unchanged with
-   docker compose.
-5. The portal and KPI flows use a MySQL database. Database credentials were removed from the
-   exported files: open the MySQL configuration nodes and enter your own. Node-RED then stores
-   them in `flows_cred.json`, which is ignored by Git.
+The flows call the API at `http://api:8000` and use the MySQL service `mysql` of the
+compose file. `flows_cred.json` holds the demo database login (`saturne` / `saturne`) in
+clear text so the demo runs without setup; for real data, set `credentialSecret` in
+`settings.js` and keep `flows_cred.json` out of version control.
