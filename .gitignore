@@ -13,8 +13,9 @@ venv/
 
 # Node-RED runtime files
 node-red/node_modules/
-node-red/.config.*.json
-node-red/.flows*.json.backup
+node-red/package.json
+node-red/.config.*
+node-red/.*.backup
 node-red/lib/
 node-red/context/
 
@@ -24,3 +25,4 @@ Thumbs.db
 .idea/
 .vscode/
 ~$*
+
