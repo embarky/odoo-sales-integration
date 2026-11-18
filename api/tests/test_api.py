@@ -68,7 +68,7 @@ def test_orders_by_customer_id(client):
 def test_order_detail(client):
     order = client.get("/saleorders/by_orderid/10").json()
     assert order["name"] == "S00010"
-    assert order["order_line"] == [{"product_id": 7, "product_name": "[DESK] Desk", "description": "[DESK] Desk",
+    assert order["order_line"] == [{"line_id": 101, "product_id": 7, "product_name": "[DESK] Desk", "description": "[DESK] Desk",
                                     "quantity": 2.0, "unit_price": 50.0, "total": 100.0}]
     assert client.get("/saleorders/by_orderid/999").status_code == 404
 
@@ -198,4 +198,36 @@ def test_openapi_lists_clean_paths_only(client):
     paths = client.get("/openapi.json").json()["paths"]
     assert "/saleorders/delivery_date/query/{order_name}" in paths
     assert "/saleorders/delivery_date/querry/{order_name}" not in paths
-    assert len(paths) == 24
+    assert len(paths) == 25
+
+
+# ---------------------------------------------------------------- quotation lines (customer portal)
+def test_order_detail_has_line_ids_and_local_dates(client):
+    order = client.get("/saleorders/by_orderid/12").json()
+    assert order["order_line"][0]["line_id"] == 103
+    assert order["scheduled_delivery_date"] == "2025-11-05 10:00:00"
+    assert order["invoice_count"] == 1 and order["editable"] is False
+    assert client.get("/saleorders/by_orderid/10").json()["editable"] is True
+
+
+def test_update_line_quantity(client, fake):
+    r = client.put("/saleorders/S00010/lines/101", json={"quantity": 5})
+    assert r.status_code == 200, r.text
+    assert fake.data["sale.order.line"][101]["product_uom_qty"] == 5
+    assert r.json()["order_line"][0]["line_id"] == 101
+    assert client.put("/saleorders/S00010/lines/101", json={"quantity": 0}).status_code == 422
+    assert client.put("/saleorders/S00010/lines/100", json={"quantity": 1}).status_code == 404  # section line
+    assert client.put("/saleorders/S00010/lines/103", json={"quantity": 1}).status_code == 404  # other order
+    assert client.put("/saleorders/S00012/lines/103", json={"quantity": 1}).status_code == 409  # confirmed
+
+
+def test_delete_line(client, fake):
+    fake.data["sale.order.line"][104] = {"id": 104, "name": "Chair", "product_id": [8, "Chair"],
+                                         "product_uom_qty": 1.0, "price_unit": 50.0, "price_total": 50.0,
+                                         "display_type": False}
+    fake.data["sale.order"][10]["order_line"].append(104)
+    r = client.delete("/saleorders/S00010/lines/104")
+    assert r.status_code == 200 and [line["line_id"] for line in r.json()["order_line"]] == [101]
+    assert 104 not in fake.data["sale.order.line"]
+    r = client.delete("/saleorders/S00010/lines/101")  # last product line
+    assert r.status_code == 409 and "cancel" in r.json()["detail"]

@@ -38,15 +38,15 @@ def initial_data() -> dict:
                 "zip": False, "country_id": False, "comment": False},
         },
         "sale.order": {
-            10: {"id": 10, "name": "S00010", "state": "draft", "partner_id": [1, "Agrolait"],
+            10: {"id": 10, "name": "S00010", "invoice_status": "no", "amount_untaxed": 100.0, "amount_tax": 0.0, "client_order_ref": False, "state": "draft", "partner_id": [1, "Agrolait"],
                  "create_date": "2025-10-01 08:00:00", "date_order": "2025-10-01 08:00:00", "amount_total": 100.0,
                  "order_line": [100, 101], "invoice_ids": [], "commitment_date": False,
                  "expected_date": "2025-10-31 21:00:00", "locked": False},
-            11: {"id": 11, "name": "S00011", "state": "sent", "partner_id": [2, "Agrolait, Jane Doe"],
+            11: {"id": 11, "name": "S00011", "invoice_status": "no", "amount_untaxed": 50.0, "amount_tax": 0.0, "client_order_ref": False, "state": "sent", "partner_id": [2, "Agrolait, Jane Doe"],
                  "create_date": "2025-10-02 08:00:00", "date_order": "2025-10-02 08:00:00", "amount_total": 50.0,
                  "order_line": [102], "invoice_ids": [], "commitment_date": False,
                  "expected_date": False, "locked": False},
-            12: {"id": 12, "name": "S00012", "state": "sale", "partner_id": [4, "Brandon Freeman"],
+            12: {"id": 12, "name": "S00012", "invoice_status": "to invoice", "amount_untaxed": 75.0, "amount_tax": 0.0, "client_order_ref": "PO-7", "state": "sale", "partner_id": [4, "Brandon Freeman"],
                  "create_date": "2025-10-03 08:00:00", "date_order": "2025-10-03 08:00:00", "amount_total": 75.0,
                  "order_line": [103], "invoice_ids": [500], "commitment_date": "2025-11-05 09:00:00",
                  "expected_date": "2025-11-04 09:00:00", "locked": False, "to_invoice": True},
@@ -171,6 +171,15 @@ class FakeOdoo:
         new_id = max(table, default=0) + 1
         table[new_id] = {"id": new_id, **vals}
         return new_id
+
+    def m_unlink(self, model, ids, **kw):
+        for r in self._records(model, ids):
+            del self.data[model][r["id"]]
+            if model == "sale.order.line":
+                for so in self.data["sale.order"].values():
+                    if r["id"] in so["order_line"]:
+                        so["order_line"].remove(r["id"])
+        return True
 
     def m_message_post(self, model, ids, body="", **kw):
         self._records(model, ids)

@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS user_messages (
     message_id      INT AUTO_INCREMENT PRIMARY KEY,
     user_id         INT          NOT NULL,
     message_content TEXT         NOT NULL,
-    message_type    VARCHAR(20)  NOT NULL DEFAULT 'text',   -- text, bug, suggestion, question, complaint, praise
+    message_type    VARCHAR(20)  NOT NULL DEFAULT 'question', -- question, incident, complaint, suggestion, praise
+    order_name      VARCHAR(30)  NULL,                       -- Odoo order the message is about, if any
     message_status  VARCHAR(20)  NOT NULL DEFAULT 'sent',   -- sent, replied
     created_at      DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
     reply_content   TEXT         NULL,
@@ -40,4 +41,21 @@ CREATE TABLE IF NOT EXISTS delivery_records (
     customer_id           INT         NOT NULL,
     delivery_date         DATE        NOT NULL,   -- promised date
     actual_delivery_date  DATE        NULL        -- NULL = not delivered yet
+);
+
+-- Requests from customers to move the delivery date of a confirmed order.
+-- The company approves (the new date is written to Odoo through the API) or rejects them.
+CREATE TABLE IF NOT EXISTS delivery_change_requests (
+    request_id      INT AUTO_INCREMENT PRIMARY KEY,
+    order_name      VARCHAR(30)  NOT NULL,
+    customer_id     INT          NOT NULL,
+    previous_date   DATETIME     NULL,        -- scheduled date when the request was made (local time)
+    requested_date  DATETIME     NOT NULL,    -- date asked by the customer (local time)
+    reason          TEXT         NULL,
+    status          VARCHAR(20)  NOT NULL DEFAULT 'pending',   -- pending, approved, rejected
+    created_at      DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    decided_at      DATETIME     NULL,
+    decision_note   TEXT         NULL,
+    INDEX idx_requests_customer (customer_id),
+    INDEX idx_requests_status (status)
 );

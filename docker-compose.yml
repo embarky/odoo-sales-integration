@@ -7,7 +7,8 @@
 #
 #   Odoo                http://localhost:8069        login admin / admin
 #   API documentation   http://localhost:8000/docs
-#   Customer portal     http://localhost:1880/dashboard
+#   Customer portal     http://localhost:1880/dashboard/portal
+#   Service desk + KPIs http://localhost:1880/dashboard/service-desk
 #   Employee dashboard  http://localhost:1880/ui
 #   Node-RED editor     http://localhost:1880
 #
@@ -72,6 +73,7 @@ services:
       MYSQL_USER: saturne
       MYSQL_PASSWORD: saturne
       MYSQL_ROOT_PASSWORD: root
+      TZ: Europe/Zurich
     command: ["--default-authentication-plugin=mysql_native_password"]
     volumes:
       - ./database:/docker-entrypoint-initdb.d:ro   # schema and demo data, loaded on first start
@@ -106,6 +108,9 @@ services:
         condition: service_started
       mysql:
         condition: service_healthy
+    environment:
+      API_URL: http://api:8000
+      TZ: Europe/Zurich
     ports:
       - "1880:1880"
     volumes:

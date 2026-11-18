@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, Field
 
 from ..dependencies import Odoo, find_one, m2o_id, m2o_name, not_found, pdf_response
 from ..odoo import OdooClient
@@ -8,6 +9,9 @@ router = APIRouter(prefix="/saleorders", tags=["Sale Orders"])
 
 ORDER_FIELDS = ["name", "state", "create_date", "date_order", "amount_total", "partner_id", "order_line"]
 LINE_FIELDS = ["name", "product_id", "product_uom_qty", "price_unit", "price_total", "display_type"]
+DETAIL_FIELDS = ORDER_FIELDS + ["commitment_date", "expected_date", "invoice_status", "invoice_ids",
+                                "amount_untaxed", "amount_tax", "client_order_ref"]
+EDITABLE_STATES = ("draft", "sent")  # quotations; confirmed orders are changed by the company
 
 
 # ---------------------------------------------------------------- helpers
@@ -62,11 +66,18 @@ def get_orders_by_customer_id(cust_id: int, odoo: Odoo):
 
 @router.get("/by_orderid/{order_id}")
 def get_order(order_id: int, odoo: Odoo):
-    """One order with detailed lines (product, description, quantity, prices)."""
-    order = find_one(odoo, "sale.order", [("id", "=", order_id)], ORDER_FIELDS, f"Order {order_id}")
+    """One order with detailed lines (product, description, quantity, prices) and its delivery date
+    in local time. `editable` tells whether the customer may still change the lines."""
+    order = find_one(odoo, "sale.order", [("id", "=", order_id)], DETAIL_FIELDS, f"Order {order_id}")
+    return _detail(odoo, order)
+
+
+def _detail(odoo: OdooClient, order: dict) -> dict:
     lines = _product_lines(odoo, order["order_line"])
+    tz = odoo.settings.timezone
     order["order_line"] = [
         {
+            "line_id": lid,
             "product_id": m2o_id(line["product_id"]),
             "product_name": m2o_name(line["product_id"]),
             "description": line["name"],
@@ -76,7 +87,51 @@ def get_order(order_id: int, odoo: Odoo):
         }
         for lid in order["order_line"] if (line := lines.get(lid))
     ]
+    order["date_order"] = odoo_to_local(order["date_order"], tz)
+    order["scheduled_delivery_date"] = odoo_to_local(order["commitment_date"] or order["expected_date"], tz)
+    order["commitment_date"] = odoo_to_local(order["commitment_date"], tz)
+    order["expected_date"] = odoo_to_local(order["expected_date"], tz)
+    order["invoice_count"] = len(order.pop("invoice_ids"))
+    order["editable"] = order["state"] in EDITABLE_STATES
     return order
+
+
+# ---------------------------------------------------------------- quotation lines
+class LineUpdate(BaseModel):
+    quantity: float = Field(gt=0, description="New ordered quantity")
+
+
+def _editable_line(odoo: OdooClient, order_name: str, line_id: int) -> dict:
+    order = _order_by_name(odoo, order_name, ["state", "order_line"])
+    if line_id not in order["order_line"] or line_id not in _product_lines(odoo, [line_id]):
+        raise not_found(f"Line {line_id} of order {order_name}")
+    if order["state"] not in EDITABLE_STATES:
+        raise HTTPException(409, f"Order {order_name} is confirmed ('{order['state']}'): "
+                                 "only quotations can be changed")
+    return order
+
+
+def _detail_by_id(odoo: OdooClient, order_id: int) -> dict:
+    return _detail(odoo, odoo.execute("sale.order", "read", [order_id], fields=DETAIL_FIELDS)[0])
+
+
+@router.put("/{order_name}/lines/{line_id}")
+def update_quotation_line(order_name: str, line_id: int, body: LineUpdate, odoo: Odoo):
+    """Change the quantity of a product line of a quotation. Returns the updated order."""
+    order = _editable_line(odoo, order_name, line_id)
+    odoo.execute("sale.order.line", "write", [line_id], {"product_uom_qty": body.quantity})
+    return _detail_by_id(odoo, order["id"])
+
+
+@router.delete("/{order_name}/lines/{line_id}")
+def delete_quotation_line(order_name: str, line_id: int, odoo: Odoo):
+    """Remove a product line from a quotation. The last product line cannot be removed
+    (cancel the quotation instead). Returns the updated order."""
+    order = _editable_line(odoo, order_name, line_id)
+    if len(_product_lines(odoo, order["order_line"])) == 1:
+        raise HTTPException(409, f"This is the last product of {order_name}: cancel the quotation instead")
+    odoo.execute("sale.order.line", "unlink", [line_id])
+    return _detail_by_id(odoo, order["id"])
 
 
 # ---------------------------------------------------------------- quotation actions

@@ -16,7 +16,7 @@ SELECT
         'One of the chairs arrived damaged.',
         'Thank you, the delivery was very fast!',
         'Can I add two more desks to my last quotation?'),
-    ELT(1 + n % 6, 'question', 'complaint', 'suggestion', 'complaint', 'praise', 'question'),
+    ELT(1 + n % 6, 'question', 'complaint', 'suggestion', 'incident', 'praise', 'question'),
     IF(n % 3 = 0, 'sent', 'replied'),
     TIMESTAMP(CURDATE() - INTERVAL (n % 30) DAY, MAKETIME(8 + n % 10, (n * 7) % 60, 0)),
     IF(n % 3 = 0, NULL, 'Thank you for your message, we are looking into it and will get back to you shortly.'),
@@ -60,3 +60,15 @@ SELECT
         ELSE CURDATE() - INTERVAL (70 - n) DAY - INTERVAL (n % 2) DAY              -- on time
     END
 FROM seq;
+
+-- a short history for the demo customer Azure Interior (partner 15), shown in the portal
+INSERT INTO user_messages (user_id, message_content, message_type, order_name, message_status, created_at, reply_content, replied_at)
+VALUES
+    (15, 'Two drawers of the last delivery have scratches on the front.', 'incident', 'S00029', 'replied',
+     NOW() - INTERVAL 6 DAY, 'Sorry about that. Replacement fronts leave our warehouse on Monday.', NOW() - INTERVAL 5 DAY),
+    (15, 'Can we get the invoices by e-mail as well?', 'question', NULL, 'sent', NOW() - INTERVAL 1 DAY, NULL, NULL);
+
+INSERT INTO delivery_change_requests (order_name, customer_id, previous_date, requested_date, reason, status, created_at, decided_at, decision_note)
+VALUES
+    ('S00027', 15, TIMESTAMP(CURDATE() + INTERVAL 7 DAY, '10:00:00'), TIMESTAMP(CURDATE() + INTERVAL 12 DAY, '10:00:00'), 'Our showroom is closed for renovation next week.',
+     'pending', NOW() - INTERVAL 2 HOUR, NULL, NULL);

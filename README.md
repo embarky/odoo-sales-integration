@@ -25,9 +25,11 @@ This project opens the sales process to external applications in three steps.
    diagrams of the main business objects.
 2. **Integrate**: a REST API that hides Odoo's XML-RPC interface behind clean, documented
    endpoints for customers, sales orders, invoices, deliveries and purchase orders.
-3. **Extend**: a Node-RED customer portal on top of the API (view orders, confirm or cancel
-   quotations, accept or reschedule delivery dates, download invoices, send messages),
-   plus KPI dashboards that measure how the portal is used.
+3. **Extend**: a Node-RED customer portal on top of the API (review and edit quotations,
+   accept or decline them, follow orders through invoicing and payment, download documents,
+   request a new delivery date, report a problem, talk to the service team), a service desk
+   where employees answer and approve these requests, and KPI dashboards that measure how
+   the portal is used.
 
 ## Architecture
 
@@ -76,6 +78,7 @@ Built with FastAPI. Interactive documentation is served at `/docs` (Swagger UI).
 | Status | `GET` | `/get-status` | `common.version`, `authenticate` |
 | Customers | `GET` | `/customers/all` · `/customers/companies` · `/customers/{id}` | `res.partner.search_read` |
 | Sales orders | `GET` | `/saleorders/by_name/{name}` · `/saleorders/by_id/{customer_id}` · `/saleorders/by_orderid/{id}` | `sale.order` + `sale.order.line` |
+| | `PUT` / `DELETE` | `/saleorders/{order}/lines/{line_id}` (quotations only) | `sale.order.line` `write` / `unlink` |
 | | `PUT` | `/saleorders/quotations/confirm/{order}` | `action_confirm` |
 | | `PUT` | `/saleorders/quotations/cancel/{order}` | `action_cancel` |
 | | `POST` | `/saleorders/invoice/create/{order}` | wizard `sale.advance.payment.inv` |
@@ -153,13 +156,16 @@ process (quotation, sent, confirmed, invoiced, paid).
 
 | Service | URL |
 |---|---|
-| Customer portal and KPI dashboards | <http://localhost:1880/dashboard> |
+| Customer portal | <http://localhost:1880/dashboard/portal> |
+| Service desk and message KPIs (employees) | <http://localhost:1880/dashboard/service-desk> |
+| Portal KPIs | <http://localhost:1880/dashboard/page1> |
 | Employee dashboard (sales and purchase) | <http://localhost:1880/ui> |
 | API documentation (Swagger UI) | <http://localhost:8000/docs> |
 | Odoo (login `admin` / `admin`) | <http://localhost:8069> |
 | Node-RED editor | <http://localhost:1880> |
 
-All passwords in the demo environment are local defaults. To connect the API to another
+In the portal, sign in as **Azure Interior** or **Wood Corner** to see orders in every
+stage. All passwords in the demo environment are local defaults. To connect the API to another
 Odoo instance, copy `.env.example` to `.env` and fill in its URL, database and login.
 
 ### Without Docker
