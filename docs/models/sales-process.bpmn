@@ -2,7 +2,7 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Defs_Saturne" targetNamespace="http://heclausanne-saturne/bpmn">
   <bpmn:collaboration id="Collab">
     <bpmn:participant id="P_Customer" name="Customer" processRef="Proc_Customer"/>
-    <bpmn:participant id="P_Company" name="heclausanne-Saturne (Odoo ERP)" processRef="Proc_Company"/>
+    <bpmn:participant id="P_Company" name="Saturne Furniture (Odoo ERP)" processRef="Proc_Company"/>
     <bpmn:messageFlow id="M_C_sendReq_S_start" name="Request" sourceRef="C_sendReq" targetRef="S_start"/>
     <bpmn:messageFlow id="M_S_sendQ_C_reviewQ" name="Quotation" sourceRef="S_sendQ" targetRef="C_reviewQ"/>
     <bpmn:messageFlow id="M_C_sign_S_accept" name="Signed quotation" sourceRef="C_sign" targetRef="S_accept"/>

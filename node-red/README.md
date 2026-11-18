@@ -25,8 +25,8 @@ Errors from the API (for example *nothing to invoice*) are shown to the user as 
 PDFs are served by Node-RED at `/pdf/order/:id`, `/pdf/invoice/:id` and `/pdf/purchase/:id`,
 so the browser does not need to reach the API directly.
 
-The back office replaces the TG1 employee dashboard, which was built with the first-generation
-Node-RED dashboard (`/ui`, no longer maintained). It covers the same actions and adds delivery,
+The back office replaces the first version of the employee dashboard, which was built with the
+first-generation Node-RED dashboard (`/ui`, no longer maintained). It covers the same actions and adds delivery,
 invoice confirmation and payment, so the whole order-to-cash process of the BPMN model can be run
 from one page. Odoo's own sample orders created before the Inventory app was installed do not
 record deliveries, so Odoo reports nothing to invoice for them; the demo orders added by

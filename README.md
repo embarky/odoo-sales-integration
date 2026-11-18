@@ -5,8 +5,6 @@ a **FastAPI** web service that exposes Odoo through its XML-RPC external API, an
 **Node-RED** applications on top of it: a customer portal, an employee back office, a service
 desk and KPI dashboards. Everything runs locally with one `docker compose` command.
 
-> Group project for the course *Enterprise Data and Integration* at HEC Lausanne (University of Lausanne), autumn semester 2025 — group **Saturne**.
-
 [![Tests](https://github.com/embarky/odoo-sales-integration/actions/workflows/tests.yml/badge.svg)](https://github.com/embarky/odoo-sales-integration/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
@@ -114,7 +112,7 @@ Highlights of the model:
 The editable source is [`docs/models/sales-process.bpmn`](docs/models/sales-process.bpmn).
 It opens in [bpmn.io](https://demo.bpmn.io) or Camunda Modeler.
 
-**Extended process with the customer portal (TG2).** Customers review and change quotations,
+**Extended process with the customer portal.** Customers review and change quotations,
 accept them, accept or request delivery dates and report problems in the portal; the portal
 carries these actions out in Odoo through the API, and the service desk decides on requests
 that commit the company. Source: [`docs/models/customer-portal-process.bpmn`](docs/models/customer-portal-process.bpmn).
@@ -342,7 +340,7 @@ This is a demonstration system. Before real use it would need:
 
 ## Authors
 
-Course project of group **Saturne** (Hang Yang, Yi Huang, Kyle Fletcher).
+Hang Yang, Yi Huang and Kyle Fletcher – HEC Lausanne, University of Lausanne, 2025.
 **Hang Yang** designed and built the API, the customer portal, the back office and the demo
 environment.
 
