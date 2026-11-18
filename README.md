@@ -114,6 +114,18 @@ Highlights of the model:
 The editable source is [`docs/models/sales-process.bpmn`](docs/models/sales-process.bpmn).
 It opens in [bpmn.io](https://demo.bpmn.io) or Camunda Modeler.
 
+**Extended process with the customer portal (TG2).** Customers review and change quotations,
+accept them, accept or request delivery dates and report problems in the portal; the portal
+carries these actions out in Odoo through the API, and the service desk decides on requests
+that commit the company. Source: [`docs/models/customer-portal-process.bpmn`](docs/models/customer-portal-process.bpmn).
+
+<details>
+<summary>BPMN diagram of the extended process</summary>
+
+![BPMN collaboration diagram of the sales process extended with the customer portal](docs/models/customer-portal-process-bpmn.png)
+
+</details>
+
 ## The API
 
 Built with FastAPI. Interactive documentation is served at `/docs` (Swagger UI).
@@ -184,7 +196,7 @@ odoo-sales-integration/
 │   └── requirements*.txt
 ├── node-red/                  # Node-RED flows (portal, back office, service desk, KPIs) and image
 ├── docs/
-│   ├── models/                # BPMN process model (source and image)
+│   ├── models/                # BPMN process models, as-is and with the portal (source and image)
 │   ├── report/                # project report (PDF and Word)
 │   └── screenshots/           # screenshots and demo recordings used in this README
 ├── database/                  # MySQL schema and demo data for the portal and KPIs
@@ -334,8 +346,9 @@ Course project of group **Saturne** (Hang Yang, Yi Huang, Kyle Fletcher).
 **Hang Yang** designed and built the API, the customer portal, the back office and the demo
 environment.
 
-The full project report (process analysis, API design, portal, KPIs and tests) is in
-[`docs/report`](docs/report).
+The full project report – process analysis, API design, extended process, data classes,
+user interface, KPIs and tests – is in [`docs/report`](docs/report)
+([PDF](docs/report/Odoo_Sales_Integration_Report.pdf) · [Word](docs/report/Odoo_Sales_Integration_Report.docx)).
 
 ## License
 
