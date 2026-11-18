@@ -1,1 +1,27 @@
-/__pycache__
+# secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node-RED runtime files
+node-red/node_modules/
+node-red/.config.*.json
+node-red/.flows*.json.backup
+node-red/flows_cred.json
+node-red/lib/
+node-red/context/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+~$*

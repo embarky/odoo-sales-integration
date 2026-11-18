@@ -1,0 +1,4943 @@
+[
+    {
+        "id": "6a3cdb4dcb12f723",
+        "type": "tab",
+        "label": "Customer - Interface",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "60255b57bde27492",
+        "type": "tab",
+        "label": "Customers Messages",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "70b614b1a465535c",
+        "type": "tab",
+        "label": "KPI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4420c2351d292668",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "09eaa569865a9606",
+        "type": "ui-group",
+        "name": "sales",
+        "page": "",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fc27825cd30b9132",
+        "type": "ui-theme",
+        "name": "Purple Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#7000cc",
+            "bgPage": "#d9bdef",
+            "groupBg": "#ffffff",
+            "groupOutline": "#7000cc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3b27354ee6f33928",
+        "type": "ui-group",
+        "name": "group-1",
+        "page": "",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "62d6e656995736f5",
+        "type": "ui-base",
+        "name": "heclausanne-Saturne",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "6e7b1c36e446e574",
+        "type": "MySQLdatabase",
+        "name": "SATURNE@edi.unil.ch",
+        "host": "edi.unil.ch",
+        "port": "3306",
+        "db": "SATURNE",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "648d5b2b862a3283",
+        "type": "MySQL-Server-Connector",
+        "name": "SATURNE",
+        "host": "edi.unil.ch",
+        "port": "3306",
+        "user": "",
+        "password": "",
+        "tls": false,
+        "database": "SATURNE"
+    },
+    {
+        "id": "ad8bd8277cf20068",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "29c1303e8ca1e852",
+        "type": "ui_group",
+        "name": "purchase",
+        "tab": "da01af37b6df1fa3",
+        "order": 1,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c7dfc1972dc30c9c",
+        "type": "ui_group",
+        "name": "Purchase Order Operation",
+        "tab": "da01af37b6df1fa3",
+        "order": 2,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "91b669ecdb534ef1",
+        "type": "ui_group",
+        "name": "Sales",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "18b6bc10eba5c917",
+        "type": "ui-group",
+        "name": "DB Access demo",
+        "page": "",
+        "width": "10",
+        "height": "2",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f308ddc1219941c6",
+        "type": "ui-group",
+        "name": "Customer  Login",
+        "page": "",
+        "width": "15",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1821bfc72f1b2c08",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "2bc85ab1754f87d3",
+        "type": "ui-page",
+        "name": "KPI - Customer Messages",
+        "ui": "62d6e656995736f5",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1821bfc72f1b2c08",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "6dc24099975c2cf3",
+        "type": "ui-group",
+        "name": "Message",
+        "page": "",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b165d622c426bfb2",
+        "type": "ui-group",
+        "name": "Customer Order",
+        "page": "",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "e3e870bbdd387d45",
+        "type": "ui-group",
+        "name": "Order Operation",
+        "page": "",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "aba435c6e2da3094",
+        "type": "ui-page",
+        "name": "KPI",
+        "ui": "62d6e656995736f5",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1821bfc72f1b2c08",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "1c2bbd12911ac830",
+        "type": "ui_tab",
+        "name": "Odoo-NodeRed-Saturne",
+        "icon": "dashboard-sales",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f20fd5aa39f9f670",
+        "type": "ui_group",
+        "name": "Customers",
+        "tab": "1c2bbd12911ac830",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fe64d88aac61e3db",
+        "type": "ui_group",
+        "name": "SaleOrders",
+        "tab": "1c2bbd12911ac830",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "491cb1f2cdf4d485",
+        "type": "ui_group",
+        "name": "SaleOrdersOperation",
+        "tab": "1c2bbd12911ac830",
+        "order": 3,
+        "disp": true,
+        "width": "28",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "741a58029aa32415",
+        "type": "ui-group",
+        "name": "Customer Interface",
+        "page": "",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "52f1cf16427fed48",
+        "type": "ui_group",
+        "name": "Message ",
+        "tab": "1c2bbd12911ac830",
+        "order": 4,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aff6f8f27b09ca87",
+        "type": "ui-group",
+        "name": "Customer - Message",
+        "page": "2bc85ab1754f87d3",
+        "width": "12",
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d68276270f259ac2",
+        "type": "ui-group",
+        "name": "KPI - Activity",
+        "page": "aba435c6e2da3094",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5ddb8d50fae697a8",
+        "type": "ui-page",
+        "name": "Customer -Interface",
+        "ui": "62d6e656995736f5",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "4420c2351d292668",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "ffe2adc900aee47d",
+        "type": "ui-group",
+        "name": "Customer Login",
+        "page": "5ddb8d50fae697a8",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "35123a26db16f1d1",
+        "type": "ui-group",
+        "name": "Customer Order",
+        "page": "5ddb8d50fae697a8",
+        "width": "6",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7b3822267135c2a7",
+        "type": "ui-group",
+        "name": "Customer Order Deatil",
+        "page": "5ddb8d50fae697a8",
+        "width": "6",
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "137708fdd1a89035",
+        "type": "ui-group",
+        "name": "Message",
+        "page": "5ddb8d50fae697a8",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "55e3fb0c6bd418f0",
+        "type": "ui-group",
+        "name": "KPI - Quotation",
+        "page": "aba435c6e2da3094",
+        "width": "12",
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "73f2f0f21b56ee95",
+        "type": "ui-group",
+        "name": "KPI - Delivery",
+        "page": "aba435c6e2da3094",
+        "width": "12",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "15b9a4b273c18a98",
+        "type": "ui-group",
+        "name": "Avg Reply Time",
+        "page": "2bc85ab1754f87d3",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "70c8298e1283e251",
+        "type": "ui-group",
+        "name": "KPI - Charts",
+        "page": "2bc85ab1754f87d3",
+        "width": "12",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "98bcecc2d055a59f",
+        "type": "inject",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "e6cb3bd357284247"
+            ]
+        ]
+    },
+    {
+        "id": "e6cb3bd357284247",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "customers/all",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://host.docker.internal:8000/customers/all",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "9c2f3e78f47f1458"
+            ]
+        ]
+    },
+    {
+        "id": "9c2f3e78f47f1458",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct customers list",
+        "func": "let data = msg.payload;\n\n\nif (typeof data === \"string\") {\n    data = JSON.parse(data);\n}\n\nmsg.payload = data.map(item => ({\n    title: item.label,    \n    value: item.value     \n}));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "fd4ddfa8ca32f432"
+            ]
+        ]
+    },
+    {
+        "id": "fd4ddfa8ca32f432",
+        "type": "ui-table",
+        "z": "6a3cdb4dcb12f723",
+        "group": "ffe2adc900aee47d",
+        "name": "",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "57fd78a09e358f31",
+                "ca65803b6876f02d",
+                "64c0352ffe3dedf9"
+            ]
+        ]
+    },
+    {
+        "id": "57fd78a09e358f31",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url customer",
+        "func": "const customerId = msg.payload.value;\n\nmsg.url = `http://host.docker.internal:8000/customers/${customerId}`;\n\nmsg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 340,
+        "wires": [
+            [
+                "53b6a111bc73ff0f"
+            ]
+        ]
+    },
+    {
+        "id": "53b6a111bc73ff0f",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "customers/{customerId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1090,
+        "y": 340,
+        "wires": [
+            [
+                "d80974c3546ffd97"
+            ]
+        ]
+    },
+    {
+        "id": "d80974c3546ffd97",
+        "type": "ui-table",
+        "z": "6a3cdb4dcb12f723",
+        "group": "ffe2adc900aee47d",
+        "name": "",
+        "label": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 1290,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca65803b6876f02d",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url orders",
+        "func": "// Extract customerId\nconst customerId = msg.payload.value;\n\n// Build query API URL or request body\nmsg.url = `http://host.docker.internal:8000/saleorders/by_id/${customerId}`;\n\n// If using HTTP Request GET request\nmsg.method = \"GET\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "35b288d49a2c5bde"
+            ]
+        ]
+    },
+    {
+        "id": "35b288d49a2c5bde",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/by_id/{customerId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "81baf199c867aebb"
+            ]
+        ]
+    },
+    {
+        "id": "81baf199c867aebb",
+        "type": "ui-table",
+        "z": "6a3cdb4dcb12f723",
+        "group": "35123a26db16f1d1",
+        "name": "",
+        "label": "",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "355d65c31c01085b",
+                "f21c93d9ee4f1c7e",
+                "7c0a1cc3d09deca3"
+            ]
+        ]
+    },
+    {
+        "id": "59f6047f0a65976b",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/by_orderid/{orderId}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 460,
+        "wires": [
+            [
+                "32b4974bcb7f0b2c",
+                "fd02656df3430c84"
+            ]
+        ]
+    },
+    {
+        "id": "355d65c31c01085b",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url order",
+        "func": "let orderId = msg.payload.id;\n\nmsg.url = `http://host.docker.internal:8000/saleorders/by_orderid/${orderId}`; \nmsg.method = \"GET\"; \n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 460,
+        "wires": [
+            [
+                "59f6047f0a65976b"
+            ]
+        ]
+    },
+    {
+        "id": "1bd5d1e2fb754dd6",
+        "type": "ui-table",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 1490,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f6e6ddbb593d081",
+        "type": "mysql",
+        "z": "6a3cdb4dcb12f723",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 1300,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51d92125515145bb",
+        "type": "ui-text-input",
+        "z": "6a3cdb4dcb12f723",
+        "group": "137708fdd1a89035",
+        "name": "",
+        "label": "Enter your feedback",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "topic": "payload",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 620,
+        "y": 160,
+        "wires": [
+            [
+                "83c6fe3fd56e522a"
+            ]
+        ]
+    },
+    {
+        "id": "55d875bce5c515f3",
+        "type": "ui-dropdown",
+        "z": "6a3cdb4dcb12f723",
+        "group": "137708fdd1a89035",
+        "name": "",
+        "label": "Select Option:",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "General",
+                "value": "text",
+                "type": "str"
+            },
+            {
+                "label": "Bug Report",
+                "value": "bug",
+                "type": "str"
+            },
+            {
+                "label": "Suggestion",
+                "value": "suggestion",
+                "type": "str"
+            },
+            {
+                "label": "Question",
+                "value": "question",
+                "type": "str"
+            },
+            {
+                "label": "Complaint",
+                "value": "complaint",
+                "type": "str"
+            },
+            {
+                "label": "Praise",
+                "value": "praise",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "payload",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "b672f530b33135ea"
+            ]
+        ]
+    },
+    {
+        "id": "ff1ac29053ce8005",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "137708fdd1a89035",
+        "name": "",
+        "label": "Send",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 950,
+        "y": 220,
+        "wires": [
+            [
+                "4da7c05f9f69afba"
+            ]
+        ]
+    },
+    {
+        "id": "4da7c05f9f69afba",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 6",
+        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 220,
+        "wires": [
+            [
+                "4f6e6ddbb593d081"
+            ]
+        ]
+    },
+    {
+        "id": "83c6fe3fd56e522a",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 7",
+        "func": "flow.set(\"message_content\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 160,
+        "wires": [
+            [
+                "ff1ac29053ce8005"
+            ]
+        ]
+    },
+    {
+        "id": "b672f530b33135ea",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 8",
+        "func": "flow.set(\"message_type\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 220,
+        "wires": [
+            [
+                "ff1ac29053ce8005"
+            ]
+        ]
+    },
+    {
+        "id": "64c0352ffe3dedf9",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 9",
+        "func": "flow.set(\"user_id\", msg.payload.value);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 280,
+        "wires": [
+            [
+                "ff1ac29053ce8005"
+            ]
+        ]
+    },
+    {
+        "id": "32b4974bcb7f0b2c",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 10",
+        "func": "const order = msg.payload;\n\nmsg.payload = [{\n  id: order.id,\n  order_no: order.name,\n  state: order.state,\n  date: order.create_date,\n  total: order.amount_total\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 420,
+        "wires": [
+            [
+                "1bd5d1e2fb754dd6"
+            ]
+        ]
+    },
+    {
+        "id": "b3bdba1e3d2bf80f",
+        "type": "ui-table",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "",
+        "order": 11,
+        "width": "0",
+        "height": "0",
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 1490,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd02656df3430c84",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 11",
+        "func": "const lines = msg.payload.order_line;\n\nmsg.payload = lines.map(l => ({\n  product: l.product_name,\n  description: l.description,\n  qty: l.quantity,\n  unit_price: l.unit_price,\n  total: l.total\n}));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 500,
+        "wires": [
+            [
+                "b3bdba1e3d2bf80f"
+            ]
+        ]
+    },
+    {
+        "id": "f21c93d9ee4f1c7e",
+        "type": "switch",
+        "z": "6a3cdb4dcb12f723",
+        "name": "",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "draft",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "sale",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "d7f3e2c623b61e8e",
+                "1735ce05f24ceeeb"
+            ],
+            [
+                "b7df0647b709c141",
+                "edf72ca54a3c1330",
+                "8124f988e1c73d48"
+            ]
+        ]
+    },
+    {
+        "id": "70bba868fcf5303f",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url confirm quotation",
+        "func": "\nvar keys = Object.keys(msg.payload).filter(k => k !== 'confirm');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar confirm = msg.payload.confirm; \n\nif (confirm === \"confirm\" && order.state === \"draft\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/saleorders/quotations/confirm/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 580,
+        "wires": [
+            [
+                "84bd7d4ef5135a29"
+            ]
+        ]
+    },
+    {
+        "id": "d7f3e2c623b61e8e",
+        "type": "join",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 700,
+        "y": 580,
+        "wires": [
+            [
+                "70bba868fcf5303f",
+                "90b2480f2fcec75f"
+            ]
+        ]
+    },
+    {
+        "id": "8b288fe0c07841e3",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url cancel quotation",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'cancel');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar cancel = msg.payload.cancel;  \n\nif (cancel === \"cancel\" && order.state === \"draft\") {\n    let orderName = order.name; \n\n    msg.url = `http://host.docker.internal:8000/saleorders/quotations/cancel/${orderName}`;\n    msg.method = \"PUT\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 660,
+        "wires": [
+            [
+                "47362493c20e5f24"
+            ]
+        ]
+    },
+    {
+        "id": "1735ce05f24ceeeb",
+        "type": "join",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 700,
+        "y": 660,
+        "wires": [
+            [
+                "8b288fe0c07841e3",
+                "e5cedf3ea7f23a25"
+            ]
+        ]
+    },
+    {
+        "id": "84bd7d4ef5135a29",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/quotations/confirm/{orderName}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1270,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47362493c20e5f24",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/quotations/cancel/{orderName}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1270,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8124f988e1c73d48",
+        "type": "join",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 700,
+        "y": 980,
+        "wires": [
+            [
+                "a0161c53d0f5eae1"
+            ]
+        ]
+    },
+    {
+        "id": "a0161c53d0f5eae1",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url createinvoice",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar createinvoice = msg.payload.createinvoice;   \n\nif (createinvoice === \"createinvoice\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/saleorders/invoice/create/${orderName}`;\n    msg.method = \"POST\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 980,
+        "wires": [
+            [
+                "3be1aeb7ba54eb5f"
+            ]
+        ]
+    },
+    {
+        "id": "3be1aeb7ba54eb5f",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/invoice/create/{orderName}",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1230,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7df0647b709c141",
+        "type": "join",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 700,
+        "y": 1060,
+        "wires": [
+            [
+                "284562658eed11b3"
+            ]
+        ]
+    },
+    {
+        "id": "284562658eed11b3",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "construct url invoiceid",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar invoicepdf = msg.payload.invoicepdf;  \n\nif (invoicepdf === \"invoicepdf\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/accounting/invoice/by_saleorder/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 1060,
+        "wires": [
+            [
+                "a7f75ea3f2ba7f95"
+            ]
+        ]
+    },
+    {
+        "id": "a7f75ea3f2ba7f95",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "accounting/invoice/by_saleorder/{orderName}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1220,
+        "y": 1060,
+        "wires": [
+            [
+                "c983479e7c97eca2"
+            ]
+        ]
+    },
+    {
+        "id": "c983479e7c97eca2",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "construct url invoicepdf",
+        "func": "if (!msg.payload || !msg.payload.invoice || !msg.payload.invoice.length) {\n    node.warn(\"No invoice data found\");\n    return null;\n}\n\nlet invoiceId = msg.payload.invoice[0].id;\n\nmsg.url = `http://127.0.0.1:8000/accounting/invoice/get/pdf/${invoiceId}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 1120,
+        "wires": [
+            [
+                "6a279fa53782c5cf"
+            ]
+        ]
+    },
+    {
+        "id": "edf72ca54a3c1330",
+        "type": "join",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Combine conditions",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 700,
+        "y": 760,
+        "wires": [
+            [
+                "f3ecba2865f2c95c"
+            ]
+        ]
+    },
+    {
+        "id": "f3ecba2865f2c95c",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url querrydelivery",
+        "func": "var keys = Object.keys(msg.payload).filter(k => k !== 'sale');\nif (keys.length === 0) return null;\n\nvar order = msg.payload[keys[0]];  \nvar querrydelivery = msg.payload.querrydelivery;  \n\nif (querrydelivery === \"querrydelivery\" && order.state === \"sale\") {\n    let orderName = order.name;  \n\n    msg.url = `http://host.docker.internal:8000/saleorders/delivery_date/querry/${orderName}`;\n    msg.method = \"GET\";\n\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 760,
+        "wires": [
+            [
+                "b6b8de933fc7c4ae"
+            ]
+        ]
+    },
+    {
+        "id": "b6b8de933fc7c4ae",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/delivery_date/querry/{orderName}",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1250,
+        "y": 760,
+        "wires": [
+            [
+                "fa917e4e5f4996be",
+                "ed22c515017e79cb"
+            ]
+        ]
+    },
+    {
+        "id": "36e7f514f8b77b80",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "Construct url confirm deliverydate",
+        "func": "var orderName = flow.get(\"order_name\");\nvar decision = \"reject\";\nvar newDate = flow.get(\"new_date\");\n\nvar encodedDate = encodeURIComponent(newDate);\n\nmsg = {\n    payload: {},\n    url : `http://host.docker.internal:8000/saleorders/delivery_date/confirm/${orderName}/${decision}/${encodedDate}`,\n    method : \"PUT\"\n};\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 860,
+        "wires": [
+            [
+                "4685d7585faaf316"
+            ]
+        ]
+    },
+    {
+        "id": "7f298ba61f3a1ce3",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "Confirm quotation",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "confirm",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 690,
+        "y": 540,
+        "wires": [
+            [
+                "d7f3e2c623b61e8e"
+            ]
+        ]
+    },
+    {
+        "id": "3b83daa32517f169",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "Cancel quotation",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "cancel",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "1735ce05f24ceeeb"
+            ]
+        ]
+    },
+    {
+        "id": "e0177af96f33358a",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "QuerryDelivery",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "querrydelivery",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 680,
+        "y": 720,
+        "wires": [
+            [
+                "edf72ca54a3c1330"
+            ]
+        ]
+    },
+    {
+        "id": "9721198f80d0d8a8",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "CreateInvoice",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "createinvoice",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 680,
+        "y": 940,
+        "wires": [
+            [
+                "8124f988e1c73d48"
+            ]
+        ]
+    },
+    {
+        "id": "833f191f3ea167e0",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "InvoicePDF",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "invoicepdf",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 670,
+        "y": 1020,
+        "wires": [
+            [
+                "b7df0647b709c141"
+            ]
+        ]
+    },
+    {
+        "id": "6a279fa53782c5cf",
+        "type": "ui-template",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "page": "",
+        "ui": "",
+        "name": "download pdf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div style=\"text-align:center;\">\n\n  <a :href=\"msg.url\" target=\"_blank\" download\n\n     style=\"padding:10px 20px; background-color:#4CAF50; color:white; text-decoration:none; border-radius:5px; display:inline-block;\">\n\n    Download PDF\n  </a>\n\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1160,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1398776a9f6f8d1",
+        "type": "ui-text-input",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "Select new datetime",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "topic": "payload",
+        "topicType": "msg",
+        "mode": "datetime-local",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 700,
+        "y": 900,
+        "wires": [
+            [
+                "6da1b3dc72a900f2"
+            ]
+        ]
+    },
+    {
+        "id": "fa917e4e5f4996be",
+        "type": "ui-markdown",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "content": "### Delivery Information\n**Order Name:** {{ msg.payload.order_name }}\n**Scheduled Delivery:** {{ msg.payload.scheduled_delivery_date }}",
+        "className": "",
+        "x": 1550,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1bf291c76e7bb35",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "7b3822267135c2a7",
+        "name": "",
+        "label": "Change",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 840,
+        "y": 860,
+        "wires": [
+            [
+                "36e7f514f8b77b80",
+                "7a4b97ca4bbd3488"
+            ]
+        ]
+    },
+    {
+        "id": "6da1b3dc72a900f2",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 52",
+        "func": "var rawDate = msg.payload; \n\nif (rawDate) {\n    var decodedDate = decodeURIComponent(rawDate);\n    var formattedDate = decodedDate.replace(\"T\", \" \");\n    if (formattedDate.length === 16) {\n        formattedDate += \":00\";\n    }\n\n    flow.set(\"new_date\", formattedDate);\n    \n    msg.payload = formattedDate;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 900,
+        "wires": [
+            [
+                "e1bf291c76e7bb35"
+            ]
+        ]
+    },
+    {
+        "id": "ed22c515017e79cb",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 54",
+        "func": "flow.set(\"order_name\", msg.payload.order_name);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 860,
+        "wires": [
+            [
+                "e1bf291c76e7bb35"
+            ]
+        ]
+    },
+    {
+        "id": "4685d7585faaf316",
+        "type": "http request",
+        "z": "6a3cdb4dcb12f723",
+        "name": "saleorders/delivery_date/confirm/{orderName}/{decision}/{encodedDate}",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1480,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5595b9d980bbf80",
+        "type": "ui-button",
+        "z": "6a3cdb4dcb12f723",
+        "group": "ffe2adc900aee47d",
+        "name": "",
+        "label": "Log out",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 980,
+        "y": 380,
+        "wires": [
+            [
+                "b0eabe0762b58efc"
+            ]
+        ]
+    },
+    {
+        "id": "b0eabe0762b58efc",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 16",
+        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 380,
+        "wires": [
+            [
+                "a5918c5e3c4c5cbf"
+            ]
+        ]
+    },
+    {
+        "id": "a5918c5e3c4c5cbf",
+        "type": "mysql",
+        "z": "6a3cdb4dcb12f723",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 1340,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c0a1cc3d09deca3",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 17",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 380,
+        "wires": [
+            [
+                "f5595b9d980bbf80"
+            ]
+        ]
+    },
+    {
+        "id": "90b2480f2fcec75f",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 36",
+        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 540,
+        "wires": [
+            [
+                "ce0e1f02800880a2"
+            ]
+        ]
+    },
+    {
+        "id": "ce0e1f02800880a2",
+        "type": "mysql",
+        "z": "6a3cdb4dcb12f723",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 1120,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5cedf3ea7f23a25",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 37",
+        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 620,
+        "wires": [
+            [
+                "66227f5689998779"
+            ]
+        ]
+    },
+    {
+        "id": "66227f5689998779",
+        "type": "mysql",
+        "z": "6a3cdb4dcb12f723",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 1120,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a4b97ca4bbd3488",
+        "type": "function",
+        "z": "6a3cdb4dcb12f723",
+        "name": "function 53",
+        "func": "var userId = flow.get(\"user_id\");\nvar type = flow.get(\"message_type\") || \"text\";\nvar content = flow.get(\"message_content\");\n\nif (!userId || !content) {\n    node.warn(\"Missing user or content\");\n    return null;\n}\n\n// Prevent SQL injection\ncontent = content.replace(/'/g, \"''\");\n\nmsg.topic = `\nINSERT INTO user_messages\n(user_id, message_content, message_type, message_status, created_at)\nVALUES\n(${userId}, '${content}', '${type}', 'sent', NOW());\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 820,
+        "wires": [
+            [
+                "2d1623adb0912da5"
+            ]
+        ]
+    },
+    {
+        "id": "2d1623adb0912da5",
+        "type": "mysql",
+        "z": "6a3cdb4dcb12f723",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 1220,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7acb1fe8cb0fbd44",
+        "type": "inject",
+        "z": "60255b57bde27492",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 120,
+        "wires": [
+            [
+                "57673f4baaaebbec"
+            ]
+        ]
+    },
+    {
+        "id": "57673f4baaaebbec",
+        "type": "function",
+        "z": "60255b57bde27492",
+        "name": "function 1",
+        "func": "// Function Node: generate SQL for fetching all messages\nmsg.topic = `\nSELECT *\nFROM user_messages\nORDER BY created_at ASC;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "f1981e0be8d5ea94"
+            ]
+        ]
+    },
+    {
+        "id": "3a28577db0d2333f",
+        "type": "debug",
+        "z": "60255b57bde27492",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f1981e0be8d5ea94",
+        "type": "mysql",
+        "z": "60255b57bde27492",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "2c73f7d0246d5914"
+            ]
+        ]
+    },
+    {
+        "id": "2c73f7d0246d5914",
+        "type": "ui-table",
+        "z": "60255b57bde27492",
+        "group": "aff6f8f27b09ca87",
+        "name": "",
+        "label": "",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "maxrows": "10",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "lg",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 570,
+        "y": 120,
+        "wires": [
+            [
+                "cbcc1fb82c29bc54"
+            ]
+        ]
+    },
+    {
+        "id": "cbcc1fb82c29bc54",
+        "type": "function",
+        "z": "60255b57bde27492",
+        "name": "function 2",
+        "func": "flow.set(\"selectedMessage\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 120,
+        "wires": [
+            [
+                "6f6846917e4b7ae6"
+            ]
+        ]
+    },
+    {
+        "id": "fae9144c05d5f6c3",
+        "type": "ui-text-input",
+        "z": "60255b57bde27492",
+        "group": "aff6f8f27b09ca87",
+        "name": "",
+        "label": "text",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 570,
+        "y": 80,
+        "wires": [
+            [
+                "ee7c2e975e3149bd"
+            ]
+        ]
+    },
+    {
+        "id": "6f6846917e4b7ae6",
+        "type": "ui-button",
+        "z": "60255b57bde27492",
+        "group": "aff6f8f27b09ca87",
+        "name": "",
+        "label": "Reply",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "94b68b94af578210"
+            ]
+        ]
+    },
+    {
+        "id": "ee7c2e975e3149bd",
+        "type": "function",
+        "z": "60255b57bde27492",
+        "name": "function 3",
+        "func": "flow.set(\"replyContent\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 80,
+        "wires": [
+            [
+                "6f6846917e4b7ae6"
+            ]
+        ]
+    },
+    {
+        "id": "94b68b94af578210",
+        "type": "function",
+        "z": "60255b57bde27492",
+        "name": "function 4",
+        "func": "// Click the button to trigger\nvar message = flow.get(\"selectedMessage\");\nvar reply = flow.get(\"replyContent\") || \"\";\n\n// Merge input box content into selected message object\nmessage.reply_content = reply;\n\n// Output to downstream function node to generate SQL\nmsg.payload = message;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 100,
+        "wires": [
+            [
+                "3a28577db0d2333f",
+                "77e7d5356aefcfd7"
+            ]
+        ]
+    },
+    {
+        "id": "77e7d5356aefcfd7",
+        "type": "function",
+        "z": "60255b57bde27492",
+        "name": "function 5",
+        "func": "var messageId = msg.payload.message_id;\nvar replyContent = msg.payload.reply_content.replace(/'/g, \"''\");\n\nmsg.topic = `\nUPDATE user_messages\nSET reply_content = '${replyContent}',\n    replied_at = NOW(),\n    message_status = 'replied'\nWHERE message_id = ${messageId};\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 100,
+        "wires": [
+            [
+                "61cd7ba66c0f2948"
+            ]
+        ]
+    },
+    {
+        "id": "61cd7ba66c0f2948",
+        "type": "mysql",
+        "z": "60255b57bde27492",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 1300,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e730b0fa0b267866",
+        "type": "inject",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 600,
+        "wires": [
+            [
+                "31792834ec841551",
+                "7d05479f56d4feff",
+                "fdc094f977c81c49",
+                "023617de8e60acf7",
+                "ac2eaac7b3481dc7",
+                "7b66c00dbae30d6f",
+                "2ecaab2b1325bb13",
+                "c0d502453605b7e1",
+                "e2c974ddbafc6ac4",
+                "b7880ab3e7df4962",
+                "663a2d8d26349274",
+                "522bfc748dbc866a",
+                "bb6e2e09287fa4f6",
+                "c430f04124350812",
+                "dd245a8836200443",
+                "f2fd89c09e2aad2e",
+                "27864eb763114614",
+                "474b194c51da67fd"
+            ]
+        ]
+    },
+    {
+        "id": "31792834ec841551",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 12",
+        "func": "msg.topic = \"SELECT COUNT(DISTINCT ip_address) AS value FROM kpi_web_traffic\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "7c6cc2c79d609be4"
+            ]
+        ]
+    },
+    {
+        "id": "7c6cc2c79d609be4",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 200,
+        "wires": [
+            [
+                "66e4ad83a561ddf7"
+            ]
+        ]
+    },
+    {
+        "id": "66e4ad83a561ddf7",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 13",
+        "func": "// MySQL returns an array, retrieve the value field of the first row\nif (msg.payload && msg.payload.length > 0) {\n    msg.payload = msg.payload[0].value;\n} else {\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 200,
+        "wires": [
+            [
+                "5e569d0039c6af59"
+            ]
+        ]
+    },
+    {
+        "id": "5e569d0039c6af59",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "d68276270f259ac2",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Monthly Unique IPs",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "100",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "1000",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "2500",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "2500",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 870,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d05479f56d4feff",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 14",
+        "func": "// Average duration over the past 30 days\nmsg.topic = \"SELECT AVG(duration_minutes) AS val FROM kpi_web_traffic\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "26466325dc7acda5"
+            ]
+        ]
+    },
+    {
+        "id": "26466325dc7acda5",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "cf4eeb943cac95f3"
+            ]
+        ]
+    },
+    {
+        "id": "cf4eeb943cac95f3",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 15",
+        "func": "if (msg.payload && msg.payload.length > 0 && msg.payload[0].val !== null) {\n    // Keep one decimal place (e.g. 7.5)\n    msg.payload = parseFloat(msg.payload[0].val).toFixed(1);\n} else {\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "1201bdfe009b9ec0"
+            ]
+        ]
+    },
+    {
+        "id": "1201bdfe009b9ec0",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "d68276270f259ac2",
+        "order": 10,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "5",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Avg Duration (Min)",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "10",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "30",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 870,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fdc094f977c81c49",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 18",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\n    SELECT DATE_FORMAT(visit_date, '%Y-%m-%d') as date_str, COUNT(*) as count \n    FROM kpi_web_traffic \n    WHERE visit_date >= DATE_SUB(CURDATE(), INTERVAL 6 DAY) \n    GROUP BY date_str \n    ORDER BY date_str ASC\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 380,
+        "wires": [
+            [
+                "73b9553b238cbd08"
+            ]
+        ]
+    },
+    {
+        "id": "73b9553b238cbd08",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "6531bdb48aba758e"
+            ]
+        ]
+    },
+    {
+        "id": "6531bdb48aba758e",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 19",
+        "func": "var rows = msg.payload;\n\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(row) {\n        flatData.push({\n            \"x\": row.date_str,    \n            \"y\": row.count,    \n            \"series\": \"Daily Visits\" \n        });\n    });\n}\nmsg.payload = flatData;\ndelete msg.topic;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [
+                "75a082af018026ee"
+            ]
+        ]
+    },
+    {
+        "id": "023617de8e60acf7",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 20",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\n    SELECT \n    CASE \n        WHEN COUNT(*) = 0 THEN 0 \n        ELSE (SUM(CASE WHEN duration_minutes < 1 THEN 1 ELSE 0 END) / COUNT(*)) * 100 \n    END AS bounce_rate \n    FROM kpi_web_traffic\n    WHERE visit_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "1bc6d02ca07347a3"
+            ]
+        ]
+    },
+    {
+        "id": "1bc6d02ca07347a3",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "78668391f3a60126"
+            ]
+        ]
+    },
+    {
+        "id": "78668391f3a60126",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 21",
+        "func": "var val = 0;\nif (msg.payload && msg.payload.length > 0) {\n    val = msg.payload[0].bounce_rate;\n}\nmsg.payload = parseFloat(val).toFixed(1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "ecfcd29288a7723d"
+            ]
+        ]
+    },
+    {
+        "id": "ecfcd29288a7723d",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "d68276270f259ac2",
+        "order": 9,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Bounce Rate",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "100",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 850,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac2eaac7b3481dc7",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 22",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\n    SELECT \n    user_id,\n    COUNT(*) AS message_count\nFROM user_messages\nGROUP BY user_id\nORDER BY message_count DESC;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1200,
+        "wires": [
+            [
+                "08c6a2055320dd01"
+            ]
+        ]
+    },
+    {
+        "id": "08c6a2055320dd01",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 1200,
+        "wires": [
+            [
+                "5e161ecca42e4a73"
+            ]
+        ]
+    },
+    {
+        "id": "5e161ecca42e4a73",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 23",
+        "func": "var rows = msg.payload;\n\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(r) {\n        flatData.push({\n            \"x\": \"Customer \" + r.user_id, \n            \"y\": r.message_count,    \n            \"series\": \"Messages\"  \n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic; \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1200,
+        "wires": [
+            [
+                "f8b767d4edfe8498"
+            ]
+        ]
+    },
+    {
+        "id": "f8b767d4edfe8498",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "",
+        "label": "Message Count",
+        "order": 1,
+        "chartType": "bar",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "5",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 860,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75a082af018026ee",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "",
+        "label": "7-Day Traffic Trend",
+        "order": 7,
+        "chartType": "line",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "50",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "30",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 870,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b66c00dbae30d6f",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 24",
+        "func": "msg.topic = `\n    SELECT \n    IFNULL(message_status, 'unknown') as status, \n    COUNT(*) as count \nFROM user_messages \nGROUP BY status;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1260,
+        "wires": [
+            [
+                "364664ef6fb8e448"
+            ]
+        ]
+    },
+    {
+        "id": "364664ef6fb8e448",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 1260,
+        "wires": [
+            [
+                "a7279c3ff8a00097"
+            ]
+        ]
+    },
+    {
+        "id": "a7279c3ff8a00097",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 25",
+        "func": "var rows = msg.payload;\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(row) {\n        flatData.push({\n            \"x\": row.status,       \n            \"y\": row.count,       \n            \"series\": \"Status\"    \n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1260,
+        "wires": [
+            [
+                "13aeec36acb7f0d4"
+            ]
+        ]
+    },
+    {
+        "id": "13aeec36acb7f0d4",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "",
+        "label": "Message Status",
+        "order": 3,
+        "chartType": "pie",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "20",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 860,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ecaab2b1325bb13",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 26",
+        "func": "msg.topic = `\nSELECT \n    DATE_FORMAT(created_at, '%Y-%m-%d') as date_str, \n    COUNT(*) as count \nFROM user_messages \nWHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)\nGROUP BY date_str\nORDER BY date_str ASC;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1320,
+        "wires": [
+            [
+                "4bf5542127598ecc"
+            ]
+        ]
+    },
+    {
+        "id": "4bf5542127598ecc",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 1320,
+        "wires": [
+            [
+                "6ce8912131dcda2c"
+            ]
+        ]
+    },
+    {
+        "id": "6ce8912131dcda2c",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 27",
+        "func": "var rows = msg.payload;\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(row) {\n        flatData.push({\n            \"x\": row.date_str,      \n            \"y\": row.count,         \n            \"series\": \"Daily Msgs\" \n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1320,
+        "wires": [
+            [
+                "e5fb0cbb39652c31"
+            ]
+        ]
+    },
+    {
+        "id": "e5fb0cbb39652c31",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "",
+        "label": "30 - Day Messages",
+        "order": 5,
+        "chartType": "line",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "50",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "15",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 870,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0d502453605b7e1",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 28",
+        "func": "msg.topic = `\nSELECT \n    ROUND(AVG(TIMESTAMPDIFF(MINUTE, created_at, replied_at)) / 60, 1) as avg_hours\nFROM user_messages \nWHERE replied_at IS NOT NULL \n  AND created_at >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1140,
+        "wires": [
+            [
+                "ea2da736e7c405ca"
+            ]
+        ]
+    },
+    {
+        "id": "ea2da736e7c405ca",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 1140,
+        "wires": [
+            [
+                "10c17f40b15b7660"
+            ]
+        ]
+    },
+    {
+        "id": "10c17f40b15b7660",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 29",
+        "func": "var val = 0;\nif (msg.payload && msg.payload.length > 0) {\n    val = msg.payload[0].avg_hours; \n}\n\nmsg.payload = val !== null ? val : 0;\n\ndelete msg.topic;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1140,
+        "wires": [
+            [
+                "c05ed57d0cd8bf9a"
+            ]
+        ]
+    },
+    {
+        "id": "c05ed57d0cd8bf9a",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "15b9a4b273c18a98",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Avg Reply Time (H)",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "hours",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "48",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "72",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "180",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "180",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 870,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2c974ddbafc6ac4",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 30",
+        "func": "msg.topic = `\nSELECT \n    user_id, \n    COUNT(*) as msg_count \nFROM user_messages \nGROUP BY user_id \nORDER BY msg_count DESC \nLIMIT 5;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1380,
+        "wires": [
+            [
+                "857573b4a0131462"
+            ]
+        ]
+    },
+    {
+        "id": "857573b4a0131462",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 1380,
+        "wires": [
+            [
+                "a979f935b374393f"
+            ]
+        ]
+    },
+    {
+        "id": "a979f935b374393f",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 31",
+        "func": "var rows = msg.payload;\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(row) {\n        flatData.push({\n            \"x\": \"User \" + row.user_id,  \n            \"y\": row.msg_count,         \n            \"series\": \"Top Users\"\n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1380,
+        "wires": [
+            [
+                "09296c3f3aa63bef"
+            ]
+        ]
+    },
+    {
+        "id": "09296c3f3aa63bef",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "",
+        "label": "Top 5 Active Users",
+        "order": 7,
+        "chartType": "bar",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "5",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 870,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7880ab3e7df4962",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 32",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\n    SELECT \n    user_id, \n    SUM(click_count) as total_clicks \nFROM kpi_web_traffic\nGROUP BY user_id \nORDER BY total_clicks DESC \nLIMIT 5\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "b5cbeee7225b3ccf"
+            ]
+        ]
+    },
+    {
+        "id": "b5cbeee7225b3ccf",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "9523571e0705ccd2"
+            ]
+        ]
+    },
+    {
+        "id": "9523571e0705ccd2",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 33",
+        "func": "var rows = msg.payload;\nvar flatData = [];\nif (rows && rows.length > 0) {\n    rows.forEach(function(r) {\n        flatData.push({\n            \"x\": \"User \" + r.user_id, // 拼个前缀更好看\n            \"y\": r.total_clicks,\n            \"series\": \"Total Clicks\"\n        });\n    });\n}\nmsg.payload = flatData;\ndelete msg.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 440,
+        "wires": [
+            [
+                "37857910324ab948"
+            ]
+        ]
+    },
+    {
+        "id": "37857910324ab948",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "",
+        "label": "Top 5 Engaged Users",
+        "order": 5,
+        "chartType": "bar",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "150",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "663a2d8d26349274",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 34",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    HOUR(visit_start_time) as visit_hour, \n    COUNT(*) as visit_count \nFROM kpi_web_traffic \nWHERE visit_date >= DATE_SUB(CURDATE(), INTERVAL 30 DAY) -- 统计最近30天\nGROUP BY visit_hour \nORDER BY visit_hour ASC;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "f78c4a3584c7b7fc"
+            ]
+        ]
+    },
+    {
+        "id": "f78c4a3584c7b7fc",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "66a767402cc6dce7"
+            ]
+        ]
+    },
+    {
+        "id": "66a767402cc6dce7",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 35",
+        "func": "var rows = msg.payload;\nvar flatData = [];\nif (rows && rows.length > 0) {\n    rows.forEach(function(r) {\n        // 格式化一下小时，比如 9 -> \"09:00\"\n        var hourLabel = (r.visit_hour < 10 ? \"0\" : \"\") + r.visit_hour + \":00\";\n        flatData.push({\n            \"x\": hourLabel,\n            \"y\": r.visit_count,\n            \"series\": \"Traffic Volume\"\n        });\n    });\n}\nmsg.payload = flatData;\ndelete msg.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "e7edc922bfebe5a4"
+            ]
+        ]
+    },
+    {
+        "id": "e7edc922bfebe5a4",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "",
+        "label": "Peak Hours Heatmap",
+        "order": 3,
+        "chartType": "bar",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "150",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "522bfc748dbc866a",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 38",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    COUNT(*) as total_quotes,\n    SUM(CASE WHEN is_confirmed = 1 THEN 1 ELSE 0 END) as confirmed_quotes\nFROM online_quotes\nWHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 30 DAY); \n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 660,
+        "wires": [
+            [
+                "516fa9da9f8ede2d"
+            ]
+        ]
+    },
+    {
+        "id": "516fa9da9f8ede2d",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 660,
+        "wires": [
+            [
+                "b22ce02491ca9f49"
+            ]
+        ]
+    },
+    {
+        "id": "b22ce02491ca9f49",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 39",
+        "func": "var data = msg.payload[0];\nvar rate = 0;\n\nif (data && data.total_quotes > 0) {\n    rate = (data.confirmed_quotes / data.total_quotes) * 100;\n}\n\nmsg.payload = parseFloat(rate.toFixed(1));\n\ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 660,
+        "wires": [
+            [
+                "efd1cde9c4c6b0ef"
+            ]
+        ]
+    },
+    {
+        "id": "efd1cde9c4c6b0ef",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "55e3fb0c6bd418f0",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Conversion Rate (30 Days)",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 900,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb6e2e09287fa4f6",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 40",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    DATE_FORMAT(created_at, '%Y-%m-%d') as date_str, \n    COUNT(*) as count \nFROM online_quotes\nWHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 6 DAY)\nGROUP BY date_str \nORDER BY date_str ASC;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 700,
+        "wires": [
+            [
+                "e55d729397ca0ed9"
+            ]
+        ]
+    },
+    {
+        "id": "e55d729397ca0ed9",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 700,
+        "wires": [
+            [
+                "304777da59ed747f"
+            ]
+        ]
+    },
+    {
+        "id": "304777da59ed747f",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 41",
+        "func": "var rows = msg.payload;\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(r) {\n        flatData.push({\n            \"x\": r.date_str,   \n            \"y\": r.count,     \n            \"series\": \"New Quotes\"\n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 700,
+        "wires": [
+            [
+                "f4d353c93fa55c7a"
+            ]
+        ]
+    },
+    {
+        "id": "f4d353c93fa55c7a",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "55e3fb0c6bd418f0",
+        "name": "",
+        "label": "Daily Quote Volume",
+        "order": 5,
+        "chartType": "line",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "35",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "15",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 870,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c430f04124350812",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 42",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    CASE \n        WHEN is_confirmed = 1 THEN 'Confirmed' \n        ELSE 'Pending/Lost' \n    END as status,\n    COUNT(*) as count \nFROM online_quotes\nWHERE created_at >= DATE_FORMAT(NOW() ,'%Y-01-01')\nGROUP BY status;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "6e0ba2fcbcf2d747"
+            ]
+        ]
+    },
+    {
+        "id": "6e0ba2fcbcf2d747",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "9e5dc2f141e1808a"
+            ]
+        ]
+    },
+    {
+        "id": "9e5dc2f141e1808a",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 43",
+        "func": "var rows = msg.payload;\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(r) {\n        flatData.push({\n            \"x\": r.status,  \n            \"y\": r.count, \n            \"series\": \"Status\" \n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 740,
+        "wires": [
+            [
+                "87ee855c51fafa03"
+            ]
+        ]
+    },
+    {
+        "id": "87ee855c51fafa03",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "55e3fb0c6bd418f0",
+        "name": "",
+        "label": "Confirmed vs Pending",
+        "order": 3,
+        "chartType": "pie",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "radial",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "50",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "15",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd245a8836200443",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 44",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    (SUM(CASE \n        WHEN actual_delivery_date <= delivery_date THEN 1 \n        ELSE 0 \n    END) / COUNT(*)) * 100 as on_time_rate\nFROM delivery_records\nWHERE actual_delivery_date IS NOT NULL;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "721ec974c13e9c1c"
+            ]
+        ]
+    },
+    {
+        "id": "721ec974c13e9c1c",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 840,
+        "wires": [
+            [
+                "dac3875123fad586"
+            ]
+        ]
+    },
+    {
+        "id": "dac3875123fad586",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 45",
+        "func": "var rate = 0;\n\nif (msg.payload && msg.payload.length > 0 && msg.payload[0].on_time_rate != null) {\n    rate = parseFloat(msg.payload[0].on_time_rate).toFixed(1);\n}\n\nmsg.payload = rate;\ndelete msg.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 840,
+        "wires": [
+            [
+                "63249735dc44cf10"
+            ]
+        ]
+    },
+    {
+        "id": "63249735dc44cf10",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "73f2f0f21b56ee95",
+        "order": 6,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "5",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "On-time Delivery Rate",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 900,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2fd89c09e2aad2e",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 46",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    IFNULL(AVG(DATEDIFF(actual_delivery_date, delivery_date)), 0) as avg_delay_days\nFROM delivery_records\nWHERE actual_delivery_date > delivery_date\n  AND actual_delivery_date IS NOT NULL;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "78a2a3d881c0c1c6"
+            ]
+        ]
+    },
+    {
+        "id": "78a2a3d881c0c1c6",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 900,
+        "wires": [
+            [
+                "06b86c3d90afb4e2"
+            ]
+        ]
+    },
+    {
+        "id": "06b86c3d90afb4e2",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 47",
+        "func": "var days = 0;\nif (msg.payload && msg.payload.length > 0) {\n    days = parseFloat(msg.payload[0].avg_delay_days).toFixed(1);\n}\n\n\nmsg.payload = days; \ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 900,
+        "wires": [
+            [
+                "0bef75984000d488"
+            ]
+        ]
+    },
+    {
+        "id": "27864eb763114614",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 48",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = \"SELECT COUNT(*) as pending_count FROM delivery_records WHERE actual_delivery_date IS NULL;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 960,
+        "wires": [
+            [
+                "9a2b7250e51d3439"
+            ]
+        ]
+    },
+    {
+        "id": "9a2b7250e51d3439",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 960,
+        "wires": [
+            [
+                "c269782cc0ea4012"
+            ]
+        ]
+    },
+    {
+        "id": "c269782cc0ea4012",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 49",
+        "func": "// 1. Extract the pending count from the database result\nvar count = 0;\nif (msg.payload && msg.payload.length > 0) {\n    count = msg.payload[0].pending_count;\n}\n\n// 2. Define color logic based on backlog severity\n// This separates the logic from the UI (HTML)\nvar colorObj = {};\n\nif (count > 50) {\n    // Red (Critical / High Backlog)\n    colorObj.text = \"#c62828\";\n    colorObj.bg = \"#ffebee\";\n} else if (count > 20) {\n    // Orange (Warning / Moderate)\n    colorObj.text = \"#ef6c00\";\n    colorObj.bg = \"#fff3e0\";\n} else {\n    // Green (Normal / Low)\n    colorObj.text = \"#2e7d32\";\n    colorObj.bg = \"#e8f5e9\";\n}\n\n// 3. Prepare the final message object\nmsg.payload = count;     // The actual number to display\nmsg.myColors = colorObj; // Pass the color settings to the HTML\n\ndelete msg.topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 960,
+        "wires": [
+            [
+                "2795366b80d7a3fe"
+            ]
+        ]
+    },
+    {
+        "id": "474b194c51da67fd",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 50",
+        "func": "// Query data grouped by date for the past 7 days\nmsg.topic = `\nSELECT \n    CASE \n        WHEN actual_delivery_date IS NULL THEN 'Pending'\n        WHEN actual_delivery_date <= delivery_date THEN 'On-Time'\n        ELSE 'Late'\n    END as status,\n    COUNT(*) as count\nFROM delivery_records\nGROUP BY status;\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1020,
+        "wires": [
+            [
+                "ee6dcae52071e3a2"
+            ]
+        ]
+    },
+    {
+        "id": "ee6dcae52071e3a2",
+        "type": "mysql",
+        "z": "70b614b1a465535c",
+        "mydb": "6e7b1c36e446e574",
+        "name": "",
+        "x": 480,
+        "y": 1020,
+        "wires": [
+            [
+                "9abc17b7c96994c4"
+            ]
+        ]
+    },
+    {
+        "id": "9abc17b7c96994c4",
+        "type": "function",
+        "z": "70b614b1a465535c",
+        "name": "function 51",
+        "func": "var rows = msg.payload;\nvar flatData = [];\n\nif (rows && rows.length > 0) {\n    rows.forEach(function(r) {\n        flatData.push({\n            \"x\": r.status,    \n            \"y\": r.count,     \n            \"series\": \"Status\"\n        });\n    });\n}\n\nmsg.payload = flatData;\ndelete msg.topic; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1020,
+        "wires": [
+            [
+                "836b0ae64f0a20cb"
+            ]
+        ]
+    },
+    {
+        "id": "836b0ae64f0a20cb",
+        "type": "ui-chart",
+        "z": "70b614b1a465535c",
+        "group": "73f2f0f21b56ee95",
+        "name": "",
+        "label": "Delivery Performance",
+        "order": 2,
+        "chartType": "bar",
+        "category": "series",
+        "categoryType": "property",
+        "xAxisLabel": "",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "20",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 900,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94a00e302e1f27fc",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "15b9a4b273c18a98",
+        "name": "Avg Reply Time (H)",
+        "order": 2,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Average Response Time (30 Days)\n\n**Definition**\nMeasures the average time taken to reply to user messages over the past 30 days, expressed in **hours**. A lower value indicates faster service response efficiency.\n\n**Calculation Logic**\n1. **Filter**: Select messages where `created_at` is within the last 30 days and `replied_at` is not null.\n2. **Compute**: Calculate the time difference (in minutes) for each message.\n3. **Average**: Take the average of these durations, divide by 60 to convert to hours, and round to 1 decimal place.\n\n**Formula**\n```text\nAvg Duration (Hours) = AVG(Replied Time - Created Time) / 60",
+        "className": "",
+        "x": 1110,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c96ee5c1e37bd45",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "Message Count",
+        "order": 8,
+        "width": "6",
+        "height": "4",
+        "content": "### KPI: Customer Message Count (Message Volume)\n\n**Definition**\nRanks customers based on the total number of messages they have sent. This helps identify the most engaged users or those requiring the most support attention.\n\n**Formula**\n```text\nMessage Count = COUNT(All Messages) per Customer",
+        "className": "",
+        "x": 1100,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3aac63bbf6813c62",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "Message Status",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "content": "### KPI: Message Status Distribution\n\n**Definition**\nVisualizes the breakdown of all user messages based on their current state (e.g., sent, delivered, failed). This metric is essential for monitoring the health of the messaging system and identifying bottlenecks.\n\n**Formula**\n```text\nStatus Volume = COUNT(Messages) grouped by Status Type",
+        "className": "",
+        "x": 1100,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dcdec7726d45288",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "30 - Day Messages",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "content": "### KPI: Daily Message Volume Trend (30 Days)\n\n**Definition**\nTracks the number of user messages generated each day over the last 30 days. This trend line is crucial for monitoring user engagement levels and spotting traffic spikes.\n\n**Formula**\n```text\nDaily Volume = COUNT(Messages) grouped by Date (YYYY-MM-DD)",
+        "className": "",
+        "x": 1110,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da971c0ac0eb1cec",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "70c8298e1283e251",
+        "name": "Top 5 Active Users",
+        "order": 6,
+        "width": "6",
+        "height": "4",
+        "content": "### KPI: Top 5 Active Users\n\n**Definition**\nIdentifies the top 5 users who have sent the highest volume of messages. This leaderboard highlights key power users or those currently dominating support resources.\n\n**Formula**\n```text\nMessage Count = COUNT(Messages) per User (Top 5)",
+        "className": "",
+        "x": 1110,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c16d4ac4ab7c3d68",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "Monthly Unique IPs",
+        "order": 12,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Total Unique Visitors\n\n**Definition**\nMeasures the total number of distinct IP addresses that have accessed the system. Unlike total page views, this metric represents the actual audience size by counting each visitor only once, regardless of how many times they return.\n\n**Formula**\n```text\nUnique Visitors = COUNT(DISTINCT IP Address)",
+        "className": "",
+        "x": 1090,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb99cfa9076d5299",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "Avg Duration (Min)",
+        "order": 11,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Average Visit Duration\n\n**Definition**\nThe average amount of time (in minutes) users spend on the website or platform during a single session. This metric is a key indicator of user engagement and content \"stickiness.\"\n\n**Formula**\n```text\nAvg Duration = AVG(Duration Minutes)",
+        "className": "",
+        "x": 1090,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44d5649f3aed7dc1",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "7-Day Traffic Trend",
+        "order": 6,
+        "width": "6",
+        "height": "6",
+        "content": "### KPI: Daily Web Traffic (Last 7 Days)\n\n**Definition**\nVisualizes the volume of website visits per day over the past week. This time-series metric is essential for spotting immediate traffic trends, spikes, or drops in user activity.\n\n**Formula**\n```text\nDaily Visits = COUNT(*) grouped by Date (YYYY-MM-DD)",
+        "className": "",
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "274572f23556a169",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "Bounce Rate",
+        "order": 8,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Bounce Rate (Last 7 Days)\n\n**Definition**\nThe percentage of visits where the user stayed for less than 1 minute. A high bounce rate often indicates that landing pages are not relevant to the visitor or the user experience needs improvement.\n\n**Formula**\n```text\nBounce Rate = (Visits < 1 min / Total Visits) * 100",
+        "className": "",
+        "x": 1070,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e66dcc395c35b82",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "Top 5 Engaged Users",
+        "order": 4,
+        "width": "6",
+        "height": "6",
+        "content": "### KPI: Top 5 Users by Click Volume\n\n**Definition**\nIdentifies the top 5 users with the highest level of engagement based on their total number of clicks. This metric helps pinpoint the most interactive users on the platform.\n\n**Formula**\n```text\nTotal Clicks = SUM(click_count) per User (Top 5)",
+        "className": "",
+        "x": 1100,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "937cbe1a3fce1b53",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "d68276270f259ac2",
+        "name": "Peak Hours Heatmap",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "content": "### KPI: Peak Traffic Hours (Hourly Distribution)\n\n**Definition**\nAnalyzes web traffic patterns by time of day over the last month. This metric helps identify peak usage hours (e.g., 9:00 AM vs. 10:00 PM) to optimize server performance or marketing timing.\n\n**Formula**\n```text\nTraffic Volume = COUNT(*) grouped by Hour of Day (0-23)",
+        "className": "",
+        "x": 1100,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae50590eda59e1ff",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "55e3fb0c6bd418f0",
+        "name": "Conversion Rate (30 Days)",
+        "order": 6,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Quote Conversion Rate (Last 30 Days)\n\n**Definition**\nMeasures the percentage of price quotes that were successfully confirmed by customers over the last 30 days. This is a primary indicator of sales effectiveness and pricing competitiveness.\n\n**Formula**\n```text\nConversion Rate = (Confirmed Quotes / Total Quotes) * 100",
+        "className": "",
+        "x": 1160,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51f645362e79f892",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "55e3fb0c6bd418f0",
+        "name": "Daily Quote Volume",
+        "order": 4,
+        "width": "6",
+        "height": "5",
+        "content": "### KPI: Daily New Quotes (Last 7 Days)\n\n**Definition**\nVisualizes the number of new price quotes generated daily over the past week. This trend line is key for tracking immediate sales demand and business activity levels.\n\n**Formula**\n```text\nDaily Quotes = COUNT(*) grouped by Date (YYYY-MM-DD)",
+        "className": "",
+        "x": 1110,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f5c46678d47c5d8",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "55e3fb0c6bd418f0",
+        "name": "Confirmed vs Pending",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "content": "### KPI: Quote Status Distribution (YTD)\n\n**Definition**\nDisplays the breakdown of all price quotes generated since the beginning of the current year, categorized by their outcome (Confirmed vs. Pending/Lost). This provides a macro view of annual sales performance.\n\n**Formula**\n```text\nStatus Volume = COUNT(*) grouped by Status (Year-to-Date)",
+        "className": "",
+        "x": 1120,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2899fa19c43f6d32",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "73f2f0f21b56ee95",
+        "name": "On-time Delivery Rate",
+        "order": 7,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: On-time Delivery Rate (OTD)\n\n**Definition**\nMeasures the percentage of completed orders that were delivered on or before the promised delivery date. This is the primary metric for evaluating supply chain reliability and customer satisfaction.\n\n**Formula**\n```text\nOTD Rate = (On-Time Deliveries / Total Completed Deliveries) * 100",
+        "className": "",
+        "x": 1120,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8e0a7e395a85209",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "73f2f0f21b56ee95",
+        "name": "Delivery Performance",
+        "order": 3,
+        "width": "6",
+        "height": "5",
+        "content": "### KPI: Delivery Status Distribution\n\n**Definition**\nProvides a snapshot of the current delivery performance by categorizing all orders into three distinct states: Pending, On-Time, or Late. This overview is essential for identifying backlogs and delay patterns.\n\n**Formula**\n```text\nStatus Count = COUNT(*) grouped by Category (Pending/On-Time/Late)",
+        "className": "",
+        "x": 1120,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ecc037d20c52b1d",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "73f2f0f21b56ee95",
+        "name": "Pending Deliveries",
+        "order": 8,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Total Pending Deliveries\n\n**Definition**\nThe total number of orders that are currently in progress or waiting to be shipped. This metric represents the current backlog and workload for the logistics team.\n\n**Formula**\n```text\nPending Count = COUNT(*) where Actual Date is NULL",
+        "className": "",
+        "x": 1110,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0085925ad3e1650",
+        "type": "ui-markdown",
+        "z": "70b614b1a465535c",
+        "group": "73f2f0f21b56ee95",
+        "name": "Avg Delay (Late Orders)",
+        "order": 4,
+        "width": "9",
+        "height": "5",
+        "content": "### KPI: Average Delivery Delay (Late Orders Only)\n\n**Definition**\nMeasures the severity of delivery delays by calculating the average number of days past the deadline for **late orders only**. This metric helps quantify how badly the schedule is being missed when a delay occurs.\n\n**Formula**\n```text\nAvg Delay = AVG(Actual Date - Planned Date) for Late Orders",
+        "className": "",
+        "x": 1150,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0bef75984000d488",
+        "type": "ui-gauge",
+        "z": "70b614b1a465535c",
+        "name": "",
+        "group": "73f2f0f21b56ee95",
+        "order": 5,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "5",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Avg Delay (Late Orders)",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "days",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "1",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "10",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 910,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2795366b80d7a3fe",
+        "type": "ui-template",
+        "z": "70b614b1a465535c",
+        "group": "73f2f0f21b56ee95",
+        "page": "",
+        "ui": "",
+        "name": "Pending Deliveries",
+        "order": 1,
+        "width": "3",
+        "height": "4",
+        "head": "",
+        "format": "<div style=\"padding: 10px; border-radius: 5px; text-align: center; \n            background-color: {{msg.myColors.bg}};\">\n            \n    <div style=\"font-size: 14px; color: #666;\">Pending Deliveries</div>\n    \n    <div style=\"font-size: 36px; font-weight: bold; \n                color: {{msg.myColors.text}};\">\n        {{msg.payload}} <span style=\"font-size: 16px;\">Orders</span>\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 890,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d11c2d4e081acfe",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.29.0",
+            "node-red-node-mysql": "2.0.0",
+            "node-red-contrib-mysql-config": "1.0.4",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
