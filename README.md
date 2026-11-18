@@ -350,6 +350,10 @@ The full project report – process analysis, API design, extended process, data
 user interface, KPIs and tests – is in [`docs/report`](docs/report)
 ([PDF](docs/report/Odoo_Sales_Integration_Report.pdf) · [Word](docs/report/Odoo_Sales_Integration_Report.docx)).
 
+### Use of AI tools
+
+The original API, the Node-RED flows, the process analysis and the first version of the report were written by the authors. Claude (Anthropic), an AI assistant, was then used to refactor and complete the project: restructuring and testing the API, redesigning the portal and adding the back office and service desk, building the Docker demo environment, and revising the documentation and the report. The authors defined the scope, made the design decisions, validated the system end to end and reviewed all changes.
+
 ## License
 
 [MIT](LICENSE): free to use, copy, modify and distribute, including for commercial purposes,
