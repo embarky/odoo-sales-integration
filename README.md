@@ -1,16 +1,22 @@
 # Odoo Sales Integration
 
 End-to-end integration of the **Odoo ERP sales process**: process modelling (BPMN / UML),
-a **FastAPI** web service that exposes Odoo through its XML-RPC external API, and a
-**Node-RED** customer portal with KPI dashboards.
+a **FastAPI** web service that exposes Odoo through its XML-RPC external API, and
+**Node-RED** applications on top of it: a customer portal, an employee back office, a service
+desk and KPI dashboards. Everything runs locally with one `docker compose` command.
 
 > Group project for the course *Enterprise Data and Integration* at HEC Lausanne (University of Lausanne), autumn semester 2025 — group **Saturne**.
 
+[![Tests](https://github.com/embarky/odoo-sales-integration/actions/workflows/tests.yml/badge.svg)](https://github.com/embarky/odoo-sales-integration/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Odoo](https://img.shields.io/badge/Odoo-ERP-714B67?logo=odoo&logoColor=white)
 ![Node-RED](https://img.shields.io/badge/Node--RED-8F0000?logo=nodered&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+
+![A quotation is accepted in the customer portal, then delivered, invoiced and paid in the back office; the portal shows the order as paid](docs/screenshots/demo-order-to-cash.gif)
+
+<sub>Left: customer portal. Right: employee back office. Every click is a call to the integration API, which carries it out in Odoo.</sub>
 
 ---
 
@@ -32,15 +38,53 @@ This project opens the sales process to external applications in three steps.
    payment) and the purchasing steps, a service desk where employees answer and approve
    customer requests, and KPI dashboards that measure how the portal is used.
 
+## See it in action
+
+| Customer portal: review and change a quotation | Back office: from quotation to payment |
+|---|---|
+| ![Customer portal](docs/screenshots/portal-quotation.png) | ![Back office](docs/screenshots/backoffice-sales.png) |
+| **Service desk: answer customers, approve requests** | **KPI dashboard** |
+| ![Service desk](docs/screenshots/service-desk.png) | ![KPI dashboard](docs/screenshots/kpi.png) |
+
+**A customer asks for another delivery date, the service desk approves it, and the new date
+is written to the order in Odoo:**
+
+![Delivery date change request and approval](docs/screenshots/demo-date-request.gif)
+
+<details>
+<summary>More screenshots</summary>
+
+| | |
+|---|---|
+| ![Sign in](docs/screenshots/portal-login.png) | ![Paid order in the portal](docs/screenshots/portal-paid.png) |
+| Sign in (demo: choose a customer account) | A paid order: progress, documents |
+| ![Delivery date request](docs/screenshots/portal-date-request.png) | ![Report a problem](docs/screenshots/portal-report-problem.png) |
+| Request another delivery date | Report a problem with an order |
+| ![Messages](docs/screenshots/portal-messages.png) | ![Purchasing](docs/screenshots/backoffice-purchase.png) |
+| Messages and answers from the service team | Back office: purchasing |
+| ![API call](docs/screenshots/api-try-it-out.png) | |
+| API documentation: a refused action returns HTTP 409 with Odoo's reason | |
+
+</details>
+
 ## Architecture
 
 ```mermaid
 flowchart LR
-    C[Customer / employee<br/>browser] -->|HTTP| NR[Node-RED<br/>portal & dashboards]
+    CU[Customer] -->|browser| P
+    EM[Employee] -->|browser| B
+    subgraph NR[Node-RED · Dashboard 2.0]
+        P[Customer portal]
+        B[Back office]
+        D[Service desk]
+        K[KPI dashboards]
+    end
+    EM --> D
+    EM --> K
     NR -->|REST / JSON| API[FastAPI<br/>integration API]
-    API -->|XML-RPC execute_kw| ODOO[(Odoo ERP<br/>Sales · Inventory · Accounting · Purchase)]
-    API -->|authenticated web session| PDF[Odoo PDF reports]
-    NR -->|SQL| DB[(MySQL<br/>messages · events · KPI)]
+    API -->|XML-RPC execute_kw| ODOO[(Odoo 18<br/>Sales · Inventory · Invoicing · Purchase)]
+    API -->|web session| PDF[Odoo PDF reports]
+    NR -->|SQL| DB[(MySQL<br/>messages · date requests · KPI events)]
 ```
 
 The API is the single entry point to Odoo: the portal never talks to the ERP directly, so
@@ -73,6 +117,13 @@ It opens in [bpmn.io](https://demo.bpmn.io) or Camunda Modeler.
 ## The API
 
 Built with FastAPI. Interactive documentation is served at `/docs` (Swagger UI).
+
+<details>
+<summary>Screenshot of the API documentation</summary>
+
+![Swagger UI of the API](docs/screenshots/api-docs.png)
+
+</details>
 
 | Area | Method | Endpoint | Odoo operation |
 |---|---|---|---|
@@ -133,19 +184,30 @@ odoo-sales-integration/
 │   └── requirements*.txt
 ├── node-red/                  # Node-RED flows (portal, back office, service desk, KPIs) and image
 ├── docs/
-│   └── models/                # BPMN process model (source and image)
+│   ├── models/                # BPMN process model (source and image)
+│   ├── report/                # project report (PDF and Word)
+│   └── screenshots/           # screenshots and demo recordings used in this README
 ├── database/                  # MySQL schema and demo data for the portal and KPIs
 ├── demo/                      # script that prepares the Odoo demo database
+├── .github/workflows/         # continuous integration (tests)
 ├── docker-compose.yml         # complete demo environment
 └── .env.example
 ```
 
-## Getting started
+## Run the demo yourself
 
-### Demo environment (Docker)
+The repository contains everything needed to run the whole system on your own computer:
+Odoo 18 Community with demo data, the API, the Node-RED applications and MySQL.
+Nothing is shared with other users and nothing needs an account.
 
-One command starts the whole system with demo data: Odoo 18 Community, the API, the
-Node-RED portal and dashboards, and the MySQL database.
+### 1. Requirements
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (macOS, Windows) or Docker
+  Engine with the Compose plugin (Linux)
+- about 4 GB of free memory and 3 GB of disk space
+- free ports **8069** (Odoo), **8000** (API) and **1880** (Node-RED)
+
+### 2. Start
 
 ```bash
 git clone https://github.com/embarky/odoo-sales-integration.git
@@ -153,25 +215,69 @@ cd odoo-sales-integration
 docker compose up -d --build
 ```
 
-The first start takes a few minutes: Odoo creates its database and installs Sales,
-Inventory, Invoicing and Purchase, then a one-off job adds demo orders in every stage of the
-process (quotation, sent, confirmed, invoiced, paid).
+The first start takes 3–5 minutes: Odoo creates its database and installs Sales, Inventory,
+Invoicing and Purchase, then a one-off job adds demo orders in every stage of the process.
+To follow it:
 
-| Service | URL |
+```bash
+docker compose logs -f seed      # wait for "[seed] done", then press Ctrl+C
+```
+
+### 3. Open
+
+| Application | Address | Who |
+|---|---|---|
+| Customer portal | <http://localhost:1880/dashboard/portal> | customers |
+| Back office (sales and purchasing) | <http://localhost:1880/dashboard/back-office> | employees |
+| Service desk and message KPIs | <http://localhost:1880/dashboard/service-desk> | employees |
+| Portal KPIs | <http://localhost:1880/dashboard/page1> | managers |
+| API documentation | <http://localhost:8000/docs> | developers |
+| Odoo (login `admin` / `admin`) | <http://localhost:8069> | to check the results in the ERP |
+| Node-RED editor | <http://localhost:1880> | to look at the flows |
+
+### 4. A five-minute tour
+
+1. **Portal:** sign in as **Azure Interior**. Open a *Quotation*, change a quantity and click
+   **Accept and confirm**.
+2. **Back office:** choose *Azure Interior*, open the same order and click through
+   **Validate delivery → Create invoice → Confirm → Register payment**.
+3. **Portal:** open the order again: it is now *Paid* and the invoice can be downloaded.
+4. **Portal:** open a confirmed order without a pending request (e.g. *S00028*) and click
+   **Request another date**.
+   **Service desk:** approve the request. Odoo now has the new delivery date (see the
+   order's chatter in Odoo).
+5. **Portal → Messages:** send a message; answer it in the **service desk**.
+
+Use the demo customers **Azure Interior** and **Wood Corner**: their orders were created by the
+demo script and go through every step. Some of Odoo's own sample orders were created before
+the Inventory app was installed, so Odoo does not record their deliveries and refuses to
+invoice them.
+
+### 5. Stop, reset, remove
+
+```bash
+docker compose stop              # stop, keep the data
+docker compose up -d             # start again
+docker compose down -v           # remove everything, including the data (fresh demo on next start)
+```
+
+### Troubleshooting
+
+| Problem | Solution |
 |---|---|
-| Customer portal | <http://localhost:1880/dashboard/portal> |
-| Service desk and message KPIs (employees) | <http://localhost:1880/dashboard/service-desk> |
-| Portal KPIs | <http://localhost:1880/dashboard/page1> |
-| Back office: sales and purchasing (employees) | <http://localhost:1880/dashboard/back-office> |
-| API documentation (Swagger UI) | <http://localhost:8000/docs> |
-| Odoo (login `admin` / `admin`) | <http://localhost:8069> |
-| Node-RED editor | <http://localhost:1880> |
+| `port is already allocated` | Another program uses 8069, 8000 or 1880. Stop it, or change the left-hand port in `docker-compose.yml` (e.g. `"8070:8069"`). |
+| The portal shows no customers | Odoo is still being prepared. Wait for `[seed] done` (step 2) and reload the page. |
+| Something is in a strange state after many tests | `docker compose down -v && docker compose up -d --build` gives a fresh demo. |
+| Docker runs out of memory | Give Docker Desktop at least 4 GB (Settings → Resources). |
 
-In the portal, sign in as **Azure Interior** or **Wood Corner** to see orders in every
-stage. All passwords in the demo environment are local defaults. To connect the API to another
-Odoo instance, copy `.env.example` to `.env` and fill in its URL, database and login.
+### Use your own Odoo
 
-### Without Docker
+The API can work with any Odoo 17/18 database that has Sales, Inventory and Invoicing: copy
+`.env.example` to `.env`, fill in `ODOO_URL`, `ODOO_DB`, `ODOO_USER` and `ODOO_PASSWORD`
+(an API key works as password), and start the stack again. All passwords in the demo
+environment are local defaults.
+
+### Run the API without Docker
 
 ```bash
 cd api
@@ -200,14 +306,36 @@ cd api
 pytest
 ```
 
-The suite starts an in-memory **fake Odoo XML-RPC server**, so the tests run without
+38 tests run on every push with GitHub Actions. The suite starts an in-memory **fake Odoo XML-RPC server**, so the tests run without
 network access or an Odoo account. It still goes through the real XML-RPC transport, and
 the fake server reproduces the Odoo behaviours the API depends on: fault codes, missing
 records, methods returning `None`, the cancel wizard, and validation errors.
 
-## Team
+## Limitations and production readiness
 
-Group Saturne: Hang Yang, Yi Huang, Kyle Fletcher.
+This is a demonstration system. Before real use it would need:
+
+- **Authentication.** Portal users sign in by choosing a company; the API itself has no
+  authentication. A real deployment would use Odoo portal accounts (or an identity provider)
+  for customers and employees, and protect the API with keys or tokens.
+- **Per-user access rights.** The API calls Odoo with one technical user. The portal only
+  lists the signed-in customer's orders, but the API does not check who is asking; Odoo's
+  record rules for portal users would enforce this in production.
+- **Fuller business cases.** Deliveries are validated for the full ordered quantity
+  (no partial deliveries or backorders) and payments are registered in full with the default
+  journal; one currency and one time zone (`Europe/Zurich`) are assumed.
+- **Secrets.** The demo database password is stored in `node-red/flows_cred.json` so that the
+  demo runs without setup; real credentials belong in environment variables or a secret store.
+- **Operations.** Logging, monitoring and backups of the Odoo and MySQL databases.
+
+## Authors
+
+Course project of group **Saturne** (Hang Yang, Yi Huang, Kyle Fletcher).
+**Hang Yang** designed and built the API, the customer portal, the back office and the demo
+environment.
+
+The full project report (process analysis, API design, portal, KPIs and tests) is in
+[`docs/report`](docs/report).
 
 ## License
 

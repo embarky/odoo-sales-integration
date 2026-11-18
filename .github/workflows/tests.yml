@@ -1,0 +1,43 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  api:
+    name: API tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: api/requirements-dev.txt
+      - run: pip install -r requirements-dev.txt
+      - run: pytest -q
+
+  demo-environment:
+    name: Demo environment configuration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check docker-compose.yml
+        run: docker compose config --quiet
+      - name: Check the Node-RED flows
+        run: |
+          python3 - <<'PY'
+          import json
+          flows = json.load(open("node-red/flows.json"))
+          ids = {n["id"] for n in flows}
+          assert len(ids) == len(flows), "duplicate node ids"
+          for n in flows:
+              for out in n.get("wires", []):
+                  for target in out:
+                      assert target in ids, f"{n['id']} is wired to missing node {target}"
+          print(len(flows), "nodes, all wires valid")
+          PY
