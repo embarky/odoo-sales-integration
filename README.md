@@ -11,6 +11,7 @@ desk and KPI dashboards. Everything runs locally with one `docker compose` comma
 ![Odoo](https://img.shields.io/badge/Odoo-ERP-714B67?logo=odoo&logoColor=white)
 ![Node-RED](https://img.shields.io/badge/Node--RED-8F0000?logo=nodered&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ![A quotation is accepted in the customer portal, then delivered, invoiced and paid in the back office; the portal shows the order as paid](docs/screenshots/demo-order-to-cash.gif)
 
@@ -201,6 +202,7 @@ odoo-sales-integration/
 ├── demo/                      # script that prepares the Odoo demo database
 ├── .github/workflows/         # continuous integration (tests)
 ├── docker-compose.yml         # complete demo environment
+├── LICENSE                    # MIT
 └── .env.example
 ```
 
@@ -350,5 +352,6 @@ user interface, KPIs and tests – is in [`docs/report`](docs/report)
 
 ## License
 
-Released for portfolio and educational purposes. Odoo is a trademark of Odoo S.A.; this
-project is not affiliated with Odoo S.A.
+[MIT](LICENSE): free to use, copy, modify and distribute, including for commercial purposes,
+as long as the copyright notice is kept. Odoo is a trademark of Odoo S.A.; this project is not
+affiliated with Odoo S.A.
