@@ -1,6 +1,6 @@
 """Odoo Sales Integration API.
 
-External web API between client applications (Node-RED dashboard / customer portal)
+External web API between client applications (customer portal, back office, service desk)
 and the Odoo ERP, which is reached through its XML-RPC external API.
 
 Run locally (from the `api/` folder):  uvicorn app.main:app --reload
@@ -17,7 +17,7 @@ from .routers import accounting, customers, purchase_orders, sale_orders, status
 app = FastAPI(
     title="Odoo Sales Integration API",
     description="Web API exposing the sales and purchase processes of an Odoo instance.",
-    version="2.0.0",
+    version="1.0.0",
 )
 
 try:

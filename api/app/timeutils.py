@@ -1,7 +1,7 @@
 """Conversions between Odoo datetimes (naive UTC strings) and local time."""
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from urllib.parse import unquote
 from zoneinfo import ZoneInfo
 
@@ -12,7 +12,7 @@ def odoo_to_local(value: str | bool | None, tz: str) -> str | None:
     """'2025-10-31 21:00:00' (UTC, as stored by Odoo) -> '2025-10-31 22:00:00' in `tz`."""
     if not value:
         return None
-    utc_dt = datetime.strptime(str(value), ODOO_FORMAT).replace(tzinfo=timezone.utc)
+    utc_dt = datetime.strptime(str(value), ODOO_FORMAT).replace(tzinfo=UTC)
     return utc_dt.astimezone(ZoneInfo(tz)).strftime(ODOO_FORMAT)
 
 
@@ -31,4 +31,4 @@ def parse_user_datetime(value: str, tz: str) -> datetime:
 
 def to_odoo(dt: datetime) -> str:
     """Aware datetime -> naive UTC string expected by Odoo."""
-    return dt.astimezone(timezone.utc).strftime(ODOO_FORMAT)
+    return dt.astimezone(UTC).strftime(ODOO_FORMAT)

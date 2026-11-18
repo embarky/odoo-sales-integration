@@ -1,9 +1,10 @@
 """End-to-end tests: FastAPI app -> real XML-RPC transport -> fake Odoo server."""
+from fastapi.testclient import TestClient
+
 from app.config import Settings
 from app.dependencies import get_odoo
 from app.main import app
 from app.odoo import OdooClient
-from fastapi.testclient import TestClient
 
 from .fake_odoo import DB, LOGIN
 
@@ -68,8 +69,8 @@ def test_orders_by_customer_id(client):
 def test_order_detail(client):
     order = client.get("/saleorders/by_orderid/10").json()
     assert order["name"] == "S00010"
-    assert order["order_line"] == [{"line_id": 101, "product_id": 7, "product_name": "[DESK] Desk", "description": "[DESK] Desk",
-                                    "quantity": 2.0, "unit_price": 50.0, "total": 100.0}]
+    assert order["order_line"] == [{"line_id": 101, "product_id": 7, "product_name": "[DESK] Desk",
+                                    "description": "[DESK] Desk", "quantity": 2.0, "unit_price": 50.0, "total": 100.0}]
     assert client.get("/saleorders/by_orderid/999").status_code == 404
 
 

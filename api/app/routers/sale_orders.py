@@ -29,7 +29,7 @@ def _product_lines(odoo: OdooClient, line_ids: list[int]) -> dict[int, dict]:
 
 
 def _list_line(line: dict) -> dict:
-    # keys expected by the "Display orders" template of the dashboard
+    # compact line format used in order lists
     return {
         "id": line["id"],
         "name": line["name"],
@@ -105,7 +105,8 @@ def _deliveries(odoo: OdooClient, picking_ids: list[int]) -> list[dict]:
     if not picking_ids:
         return []
     tz = odoo.settings.timezone
-    pickings = odoo.execute("stock.picking", "read", picking_ids, fields=["name", "state", "scheduled_date", "date_done"])
+    fields = ["name", "state", "scheduled_date", "date_done"]
+    pickings = odoo.execute("stock.picking", "read", picking_ids, fields=fields)
     return [{"id": p["id"], "name": p["name"], "state": p["state"],
              "scheduled_date": odoo_to_local(p["scheduled_date"], tz), "date_done": odoo_to_local(p["date_done"], tz)}
             for p in pickings]
@@ -197,7 +198,8 @@ def validate_delivery(order_name: str, odoo: Odoo):
         # skip_sms: no "send an SMS to the customer?" wizard (stock_sms)
         result = odoo.execute("stock.picking", "button_validate", [picking["id"]], context={"skip_sms": True})
         if isinstance(result, dict) and result.get("res_model"):
-            raise HTTPException(409, f"Odoo asks for a manual step to validate {picking['name']} ({result['res_model']})")
+            raise HTTPException(
+                409, f"Odoo asks for a manual step to validate {picking['name']} ({result['res_model']})")
     after = _deliveries(odoo, order["picking_ids"])
     if any(p["state"] not in ("done", "cancel") for p in after):
         raise HTTPException(409, f"Odoo did not complete the delivery of {order_name}")
@@ -233,7 +235,7 @@ def create_invoice(order_name: str, odoo: Odoo):
 
 # ---------------------------------------------------------------- delivery date
 @router.get("/delivery_date/query/{order_name}")
-@router.get("/delivery_date/querry/{order_name}", include_in_schema=False)  # old spelling used by the flows
+@router.get("/delivery_date/querry/{order_name}", include_in_schema=False)  # old spelling, kept for older clients
 def get_delivery_date(order_name: str, odoo: Odoo):
     """Scheduled delivery date in local time: the committed date if set, otherwise the expected date."""
     order = _order_by_name(odoo, order_name, ["name", "commitment_date", "expected_date"])

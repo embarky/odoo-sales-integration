@@ -30,7 +30,7 @@ def _with_lines(odoo: OdooClient, orders: list[dict]) -> list[dict]:
                 "product_id": m2o_id(line["product_id"]),
                 "product_name": m2o_name(line["product_id"]),
                 "product_qty": line["product_qty"],
-                "product_uom_qty": line["product_qty"],  # key used by the dashboard templates
+                "product_uom_qty": line["product_qty"],  # same key as in sales order lines
                 "price_unit": line["price_unit"],
                 "price_total": line["price_total"],
             }
@@ -91,7 +91,7 @@ def cancel_purchase_order(purchase_orders_id: int, odoo: Odoo):
 
 
 @router.get("/deliverdate/query/{purchase_orders_id}")
-@router.get("/deliverdate/querry/{purchase_orders_id}", include_in_schema=False)  # old spelling used by the flows
+@router.get("/deliverdate/querry/{purchase_orders_id}", include_in_schema=False)  # old spelling, kept for older clients
 def get_expected_arrival(purchase_orders_id: int, odoo: Odoo):
     """Expected arrival date (date_planned) in local time."""
     po = _po(odoo, purchase_orders_id, ["name", "date_planned"])

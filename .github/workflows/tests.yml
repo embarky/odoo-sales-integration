@@ -19,7 +19,10 @@ jobs:
           cache: pip
           cache-dependency-path: api/requirements-dev.txt
       - run: pip install -r requirements-dev.txt
-      - run: pytest -q
+      - name: Lint
+        run: ruff check .
+      - name: Tests
+        run: pytest -q
 
   demo-environment:
     name: Demo environment configuration

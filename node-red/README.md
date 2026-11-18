@@ -7,7 +7,7 @@
 | Customer Portal | `/dashboard/portal` | Customer self-service: orders and quotations, edit quotation lines, accept / decline, delivery date accept or change request, problem reports, messages and replies, order and invoice PDFs |
 | Back Office | `/dashboard/back-office` | Employees: sales orders from quotation to payment (confirm, validate delivery, create and confirm invoice, register payment, cancel, PDFs) and purchase orders (confirm, cancel, vendor arrival date, PDF) |
 | Service Desk | `/dashboard/service-desk` | Employees: reply to customer messages, approve or reject delivery date requests (approval updates Odoo) |
-| KPI | `/dashboard/page1` | KPI dashboards: traffic, quotations, deliveries; message KPIs are on the service desk page |
+| KPI | `/dashboard/kpi` | KPI dashboards: traffic, quotations, deliveries; message KPIs are on the service desk page |
 
 ### How the pages work
 

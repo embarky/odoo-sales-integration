@@ -240,7 +240,7 @@ docker compose logs -f seed      # wait for "[seed] done", then press Ctrl+C
 | Customer portal | <http://localhost:1880/dashboard/portal> | customers |
 | Back office (sales and purchasing) | <http://localhost:1880/dashboard/back-office> | employees |
 | Service desk and message KPIs | <http://localhost:1880/dashboard/service-desk> | employees |
-| Portal KPIs | <http://localhost:1880/dashboard/page1> | managers |
+| Portal KPIs | <http://localhost:1880/dashboard/kpi> | managers |
 | API documentation | <http://localhost:8000/docs> | developers |
 | Odoo (login `admin` / `admin`) | <http://localhost:8069> | to check the results in the ERP |
 | Node-RED editor | <http://localhost:1880> | to look at the flows |

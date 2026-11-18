@@ -30,7 +30,7 @@ def get_company_customers(odoo: Odoo):
 
 @router.get("/{cust_id}")
 def get_customer(cust_id: int, odoo: Odoo):
-    """Details of one customer. Returned as a one-element list (format used by the dashboard)."""
+    """Details of one customer, returned as a one-element list."""
     rows = odoo.execute(
         "res.partner", "search_read", [("id", "=", cust_id)],
         fields=["name", "email", "phone", "street", "city", "zip", "country_id", "comment", "is_company"],
