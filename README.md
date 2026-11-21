@@ -340,11 +340,14 @@ This is a demonstration system. Before real use it would need:
   demo runs without setup; real credentials belong in environment variables or a secret store.
 - **Operations.** Logging, monitoring and backups of the Odoo and MySQL databases.
 
-## Authors
+## Team
 
-Hang Yang, Yi Huang and Kyle Fletcher – HEC Lausanne, University of Lausanne, 2025.
-**Hang Yang** designed and built the API, the customer portal, the back office and the demo
-environment.
+v1.0 was built as a group project for the course *Enterprise Data and Integration* at
+HEC Lausanne, University of Lausanne (2025), by Hang Yang, Yi Huang and Kyle Fletcher.
+Hang Yang wrote the code; the process analysis and the first version of the report were
+written by the team. The post-course work in v2.0 – the restructured and tested API, the new
+portal, back office and service desk, the Docker demo environment and the revised report – is
+by Hang Yang.
 
 The full project report – process analysis, API design, extended process, data classes,
 user interface, KPIs and tests – is in [`docs/report`](docs/report)
@@ -352,10 +355,14 @@ user interface, KPIs and tests – is in [`docs/report`](docs/report)
 
 ### Use of AI tools
 
-The original API, the Node-RED flows, the process analysis and the first version of the report were written by the authors. Claude (Anthropic), an AI assistant, was then used to refactor and complete the project: restructuring and testing the API, redesigning the portal and adding the back office and service desk, building the Docker demo environment, and revising the documentation and the report. The authors defined the scope, made the design decisions, validated the system end to end and reviewed all changes.
+In v2.0, Claude (Anthropic), an AI assistant, was used to refactor and complete the project:
+restructuring and testing the API, redesigning the portal and adding the back office and service
+desk, building the Docker demo environment, and revising the documentation and the report.
+Hang Yang defined the scope, made the design decisions, validated the system end to end and
+reviewed all changes.
 
 ## License
 
-[MIT](LICENSE): free to use, copy, modify and distribute, including for commercial purposes,
-as long as the copyright notice is kept. Odoo is a trademark of Odoo S.A.; this project is not
-affiliated with Odoo S.A.
+Released under the [MIT License](LICENSE) © 2025–2026 Hang Yang: free to use, copy, modify
+and distribute, including for commercial purposes, as long as the copyright notice is kept.
+Odoo is a trademark of Odoo S.A.; this project is not affiliated with Odoo S.A.

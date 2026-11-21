@@ -17,7 +17,7 @@ from .routers import accounting, customers, purchase_orders, sale_orders, status
 app = FastAPI(
     title="Odoo Sales Integration API",
     description="Web API exposing the sales and purchase processes of an Odoo instance.",
-    version="1.0.0",
+    version="2.0.0",
 )
 
 try:
