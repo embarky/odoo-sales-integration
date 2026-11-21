@@ -36,11 +36,10 @@ The full write-up is in the [project report](docs/report/Odoo_Sales_Integration_
 
 ## See it in action
 
-| Customer portal: review and change a quotation | Back office: from quotation to payment |
-|---|---|
-| ![Customer portal](docs/screenshots/portal-quotation.png) | ![Back office](docs/screenshots/backoffice-sales.png) |
-| **Service desk: answer customers, approve requests** | **KPI dashboard** |
-| ![Service desk](docs/screenshots/service-desk.png) | ![KPI dashboard](docs/screenshots/kpi.png) |
+<table>
+<tr><td width="50%" valign="top"><b>Customer portal</b><br><img src="docs/screenshots/portal-quotation.png" width="100%" alt="Customer portal"></td><td width="50%" valign="top"><b>Back office: quotation to payment</b><br><img src="docs/screenshots/backoffice-sales.png" width="100%" alt="Back office: quotation to payment"></td></tr>
+<tr><td width="50%" valign="top"><b>Service desk</b><br><img src="docs/screenshots/service-desk.png" width="100%" alt="Service desk"></td><td width="50%" valign="top"><b>KPI dashboard</b><br><img src="docs/screenshots/kpi.png" width="100%" alt="KPI dashboard"></td></tr>
+</table>
 
 **A customer asks for another delivery date, the service desk approves it, and the new date
 is written to the order in Odoo:**
@@ -50,16 +49,12 @@ is written to the order in Odoo:**
 <details>
 <summary>More screenshots</summary>
 
-| | |
-|---|---|
-| ![Sign in](docs/screenshots/portal-login.png) | ![Paid order in the portal](docs/screenshots/portal-paid.png) |
-| Sign in (demo: choose a customer account) | A paid order: progress, documents |
-| ![Delivery date request](docs/screenshots/portal-date-request.png) | ![Report a problem](docs/screenshots/portal-report-problem.png) |
-| Request another delivery date | Report a problem with an order |
-| ![Messages](docs/screenshots/portal-messages.png) | ![Purchasing](docs/screenshots/backoffice-purchase.png) |
-| Messages and answers from the service team | Back office: purchasing |
-| ![API call](docs/screenshots/api-try-it-out.png) | |
-| API documentation: a refused action returns HTTP 409 with Odoo's reason | |
+<table>
+<tr><td width="50%" valign="top"><b>Sign in</b><br><img src="docs/screenshots/portal-login.png" width="100%" alt="Sign in"></td><td width="50%" valign="top"><b>A paid order</b><br><img src="docs/screenshots/portal-paid.png" width="100%" alt="A paid order"></td></tr>
+<tr><td width="50%" valign="top"><b>Delivery date request</b><br><img src="docs/screenshots/portal-date-request.png" width="100%" alt="Delivery date request"></td><td width="50%" valign="top"><b>Problem report</b><br><img src="docs/screenshots/portal-report-problem.png" width="100%" alt="Problem report"></td></tr>
+<tr><td width="50%" valign="top"><b>Messages and answers</b><br><img src="docs/screenshots/portal-messages.png" width="100%" alt="Messages and answers"></td><td width="50%" valign="top"><b>Back office: purchasing</b><br><img src="docs/screenshots/backoffice-purchase.png" width="100%" alt="Back office: purchasing"></td></tr>
+<tr><td width="50%" valign="top"><b>API: a refused action returns 409</b><br><img src="docs/screenshots/api-try-it-out.png" width="100%" alt="API: a refused action returns 409"></td><td width="50%"></td></tr>
+</table>
 
 </details>
 
