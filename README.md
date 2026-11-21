@@ -349,6 +349,9 @@ written by the team. The post-course work in v2.0 – the restructured and teste
 portal, back office and service desk, the Docker demo environment and the revised report – is
 by Hang Yang.
 
+The `v1.0` tag holds the course version of the API, a single script (`my_odoo_api.py`); the
+Node-RED flows and the report of that version were added to the repository in v2.0.
+
 The full project report – process analysis, API design, extended process, data classes,
 user interface, KPIs and tests – is in [`docs/report`](docs/report)
 ([PDF](docs/report/Odoo_Sales_Integration_Report.pdf) · [Word](docs/report/Odoo_Sales_Integration_Report.docx)).
