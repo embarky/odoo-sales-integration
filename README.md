@@ -228,12 +228,13 @@ deliveries and payments; and secrets kept out of `node-red/flows_cred.json`.
 
 ## Team
 
-v1.0 was a group project for the course *Enterprise Data and Integration* at HEC Lausanne,
-University of Lausanne (2025), by Hang Yang, Yi Huang and Kyle Fletcher: Hang Yang wrote the
-code (the `v1.0` tag, a single API script) and the team did the process analysis and the first
-report. v2.0 – the restructured API, the portal, back office and service desk, the demo
-environment and the revised report – is by Hang Yang, developed with Claude (Anthropic) as a
-coding assistant; all changes were designed, reviewed and tested by Hang Yang.
+**v1.0** was a group project for the course *Enterprise Data and Integration* at HEC Lausanne,
+University of Lausanne (2025), by Hang Yang, Yi Huang and Kyle Fletcher. Hang Yang wrote the
+code (the `v1.0` tag, a single API script); the team did the process analysis and the first report.
+
+**v2.0** – the restructured API, the portal, back office and service desk, the demo environment
+and the revised report – is by Hang Yang. It was developed with Claude (Anthropic) as a coding
+assistant; all changes were designed, reviewed and tested by Hang Yang.
 
 ## License
 
