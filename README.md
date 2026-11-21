@@ -366,6 +366,4 @@ reviewed all changes.
 
 ## License
 
-Released under the [MIT License](LICENSE) © 2025–2026 Hang Yang: free to use, copy, modify
-and distribute, including for commercial purposes, as long as the copyright notice is kept.
-Odoo is a trademark of Odoo S.A.; this project is not affiliated with Odoo S.A.
+Released under the [MIT License](LICENSE) © 2025–2026 Hang Yang.
